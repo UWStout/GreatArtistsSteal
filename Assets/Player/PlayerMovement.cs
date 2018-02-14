@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 
         //get movement direction of player
         float move = Input.GetAxis("Horizontal");
-        //add velocity to the direction of player
+        //create movement in the player horizontal direction
         GetComponent<Rigidbody2D>().velocity = new Vector2(move * topSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
         //if facing negative direction and not facing the right FLIP
@@ -44,6 +44,15 @@ public class PlayerMovement : MonoBehaviour {
         {
             //adding jumpforce to the y-axis of the rigidBody
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            topSpeed = 10f;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            topSpeed = 5f;
         }
     }
 
