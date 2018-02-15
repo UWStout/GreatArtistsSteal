@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     //How fast the player moves (sneaking)
-    public float topSpeed = 5f;
+    public float topSpeed = 3f;
 
     //determine sprite direction
     bool faceRight = true;
@@ -61,11 +61,11 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            topSpeed = 10f;
+            topSpeed = 6f;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            topSpeed = 5f;
+            topSpeed = 3f;
         }
 
         
