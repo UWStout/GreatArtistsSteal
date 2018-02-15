@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    //reference to the PlayerAnimatorController
+    Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     //How fast the player moves (sneaking)
     public float topSpeed = 3f;
 
@@ -37,7 +45,8 @@ public class PlayerMovement : MonoBehaviour {
         //create movement in the player horizontal direction
         //if (wallCheck && (Input.GetKeyDown(KeyCode.A)) || (Input.GetKeyDown(KeyCode.D)))
         //{
-            GetComponent<Rigidbody2D>().velocity = new Vector2(move * topSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(move * topSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        anim.SetFloat("Speed", Mathf.Abs(move));
         //}
 
         //if facing negative direction and not facing the right FLIP
@@ -68,7 +77,6 @@ public class PlayerMovement : MonoBehaviour {
             topSpeed = 3f;
         }
 
-        
     }
 
     //flips the direction of the sprite depending on which way the player is facing/moving
