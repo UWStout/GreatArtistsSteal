@@ -1,47 +1,47 @@
 fileFormatVersion: 2
-guid: ec069f8c53adb5c4199247597997c7e1
-timeCreated: 1518804336
+guid: 468c977dd2e416848b8978a430678627
+timeCreated: 1518804335
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playerSneak_0
-    21300002: playerSneak_1
-    21300004: playerSneak_2
-    21300006: playerSneak_3
-    21300008: playerSneak_4
-    21300010: playerSneak_5
-    21300012: playerSneak_6
-    21300014: playerSneak_7
-    21300016: playerSneak_8
-    21300018: playerSneak_9
-    21300020: playerSneak_10
-    21300022: playerSneak_11
-    21300024: playerSneak_12
-    21300026: playerSneak_13
-    21300028: playerSneak_14
-    21300030: playerSneak_15
-    21300032: playerSneak_16
-    21300034: playerSneak_17
-    21300036: playerSneak_18
-    21300038: playerSneak_19
-    21300040: playerSneak_20
-    21300042: playerSneak_21
-    21300044: playerSneak_22
-    21300046: playerSneak_23
-    21300048: playerSneak_24
-    21300050: playerSneak_25
-    21300052: playerSneak_26
-    21300054: playerSneak_27
-    21300056: playerSneak_28
-    21300058: playerSneak_29
-    21300060: playerSneak_30
-    21300062: playerSneak_31
-    21300064: playerSneak_32
-    21300066: playerSneak_33
-    21300068: playerSneak_34
-    21300070: playerSneak_35
-    21300072: playerSneak_36
-    21300074: playerSneak_37
+    21300000: playerCaught_0
+    21300002: playerCaught_1
+    21300004: playerCaught_2
+    21300006: playerCaught_3
+    21300008: playerCaught_4
+    21300010: playerCaught_5
+    21300012: playerCaught_6
+    21300014: playerCaught_7
+    21300016: playerCaught_8
+    21300018: playerCaught_9
+    21300020: playerCaught_10
+    21300022: playerCaught_11
+    21300024: playerCaught_12
+    21300026: playerCaught_13
+    21300028: playerCaught_14
+    21300030: playerCaught_15
+    21300032: playerCaught_16
+    21300034: playerCaught_17
+    21300036: playerCaught_18
+    21300038: playerCaught_19
+    21300040: playerCaught_20
+    21300042: playerCaught_21
+    21300044: playerCaught_22
+    21300046: playerCaught_23
+    21300048: playerCaught_24
+    21300050: playerCaught_25
+    21300052: playerCaught_26
+    21300054: playerCaught_27
+    21300056: playerCaught_28
+    21300058: playerCaught_29
+    21300060: playerCaught_30
+    21300062: playerCaught_31
+    21300064: playerCaught_32
+    21300066: playerCaught_33
+    21300068: playerCaught_34
+    21300070: playerCaught_35
+    21300072: playerCaught_36
+    21300074: playerCaught_37
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -138,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerSneak_0
+      name: playerCaught_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,13 +152,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_1
+      name: playerCaught_1
       rect:
         serializedVersion: 2
-        x: 157
+        x: 135
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,13 +166,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_2
+      name: playerCaught_2
       rect:
         serializedVersion: 2
-        x: 314
+        x: 270
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,13 +180,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_3
+      name: playerCaught_3
       rect:
         serializedVersion: 2
-        x: 471
+        x: 405
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,13 +194,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_4
+      name: playerCaught_4
       rect:
         serializedVersion: 2
-        x: 628
+        x: 540
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,13 +208,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_5
+      name: playerCaught_5
       rect:
         serializedVersion: 2
-        x: 785
+        x: 675
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,13 +222,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_6
+      name: playerCaught_6
       rect:
         serializedVersion: 2
-        x: 942
+        x: 810
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,13 +236,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_7
+      name: playerCaught_7
       rect:
         serializedVersion: 2
-        x: 1099
+        x: 945
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,13 +250,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_8
+      name: playerCaught_8
       rect:
         serializedVersion: 2
-        x: 1256
+        x: 1080
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,13 +264,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_9
+      name: playerCaught_9
       rect:
         serializedVersion: 2
-        x: 1413
+        x: 1215
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,13 +278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_10
+      name: playerCaught_10
       rect:
         serializedVersion: 2
-        x: 1570
+        x: 1350
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,13 +292,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_11
+      name: playerCaught_11
       rect:
         serializedVersion: 2
-        x: 1727
+        x: 1485
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,13 +306,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_12
+      name: playerCaught_12
       rect:
         serializedVersion: 2
-        x: 1884
+        x: 1620
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,13 +320,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_13
+      name: playerCaught_13
       rect:
         serializedVersion: 2
-        x: 2041
+        x: 1755
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,13 +334,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_14
+      name: playerCaught_14
       rect:
         serializedVersion: 2
-        x: 2198
+        x: 1890
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,13 +348,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_15
+      name: playerCaught_15
       rect:
         serializedVersion: 2
-        x: 2355
+        x: 2025
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,13 +362,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_16
+      name: playerCaught_16
       rect:
         serializedVersion: 2
-        x: 2512
+        x: 2160
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,13 +376,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_17
+      name: playerCaught_17
       rect:
         serializedVersion: 2
-        x: 2669
+        x: 2295
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -390,13 +390,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_18
+      name: playerCaught_18
       rect:
         serializedVersion: 2
-        x: 2826
+        x: 2430
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,13 +404,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_19
+      name: playerCaught_19
       rect:
         serializedVersion: 2
-        x: 2983
+        x: 2565
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,13 +418,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_20
+      name: playerCaught_20
       rect:
         serializedVersion: 2
-        x: 3140
+        x: 2700
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,13 +432,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_21
+      name: playerCaught_21
       rect:
         serializedVersion: 2
-        x: 3297
+        x: 2835
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,13 +446,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_22
+      name: playerCaught_22
       rect:
         serializedVersion: 2
-        x: 3454
+        x: 2970
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,13 +460,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_23
+      name: playerCaught_23
       rect:
         serializedVersion: 2
-        x: 3611
+        x: 3105
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -474,13 +474,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_24
+      name: playerCaught_24
       rect:
         serializedVersion: 2
-        x: 3768
+        x: 3240
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,13 +488,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_25
+      name: playerCaught_25
       rect:
         serializedVersion: 2
-        x: 3925
+        x: 3375
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,13 +502,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_26
+      name: playerCaught_26
       rect:
         serializedVersion: 2
-        x: 4082
+        x: 3510
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,13 +516,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_27
+      name: playerCaught_27
       rect:
         serializedVersion: 2
-        x: 4239
+        x: 3645
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,13 +530,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_28
+      name: playerCaught_28
       rect:
         serializedVersion: 2
-        x: 4396
+        x: 3780
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,13 +544,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_29
+      name: playerCaught_29
       rect:
         serializedVersion: 2
-        x: 4553
+        x: 3915
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -558,13 +558,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_30
+      name: playerCaught_30
       rect:
         serializedVersion: 2
-        x: 4710
+        x: 4050
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,13 +572,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_31
+      name: playerCaught_31
       rect:
         serializedVersion: 2
-        x: 4867
+        x: 4185
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,13 +586,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_32
+      name: playerCaught_32
       rect:
         serializedVersion: 2
-        x: 5024
+        x: 4320
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -600,13 +600,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_33
+      name: playerCaught_33
       rect:
         serializedVersion: 2
-        x: 5181
+        x: 4455
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,13 +614,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_34
+      name: playerCaught_34
       rect:
         serializedVersion: 2
-        x: 5338
+        x: 4590
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -628,13 +628,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_35
+      name: playerCaught_35
       rect:
         serializedVersion: 2
-        x: 5495
+        x: 4725
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -642,13 +642,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_36
+      name: playerCaught_36
       rect:
         serializedVersion: 2
-        x: 5652
+        x: 4860
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,13 +656,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSneak_37
+      name: playerCaught_37
       rect:
         serializedVersion: 2
-        x: 5809
+        x: 4995
         y: 0
-        width: 157
-        height: 200
+        width: 135
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

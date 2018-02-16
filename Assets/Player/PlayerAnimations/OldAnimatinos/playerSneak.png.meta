@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ec069f8c53adb5c4199247597997c7e1
-timeCreated: 1518804336
+guid: a27c8bcb676721e4eba1e1e1c6776621
+timeCreated: 1518648447
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -36,12 +36,6 @@ TextureImporter:
     21300058: playerSneak_29
     21300060: playerSneak_30
     21300062: playerSneak_31
-    21300064: playerSneak_32
-    21300066: playerSneak_33
-    21300068: playerSneak_34
-    21300070: playerSneak_35
-    21300072: playerSneak_36
-    21300074: playerSneak_37
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -142,9 +136,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 157
-        height: 200
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +149,10 @@ TextureImporter:
       name: playerSneak_1
       rect:
         serializedVersion: 2
-        x: 157
-        y: 0
-        width: 157
-        height: 200
+        x: 146
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +163,10 @@ TextureImporter:
       name: playerSneak_2
       rect:
         serializedVersion: 2
-        x: 314
-        y: 0
-        width: 157
-        height: 200
+        x: 292
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +177,10 @@ TextureImporter:
       name: playerSneak_3
       rect:
         serializedVersion: 2
-        x: 471
-        y: 0
-        width: 157
-        height: 200
+        x: 438
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +191,10 @@ TextureImporter:
       name: playerSneak_4
       rect:
         serializedVersion: 2
-        x: 628
-        y: 0
-        width: 157
-        height: 200
+        x: 584
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +205,10 @@ TextureImporter:
       name: playerSneak_5
       rect:
         serializedVersion: 2
-        x: 785
-        y: 0
-        width: 157
-        height: 200
+        x: 730
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +219,10 @@ TextureImporter:
       name: playerSneak_6
       rect:
         serializedVersion: 2
-        x: 942
-        y: 0
-        width: 157
-        height: 200
+        x: 876
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +233,10 @@ TextureImporter:
       name: playerSneak_7
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 0
-        width: 157
-        height: 200
+        x: 1022
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +247,10 @@ TextureImporter:
       name: playerSneak_8
       rect:
         serializedVersion: 2
-        x: 1256
-        y: 0
-        width: 157
-        height: 200
+        x: 1168
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +261,10 @@ TextureImporter:
       name: playerSneak_9
       rect:
         serializedVersion: 2
-        x: 1413
-        y: 0
-        width: 157
-        height: 200
+        x: 1314
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +275,10 @@ TextureImporter:
       name: playerSneak_10
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 0
-        width: 157
-        height: 200
+        x: 1460
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +289,10 @@ TextureImporter:
       name: playerSneak_11
       rect:
         serializedVersion: 2
-        x: 1727
-        y: 0
-        width: 157
-        height: 200
+        x: 1606
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,10 +303,10 @@ TextureImporter:
       name: playerSneak_12
       rect:
         serializedVersion: 2
-        x: 1884
-        y: 0
-        width: 157
-        height: 200
+        x: 1752
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +317,10 @@ TextureImporter:
       name: playerSneak_13
       rect:
         serializedVersion: 2
-        x: 2041
-        y: 0
-        width: 157
-        height: 200
+        x: 1898
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +331,10 @@ TextureImporter:
       name: playerSneak_14
       rect:
         serializedVersion: 2
-        x: 2198
-        y: 0
-        width: 157
-        height: 200
+        x: 2044
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,10 +345,10 @@ TextureImporter:
       name: playerSneak_15
       rect:
         serializedVersion: 2
-        x: 2355
-        y: 0
-        width: 157
-        height: 200
+        x: 2190
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +359,10 @@ TextureImporter:
       name: playerSneak_16
       rect:
         serializedVersion: 2
-        x: 2512
-        y: 0
-        width: 157
-        height: 200
+        x: 2336
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +373,10 @@ TextureImporter:
       name: playerSneak_17
       rect:
         serializedVersion: 2
-        x: 2669
-        y: 0
-        width: 157
-        height: 200
+        x: 2482
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,10 +387,10 @@ TextureImporter:
       name: playerSneak_18
       rect:
         serializedVersion: 2
-        x: 2826
-        y: 0
-        width: 157
-        height: 200
+        x: 2628
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +401,10 @@ TextureImporter:
       name: playerSneak_19
       rect:
         serializedVersion: 2
-        x: 2983
-        y: 0
-        width: 157
-        height: 200
+        x: 2774
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +415,10 @@ TextureImporter:
       name: playerSneak_20
       rect:
         serializedVersion: 2
-        x: 3140
-        y: 0
-        width: 157
-        height: 200
+        x: 2920
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,10 +429,10 @@ TextureImporter:
       name: playerSneak_21
       rect:
         serializedVersion: 2
-        x: 3297
-        y: 0
-        width: 157
-        height: 200
+        x: 3066
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +443,10 @@ TextureImporter:
       name: playerSneak_22
       rect:
         serializedVersion: 2
-        x: 3454
-        y: 0
-        width: 157
-        height: 200
+        x: 3212
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +457,10 @@ TextureImporter:
       name: playerSneak_23
       rect:
         serializedVersion: 2
-        x: 3611
-        y: 0
-        width: 157
-        height: 200
+        x: 3358
+        y: 187
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,10 +471,10 @@ TextureImporter:
       name: playerSneak_24
       rect:
         serializedVersion: 2
-        x: 3768
+        x: 0
         y: 0
-        width: 157
-        height: 200
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +485,10 @@ TextureImporter:
       name: playerSneak_25
       rect:
         serializedVersion: 2
-        x: 3925
+        x: 146
         y: 0
-        width: 157
-        height: 200
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +499,10 @@ TextureImporter:
       name: playerSneak_26
       rect:
         serializedVersion: 2
-        x: 4082
+        x: 292
         y: 0
-        width: 157
-        height: 200
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,10 +513,10 @@ TextureImporter:
       name: playerSneak_27
       rect:
         serializedVersion: 2
-        x: 4239
+        x: 438
         y: 0
-        width: 157
-        height: 200
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,10 +527,10 @@ TextureImporter:
       name: playerSneak_28
       rect:
         serializedVersion: 2
-        x: 4396
+        x: 584
         y: 0
-        width: 157
-        height: 200
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,10 +541,10 @@ TextureImporter:
       name: playerSneak_29
       rect:
         serializedVersion: 2
-        x: 4553
+        x: 730
         y: 0
-        width: 157
-        height: 200
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,10 +555,10 @@ TextureImporter:
       name: playerSneak_30
       rect:
         serializedVersion: 2
-        x: 4710
+        x: 1022
         y: 0
-        width: 157
-        height: 200
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,94 +569,10 @@ TextureImporter:
       name: playerSneak_31
       rect:
         serializedVersion: 2
-        x: 4867
+        x: 1168
         y: 0
-        width: 157
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerSneak_32
-      rect:
-        serializedVersion: 2
-        x: 5024
-        y: 0
-        width: 157
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerSneak_33
-      rect:
-        serializedVersion: 2
-        x: 5181
-        y: 0
-        width: 157
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerSneak_34
-      rect:
-        serializedVersion: 2
-        x: 5338
-        y: 0
-        width: 157
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerSneak_35
-      rect:
-        serializedVersion: 2
-        x: 5495
-        y: 0
-        width: 157
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerSneak_36
-      rect:
-        serializedVersion: 2
-        x: 5652
-        y: 0
-        width: 157
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerSneak_37
-      rect:
-        serializedVersion: 2
-        x: 5809
-        y: 0
-        width: 157
-        height: 200
+        width: 146
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
