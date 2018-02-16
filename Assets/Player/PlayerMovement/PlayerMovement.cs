@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
     //How fast the player moves (sneaking)
     public float topSpeed = 3f;
+    bool sprint = false;
 
     //determine sprite direction
     bool faceRight = true;
@@ -86,13 +87,15 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            sprint = true;
             topSpeed = 6f;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             topSpeed = 3f;
+            sprint = false;
         }
-
+        anim.SetBool("Sprint", sprint);
     }
 
     //flips the direction of the sprite depending on which way the player is facing/moving
