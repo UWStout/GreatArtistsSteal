@@ -24,11 +24,12 @@ public class PlayerMovement : MonoBehaviour {
     float groundRadius = 0.2f;//how large the circle is when checking distance to ground
     public float jumpForce = 300f;//how high the player can jump
     public LayerMask whatIsGround;//checks which layer is currently considered the ground
+    public float gravityForce = -40f;
 
     //checks if player is next to wall (if player is next to wall disable horizontal input (x-axis))
     bool wallNear = false;//not next to a wall on right side
     public Transform wallCheck;//transform at player sides to check if they are close to a wall
-    float wallRadius = 4f;//how large the circle is when checking distance to wall
+    float wallRadius = 1f;//how large the circle is when checking distance to wall
     public LayerMask whatIsWall;//checks which layer is currently considered a wall
 
     //physics in fixed update
@@ -66,6 +67,10 @@ public class PlayerMovement : MonoBehaviour {
         {
             //adding jumpforce to the y-axis of the rigidBody
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+        }
+        if (!grounded)//adding faster fall speed to character when player is not grounded
+        {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, gravityForce));
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
