@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour {
     //checks if player is next to wall (if player is next to wall disable horizontal input (x-axis))
     bool wallNear = false;//not next to a wall on right side
     public Transform wallCheck;//transform at player sides to check if they are close to a wall
-    float wallRadius = 0.5f;//how large the circle is when checking distance to wall
+    float wallRadius = 4f;//how large the circle is when checking distance to wall
     public LayerMask whatIsWall;//checks which layer is currently considered a wall
 
     //physics in fixed update
@@ -43,10 +43,10 @@ public class PlayerMovement : MonoBehaviour {
         //get movement direction of player
         float move = Input.GetAxis("Horizontal");
         //create movement in the player horizontal direction
-        //if (wallCheck && (Input.GetKeyDown(KeyCode.A)) || (Input.GetKeyDown(KeyCode.D)))
+        //if ((wallCheck == false) && (Input.GetKeyDown(KeyCode.A)) || (Input.GetKeyDown(KeyCode.D)))
         //{
-        GetComponent<Rigidbody2D>().velocity = new Vector2(move * topSpeed, GetComponent<Rigidbody2D>().velocity.y);
-        anim.SetFloat("Speed", Mathf.Abs(move));
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move * topSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            anim.SetFloat("Speed", Mathf.Abs(move));
         //}
 
         //if facing negative direction and not facing the right FLIP
