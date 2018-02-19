@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GuardMovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public LayerMask guardMask;//layermask of guard so the guard cannot colide with itself
+    Rigidbody guardBody;//rigidbody of the guard
+    Transform guardTrans;
+
+    public void Start()
+    {
+        guardTrans = this.transform;
+        
+
+    }
 }
