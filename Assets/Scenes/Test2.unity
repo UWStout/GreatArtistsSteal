@@ -377,6 +377,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18fcd494ab71841d695135246693eb3a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &550156724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 550156725}
+  m_Layer: 0
+  m_Name: WallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &550156725
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550156724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 787541771}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &613873400
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,35 +443,14 @@ GameObject:
   - component: {fileID: 787541771}
   - component: {fileID: 787541770}
   - component: {fileID: 787541769}
-  - component: {fileID: 787541768}
   - component: {fileID: 787541772}
   m_Layer: 0
-  m_Name: gaurdNonfinalChaseBig_000
+  m_Name: Guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &787541768
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 787541767}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &787541769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -522,7 +529,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.88, y: 0.85, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_Children: []
+  m_Children:
+  - {fileID: 550156725}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -537,9 +545,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b764e3952fce094cb5d7163547c4653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guardMask:
+  whatIsGuardWall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
+  wallNear: {fileID: 550156725}
+  walkSpeed: 2
 --- !u!1001 &1030468215
 Prefab:
   m_ObjectHideFlags: 0
@@ -629,7 +639,7 @@ GameObject:
   - component: {fileID: 1059213980}
   - component: {fileID: 1059213979}
   - component: {fileID: 1059213978}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: SideWallL (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
