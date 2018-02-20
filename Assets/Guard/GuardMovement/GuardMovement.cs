@@ -26,13 +26,13 @@ public class GuardMovement : MonoBehaviour {
     {
         if (wallCheck && (moveCount == 0))
         {
-            moveCount = 1;
             moveRight();
         }
-        else
+        else if ((wallCheck == true) && (moveCount ==1))
         {
-            moveCount = 0;
             moveLeft();
+            moveCount = 0;
+
         }
         
     }
