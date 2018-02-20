@@ -12,14 +12,10 @@ public class GuardMovement : MonoBehaviour {
     public LayerMask whatIsGuardWall;//determines what is considered a wall for the guard
     float wallRadius = 1.6f;
     public Transform wallNear;
+    int moveCount = 0;
 
     //guard move speed
-    public float walkSpeed = 2f;
-
-    public void Start()
-    {
-        
-    }
+    public float walkSpeed = 3f;
 
     private void FixedUpdate()
     {
@@ -28,25 +24,25 @@ public class GuardMovement : MonoBehaviour {
 
     private void Update()
     {
-        if (wallCheck)
+        if (wallCheck && (moveCount == 0))
         {
-            transform.position += transform.right * walkSpeed * Time.deltaTime;
-        } else if (!wallCheck)
+            moveCount = 1;
+            moveRight();
+        }
+        else
         {
-            transform.position += -transform.right * walkSpeed * Time.deltaTime;
+            moveCount = 0;
+            moveLeft();
         }
         
     }
 
-    void Flip()//flips sprite depending on movement
+    public void moveLeft()
     {
-        //face the opposite direction
-        faceRight = !faceRight;
-        //get local scale
-        Vector3 theScale = transform.localScale;
-        //flip the sprite on the x axis
-        theScale.x *= -1;
-        //apply the flip to the local scale of the player
-        transform.localScale = theScale;
+        transform.position += transform.right * walkSpeed * Time.deltaTime;
+    }
+    public void moveRight()
+    {
+        transform.position += -transform.right * walkSpeed * Time.deltaTime;
     }
 }
