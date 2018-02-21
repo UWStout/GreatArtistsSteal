@@ -12,7 +12,7 @@ public class GuardMovement : MonoBehaviour {
     public LayerMask whatIsGuardWall;//determines what is considered a wall for the guard
     float wallRadius = 1.6f;
     public Transform wallNear;
-    int moveCount = 0;
+    bool wallNum = false;
 
     //guard move speed
     public float walkSpeed = 3f;
@@ -24,15 +24,14 @@ public class GuardMovement : MonoBehaviour {
 
     private void Update()
     {
-        if (wallCheck && (moveCount == 0))
-        {
-            moveRight();
-        }
-        else if ((wallCheck == true) && (moveCount ==1))
+        if (wallCheck == false && wallNum == false)
         {
             moveLeft();
-            moveCount = 0;
-
+        }
+        else if ((wallCheck == true))
+        {
+            moveRight();
+            wallNum = true;
         }
         
     }
