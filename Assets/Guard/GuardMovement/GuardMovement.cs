@@ -11,37 +11,49 @@ public class GuardMovement : MonoBehaviour {
     bool wallCheckL = false;
     bool wallCheckR = false;
     public LayerMask whatIsGuardWall;//determines what is considered a wall for the guard
-    float wallRadius = 0.2f;
+    float wallRadius = .2f;
     public Transform wallNearL;
     public Transform wallNearR;
-    bool movingLeft = true;
+    bool movingRight = true;
 
+    bool Patrolling = true;
+
+    //animator
+    Animator anim;
 
     //guard move speed
     public float walkSpeed = 3f;
+
+    public void Start()
+    {
+        anim = GetComponent<Animator>();
+        anim.SetBool( "Patrolling",Patrolling);
+    }
 
     private void FixedUpdate()
     {
         wallCheckL = Physics2D.OverlapCircle(wallNearR.position, wallRadius, whatIsGuardWall);
         wallCheckR = Physics2D.OverlapCircle(wallNearL.position, wallRadius, whatIsGuardWall);
 
-        switch (movingLeft)
+        switch (movingRight)
         {
             case true:
-                moveLeft();
-                if (wallCheckL)
+                moveRight();
+                if (wallCheckR)
                 {
-                    movingLeft = false;
-                    Debug.Log("Left Wall Check");
+                    Flip();
+                    movingRight = false;
+                    faceRight = false;
                 }
                 break;
 
             case false:
-                moveRight();
-                if (wallCheckR)
+                moveLeft();
+                if (wallCheckL)
                 {
-                    movingLeft = true;
-                    Debug.Log("Right Wall Check");
+                    Flip();
+                    movingRight = true;
+                    faceRight = true;
                 }
                 break;
         }
@@ -57,9 +69,32 @@ public class GuardMovement : MonoBehaviour {
     public void moveLeft()
     {
         transform.position += transform.right * walkSpeed * Time.deltaTime;
+        Patrolling = true;
     }
     public void moveRight()
     {
         transform.position += -transform.right * walkSpeed * Time.deltaTime;
+        Patrolling = true;
+    }
+
+    //flips the direction of the sprite depending on which way the player is facing/moving
+    void Flip()
+    {
+        Vector3 theScale = transform.localScale;
+
+        theScale.x = -theScale.x;
+
+        transform.localScale = theScale;
+
+
+        /*/face the opposite direction
+        faceRight = !faceRight;
+        //get local scale
+        Vector3 theScale = transform.localScale;
+        //flip the sprite on the x axis
+        theScale.x *= -1;
+        //apply the flip to the local scale of the player
+        transform.localScale = theScale;
+        //*/
     }
 }
