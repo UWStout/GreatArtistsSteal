@@ -62,8 +62,6 @@ public class GuardMovement : MonoBehaviour {
     private void Update()
     {
 
-        
-
     }
 
     public void moveLeft()
