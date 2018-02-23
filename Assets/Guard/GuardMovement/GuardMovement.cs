@@ -54,6 +54,7 @@ public class GuardMovement : MonoBehaviour {
                     Flip();
                     movingRight = true;
                     faceRight = true;
+
                 }
                 break;
         }
@@ -67,6 +68,7 @@ public class GuardMovement : MonoBehaviour {
     public void moveLeft()
     {
         transform.position += transform.right * walkSpeed * Time.deltaTime;
+        
         Patrolling = true;
     }
     public void moveRight()
@@ -78,21 +80,19 @@ public class GuardMovement : MonoBehaviour {
     //flips the direction of the sprite depending on which way the player is facing/moving
     void Flip()
     {
-        Vector3 theScale = transform.localScale;
+        
 
-        theScale.x = -theScale.x;
+        SpriteRenderer guardSprite = gameObject.GetComponent<SpriteRenderer>();
+        
 
-        transform.localScale = theScale;
+        if (guardSprite.flipX == true)
+        {
+            guardSprite.flipX = false;
+        }
+        else
+        {
+            guardSprite.flipX = true;
+        }
 
-
-        /*/face the opposite direction
-        faceRight = !faceRight;
-        //get local scale
-        Vector3 theScale = transform.localScale;
-        //flip the sprite on the x axis
-        theScale.x *= -1;
-        //apply the flip to the local scale of the player
-        transform.localScale = theScale;
-        //*/
     }
 }

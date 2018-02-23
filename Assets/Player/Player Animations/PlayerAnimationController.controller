@@ -315,7 +315,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 87266bf06b3ab7040a580042158fca54, type: 2}
+  m_Motion: {fileID: 7400000, guid: ae39d262456d6fd48a0495b906ed8ac3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -342,7 +342,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ca0e83275136e65488132e8c73c3464a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 069442f8d4d05964ea8fb76c4e427990, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -355,7 +355,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: PlayerIdleAnimation
-  m_Speed: 1
+  m_Speed: 1.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101977578757107674}
@@ -369,7 +369,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 81d360c05524985438910f060f04de5d, type: 2}
+  m_Motion: {fileID: 7400000, guid: ec6717c778ca003428bcc04cc3df82e5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
