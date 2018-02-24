@@ -847,7 +847,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198571182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.02, y: 4.34, z: -12}
+  m_LocalPosition: {x: 12.26, y: 4.3399997, z: -12}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -885,7 +885,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 61
+  field of view: 87
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1884,9 +1884,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: -0.39}
+  m_Offset: {x: 0.05, y: -0.36}
   serializedVersion: 2
-  m_Radius: 0.57
+  m_Radius: 0.59
 --- !u!61 &1986646122
 BoxCollider2D:
   m_ObjectHideFlags: 0
