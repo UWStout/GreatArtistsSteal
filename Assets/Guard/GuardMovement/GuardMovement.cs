@@ -49,7 +49,7 @@ public class GuardMovement : MonoBehaviour {
         wallCheckL = Physics2D.OverlapCircle(wallNearR.position, wallRadius, whatIsGuardWall);
         wallCheckR = Physics2D.OverlapCircle(wallNearL.position, wallRadius, whatIsGuardWall);
 
-        if(Patrolling == true)
+        if(Patrolling == true && Incapacitated == false)
         {
             switch (movingRight)
             {
@@ -73,13 +73,13 @@ public class GuardMovement : MonoBehaviour {
                     }
                     break;
             }
-        }else if (Incapacitated == true)
+        }else if (Incapacitated == true && Patrolling == false)
         {
             Patrolling = false;
         }
+        anim.SetBool("Incapacitated", Incapacitated);
 
-        
-        
+
     }
 
     private void Update()
@@ -133,11 +133,12 @@ public class GuardMovement : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if (collision.gameObject.tag == ("Player"))
         {
-            anim.SetBool("Incapacitated", Incapacitated);
             Debug.Log("Guard incapacitated");
             Incapacitated = true;
-        }
+            //anim.SetTrigger("IncapacitatedOnce");
+        }      
     }
 }
