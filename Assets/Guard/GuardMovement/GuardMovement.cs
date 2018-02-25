@@ -27,6 +27,7 @@ public class GuardMovement : MonoBehaviour {
     bool playerCaught = false;
     bool Incapacitated = false;
 
+
     //animator
     Animator anim;
 
@@ -139,6 +140,10 @@ public class GuardMovement : MonoBehaviour {
             Debug.Log("Guard incapacitated");
             Incapacitated = true;
             //anim.SetTrigger("IncapacitatedOnce");
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            
+            //moves the guard back in space to allow the player sprite to not clip
+            gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - 1, 1);
         }      
     }
 }
