@@ -25,6 +25,7 @@ public class GuardMovement : MonoBehaviour {
 
     bool Patrolling = true;
     bool playerCaught = false;
+    bool Incapacitated = false;
 
     //animator
     Animator anim;
@@ -41,6 +42,7 @@ public class GuardMovement : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
         anim.SetBool( "Patrolling",Patrolling);
+        anim.SetBool("Incapacitated", Incapacitated);
     }
 
     private void FixedUpdate()
@@ -72,7 +74,12 @@ public class GuardMovement : MonoBehaviour {
                     }
                     break;
             }
+        }else if (Incapacitated == true)
+        {
+            Patrolling = false;
         }
+
+        
         
     }
 
@@ -125,4 +132,12 @@ public class GuardMovement : MonoBehaviour {
 
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("Player"))
+        {
+            Debug.Log("Guard incapacitated");
+            Incapacitated = true;
+        }
+    }
 }

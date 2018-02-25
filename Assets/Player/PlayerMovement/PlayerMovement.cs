@@ -111,4 +111,5 @@ public class PlayerMovement : MonoBehaviour {
         //apply the flip to the local scale of the player
         transform.localScale = theScale;
     }
+
 }
