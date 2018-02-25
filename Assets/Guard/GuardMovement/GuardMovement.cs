@@ -42,7 +42,6 @@ public class GuardMovement : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
         anim.SetBool( "Patrolling",Patrolling);
-        anim.SetBool("Incapacitated", Incapacitated);
     }
 
     private void FixedUpdate()
@@ -136,6 +135,7 @@ public class GuardMovement : MonoBehaviour {
     {
         if (collision.gameObject.tag == ("Player"))
         {
+            anim.SetBool("Incapacitated", Incapacitated);
             Debug.Log("Guard incapacitated");
             Incapacitated = true;
         }
