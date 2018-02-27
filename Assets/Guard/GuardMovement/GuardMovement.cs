@@ -32,6 +32,10 @@ public class GuardMovement : MonoBehaviour {
     public Transform chasingTrigger;
     public Transform caughtTrigger;
 
+    //player componenets to be called from script
+    public Transform player;
+    Animator otherAnimator;
+
     //animator
     Animator anim;
 
@@ -43,6 +47,8 @@ public class GuardMovement : MonoBehaviour {
         incapacitatedTrigger = this.gameObject.transform.GetChild(4);
         caughtTrigger = this.gameObject.transform.GetChild(2);
         chasingTrigger = this.gameObject.transform.GetChild(3);
+        player = GameObject.Find("Player").transform;
+        otherAnimator = player.GetComponent<Animator>();
     }
 
     public void Start()
@@ -87,13 +93,22 @@ public class GuardMovement : MonoBehaviour {
         }
         else if (Incapacitated == false && chasing == true)
         {
-            
+            if (player.transform.localPosition.x > transform.localPosition.x)
+            {      
+                transform.position += transform.right * (walkSpeed * 2) * Time.deltaTime;  
+            }
+            else if (player.transform.localPosition.x < transform.localPosition.x)
+            {
+                transform.position += -transform.right * (walkSpeed * 2) * Time.deltaTime;    
+            }
         }
         else if (Incapacitated == false && playerCaught == true)
         {
-
+            otherAnimator.SetBool("PlayerCaught", playerCaught);
         }
         anim.SetBool("Incapacitated", Incapacitated);
+        anim.SetBool("Chasing", chasing);
+        
 
 
     }
