@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GuardCaught : MonoBehaviour {
 
-    bool guardCaught = false;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -18,10 +16,16 @@ public class GuardCaught : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        GuardMovement caught = gameObject.GetComponentInParent<GuardMovement>();
         if (collision.gameObject.tag == ("Player"))
         {
-            Debug.Log("CaughtPlayer");
-            guardCaught = true;
+            caught.GuardCuaght();
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
     }
 }

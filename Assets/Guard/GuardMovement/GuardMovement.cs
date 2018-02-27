@@ -26,6 +26,7 @@ public class GuardMovement : MonoBehaviour {
     bool Patrolling = true;
     bool playerCaught = false;
     bool Incapacitated = false;
+    bool chasing = false;
 
     public Transform incapacitatedTrigger;
     public Transform chasingTrigger;
@@ -55,7 +56,7 @@ public class GuardMovement : MonoBehaviour {
         wallCheckL = Physics2D.OverlapCircle(wallNearR.position, wallRadius, whatIsGuardWall);
         wallCheckR = Physics2D.OverlapCircle(wallNearL.position, wallRadius, whatIsGuardWall);
 
-        if(Patrolling == true && Incapacitated == false)
+        if(Patrolling == true && Incapacitated == false && chasing == false && playerCaught == false)
         {
             switch (movingRight)
             {
@@ -79,9 +80,18 @@ public class GuardMovement : MonoBehaviour {
                     }
                     break;
             }
-        }else if (Incapacitated == true && Patrolling == false)
+        }
+        else if (Incapacitated == true && Patrolling == false)
         {
             Patrolling = false;
+        }
+        else if (Incapacitated == false && chasing == true)
+        {
+            
+        }
+        else if (Incapacitated == false && playerCaught == true)
+        {
+
         }
         anim.SetBool("Incapacitated", Incapacitated);
 
@@ -137,7 +147,7 @@ public class GuardMovement : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == ("Player"))
         {
@@ -149,15 +159,17 @@ public class GuardMovement : MonoBehaviour {
             //moves the guard back in space to allow the player sprite to not clip
             //gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - 1, 1);
         }
-    }
+    }*/
 
     public void GuardChasing()
     {
-
+        Debug.Log("GuardChasing");
+        chasing = true;
     }
     public void GuardCuaght()
     {
-
+        Debug.Log("GuardCaught");
+        playerCaught = true;
     }
     public void GuardIncapacitated()
     {

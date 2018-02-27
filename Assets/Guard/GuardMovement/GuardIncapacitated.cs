@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GuardIncapacitated : MonoBehaviour {
 
-    bool guardIncapacitated = false;
-
     // Use this for initialization
     void Start () {
         
@@ -25,5 +23,10 @@ public class GuardIncapacitated : MonoBehaviour {
         {
             incapacitated.GuardIncapacitated();
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
     }
 }

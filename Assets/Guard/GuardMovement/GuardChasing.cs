@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GuardChasing : MonoBehaviour {
 
-    bool guardChasing = false;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -18,10 +16,16 @@ public class GuardChasing : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        GuardMovement chasing = gameObject.GetComponentInParent<GuardMovement>();
+
         if (collision.gameObject.tag == ("Player"))
         {
-            Debug.Log("ChasingPlayer");
-            guardChasing = true;
+            chasing.GuardChasing();
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
     }
 }
