@@ -27,6 +27,9 @@ public class GuardMovement : MonoBehaviour {
     bool playerCaught = false;
     bool Incapacitated = false;
 
+    public Transform incapacitatedTrigger;
+    public Transform chasingTrigger;
+    public Transform caughtTrigger;
 
     //animator
     Animator anim;
@@ -36,7 +39,9 @@ public class GuardMovement : MonoBehaviour {
 
     private void Awake()
     {
-        
+        incapacitatedTrigger = this.gameObject.transform.GetChild(4);
+        caughtTrigger = this.gameObject.transform.GetChild(2);
+        chasingTrigger = this.gameObject.transform.GetChild(3);
     }
 
     public void Start()
@@ -132,19 +137,36 @@ public class GuardMovement : MonoBehaviour {
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.gameObject.tag == ("Player"))
         {
             Debug.Log("Guard incapacitated");
             Incapacitated = true;
             //anim.SetTrigger("IncapacitatedOnce");
             gameObject.GetComponent<Collider2D>().enabled = false;
-            
+
             //moves the guard back in space to allow the player sprite to not clip
             //gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - 1, 1);
-        }      
+        }
     }
 
+    public void GuardChasing()
+    {
+
+    }
+    public void GuardCuaght()
+    {
+
+    }
+    public void GuardIncapacitated()
+    {
+        Debug.Log("Guard incapacitated");
+        Incapacitated = true;
+        //anim.SetTrigger("IncapacitatedOnce");
+        gameObject.GetComponent<Collider2D>().enabled = false;
+
+        //moves the guard back in space to allow the player sprite to not clip
+        //gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - 1, 1);
+    }
 }
