@@ -27,6 +27,7 @@ public class GuardMovement : MonoBehaviour {
     bool playerCaught = false;
     bool Incapacitated = false;
     bool chasing = false;
+    bool caught = false;
 
     public Transform incapacitatedTrigger;
     public Transform chasingTrigger;
@@ -186,9 +187,11 @@ public class GuardMovement : MonoBehaviour {
     public void GuardCuaght()
     {
         chasing = false;
+        caught = true;
         Debug.Log("GuardCaught");
         playerCaught = true;
         otherAnimator.GetComponent<Animator>().SetTrigger("Caught");
+        anim.SetBool("playerCaught", caught);
     }
     public void GuardIncapacitated()
     {
