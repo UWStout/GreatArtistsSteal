@@ -35,6 +35,8 @@ public class GuardMovement : MonoBehaviour {
     //player componenets to be called from script
     public Transform player;
     Animator otherAnimator;
+    public Transform playerObject;
+    public GameObject otherObject;
 
     //animator
     Animator anim;
@@ -48,7 +50,8 @@ public class GuardMovement : MonoBehaviour {
         caughtTrigger = this.gameObject.transform.GetChild(2);
         chasingTrigger = this.gameObject.transform.GetChild(3);
         player = GameObject.Find("Player").transform;
-        otherAnimator = player.GetComponent<Animator>();
+        
+        otherAnimator = otherObject.GetComponent<Animator>();
     }
 
     public void Start()
@@ -108,8 +111,6 @@ public class GuardMovement : MonoBehaviour {
         }
         anim.SetBool("Incapacitated", Incapacitated);
         anim.SetBool("Chasing", chasing);
-        
-
 
     }
 
@@ -131,6 +132,7 @@ public class GuardMovement : MonoBehaviour {
         }
 
         anim.SetBool("Caught", playerCaught);*/
+
     }
 
     //movement of the guard position
@@ -183,9 +185,10 @@ public class GuardMovement : MonoBehaviour {
     }
     public void GuardCuaght()
     {
+        chasing = false;
         Debug.Log("GuardCaught");
         playerCaught = true;
-        player.GetComponent<Animator>().SetTrigger("Caught");
+        otherAnimator.GetComponent<Animator>().SetTrigger("Caught");
     }
     public void GuardIncapacitated()
     {
