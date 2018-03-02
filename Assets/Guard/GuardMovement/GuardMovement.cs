@@ -185,6 +185,7 @@ public class GuardMovement : MonoBehaviour {
     {
         Debug.Log("GuardCaught");
         playerCaught = true;
+        player.GetComponent<Animator>().SetTrigger("Caught");
     }
     public void GuardIncapacitated()
     {
