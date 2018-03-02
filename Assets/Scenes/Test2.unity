@@ -606,6 +606,8 @@ MonoBehaviour:
   chasingTrigger: {fileID: 1987399994}
   caughtTrigger: {fileID: 1918815995}
   player: {fileID: 1986646118}
+  playerObject: {fileID: 1986646118}
+  otherObject: {fileID: 1986646116}
   walkSpeed: 3
 --- !u!61 &787541773
 BoxCollider2D:
