@@ -10,6 +10,7 @@ public class GuardMovement : MonoBehaviour {
     public Transform originPoint;
     private Vector2 direction = new Vector2(-1, 0);*/
 
+    private float guardScale = 0.8f;
 
     //determine sprite direction
     bool faceRight = true;
@@ -193,6 +194,16 @@ public class GuardMovement : MonoBehaviour {
     {
         chasing = false;
         caught = true;
+
+        if (player.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
+        }
+        else if (player.position.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(guardScale, guardScale, guardScale);
+        }
+
         Debug.Log("GuardCaught");
         playerCaught = true;
         otherAnimator.GetComponent<Animator>().SetTrigger("Caught");
