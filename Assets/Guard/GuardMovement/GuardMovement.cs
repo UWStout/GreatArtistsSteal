@@ -75,6 +75,7 @@ public class GuardMovement : MonoBehaviour {
                     if (wallCheckR)
                     {
                         Flip();
+                        //ChasingTriggerLocation();
                         movingRight = false;
                         faceRight = false;
                     }
@@ -85,6 +86,7 @@ public class GuardMovement : MonoBehaviour {
                     if (wallCheckL)
                     {
                         Flip();
+                        //ChasingTriggerLocation();
                         movingRight = true;
                         faceRight = true;
                     }
@@ -184,6 +186,11 @@ public class GuardMovement : MonoBehaviour {
         Debug.Log("GuardChasing");
         chasing = true;
     }
+    public void StopGuardChasing()
+    {
+        Debug.Log("GuardStopChasing");
+        chasing = false;
+    }
     public void GuardCuaght()
     {
         chasing = false;
@@ -204,4 +211,9 @@ public class GuardMovement : MonoBehaviour {
         //gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - 1, 1);
 
     }
+
+    /*public void ChasingTriggerLocation()
+    {
+        chasingTrigger.position *= -1;
+    }*/
 }

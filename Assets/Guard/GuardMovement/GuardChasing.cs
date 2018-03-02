@@ -26,7 +26,7 @@ public class GuardChasing : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        GuardMovement chasing = gameObject.GetComponentInParent<GuardMovement>();
-        
+        GuardMovement stopChasing = gameObject.GetComponentInParent<GuardMovement>();
+        stopChasing.StopGuardChasing();
     }
 }
