@@ -202,5 +202,10 @@ public class GuardMovement : MonoBehaviour {
 
         //moves the guard back in space to allow the player sprite to not clip
         //gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - 1, 1);
+
+        foreach (Transform child in transform)
+        {
+
+        }
     }
 }
