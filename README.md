@@ -1,4 +1,4 @@
-# Great Artists Steam
+# Great Artists Steal
 #### A student game from GDD 325, Spring 2018 at UW Stout
 
 # Description
