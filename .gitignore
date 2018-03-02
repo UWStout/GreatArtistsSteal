@@ -1,9 +1,19 @@
+# Unity32 Generated content
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+
+# Visual Studio Code cache directory
+/.vscode/
+
+# Special VS Code files we DON'T want ignored
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -32,3 +42,54 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Windows: thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Windows: Dump file
+*.stackdump
+
+# Windows: Folder config file
+[Dd]esktop.ini
+
+# Windows: Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows: Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows: shortcuts
+*.lnk
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows:Icon must end with two \r
+Icon
+
+
+# MacOS: Thumbnails
+._*
+
+# MacOS: Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# MacOS: Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
