@@ -44,7 +44,7 @@ public class GuardMovement : MonoBehaviour {
     Animator anim;
 
     //guard move speed
-    public float walkSpeed = 3f;
+    public float walkSpeed = 4f;
 
     private void Awake()
     {
