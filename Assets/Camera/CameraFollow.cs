@@ -9,6 +9,7 @@ public class CameraFollow : MonoBehaviour {
 
     public GameObject playerPosition;
     public GameObject guardPosition;
+    public float distance;
 
 	
 	// Update is called once per frame
@@ -18,6 +19,8 @@ public class CameraFollow : MonoBehaviour {
         position.x = player.transform.position.x;
         position.y = cameraHeight;
         transform.position = position;
+
+        //distance = Vector3.Distance(playerPosition.transform.position.x, guardPosition.transform.position.x);
 
         /*if (playerPosition.transform.position.x < guardPosition.transform.position.x + 20)
         {
