@@ -5,20 +5,21 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 
     public Transform player;
-    float cameraHeight = -3f;
+    float cameraHeight = -5f;
 
     public GameObject playerPosition;
     public GameObject guardPosition;
     public float distance;
 
-	
+    public Transform camera;
+
 	// Update is called once per frame
 	void Update () {
 
         Vector3 position = transform.position;
         position.x = player.transform.position.x;
         position.y = cameraHeight;
-        transform.position = position;
+        transform.position = position;   
 
         //distance = Vector3.Distance(playerPosition.transform.position.x, guardPosition.transform.position.x);
 
@@ -31,4 +32,16 @@ public class CameraFollow : MonoBehaviour {
             position.x = player.transform.position.x - 5;
         }*/
 	}
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == ("leftWall"))
+        {
+            Debug.Log("left wall hit");
+            Vector3 position2 = transform.position;
+            position2.x = player.transform.position.x - 100;
+            position2.y = cameraHeight;
+            transform.position = position2;
+        }
+    }*/
 }
