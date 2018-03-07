@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelOneGen : MonoBehaviour {
-private float offsetX = 0f;
-    private float offsetY = 0f;
+    private int offsetX = 0;
+    private int offsetY = 0;
     private int maxX = 7;
     private int maxY = 10;
 
@@ -36,6 +36,8 @@ private float offsetX = 0f;
     public GameObject NormalStairsDown;
     public GameObject NormalStairsUp;
 
+    public GameObject TREASUREROOM;
+
 
     // Use this for initialization
     void Start()
@@ -55,8 +57,11 @@ private float offsetX = 0f;
 
         
 
-//* Randomizing the Normal Rooms *//
+
+
 int prev = -1;
+
+//* Randomizing the Normal Rooms *//
 for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
@@ -140,6 +145,8 @@ for (int x = maxX-1; x >= 0; x--)
 
 		}
 
+
+
 // Placing the Shells
 
 for (int x = maxX-1; x >= 0; x--)
@@ -152,12 +159,12 @@ for (int x = maxX-1; x >= 0; x--)
 					Instantiate(LeftShell, offset, Quaternion.identity);
 					offsetY += 24;
 				}
-				else if(level[x,y] == 1 || level[x,y] >= 10 && level[x,y] <=24)
+				else if(level[x,y] == 1 ||level[x,y] == 8 || level[x,y]== 9 || level[x,y] >= 10 && level[x,y] <= 24)
 				{
                     Instantiate(NormalShell, offset, Quaternion.identity);
                     offsetY += 24;
 				}
-                else if(level[x,y]==6 || level[x,y] == 5 || level[x,y] == 6){
+                else if(level[x,y]== 6 || level[x,y] == 5 || level[x,y] == 7){
                     Instantiate(RightShell, offset, Quaternion.identity);
                     offsetY += 24;
                 }
@@ -168,6 +175,20 @@ for (int x = maxX-1; x >= 0; x--)
             offsetX += 9;
 		}
 
+// Finding the index of the treasure Room and
+// making sure it is not supposed to be an empty Room or stair room
+
+int randX = Random.Range(0,maxY);
+int randY = Random.Range(5,6);
+if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2  ){
+    while(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2){
+        randX = Random.Range(0,maxY);
+        randY = Random.Range(maxX-1,maxX);
+        if(level[randX, randY] == 1 ||  level[randX,randY] == 5 ||  level[randX,randY] == 2){
+            level[randX,randY] = 50;
+        }
+    }
+}
 
 //*Placing The Rooms */
         for (int x = maxX-1; x >= 0; x--)
@@ -177,7 +198,7 @@ for (int x = maxX-1; x >= 0; x--)
                 Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 //Places NormalRooms
-                if (level[x, y] == 1)
+                if (level[x,y] == 1 ||level[x,y] == 8 || level[x,y]== 9 || level[x,y] >= 10 && level[x,y] <= 24)
                 {
                     //Figures a random int for a random room to be placed
                     int rand = Random.Range(1, 4);
@@ -197,57 +218,61 @@ for (int x = maxX-1; x >= 0; x--)
                         Instantiate(NormalRoom4, offset, Quaternion.identity);
                     }
 
-                    offsetY += 20;
+                    offsetY += 24;
                 }
                 //Right Rooms
                 else if (level[x, y] == 2)
                 {
                     Instantiate(RightRoom, offset, Quaternion.identity);
-                    offsetY += 20;
+                    offsetY += 24;
                 }
                 //Right Stairs Up
                 else if (level[x, y] == 3)
                 {
                     Instantiate(RightStairsUp, offset, Quaternion.identity);
-                    offsetY += 20;
+                    offsetY += 24;
                 }
                 //Right Stairs Down
                 else if (level[x, y] == 4)
                 {
                     Instantiate(RightStairsDown, offset, Quaternion.identity);
-                    offsetY += 20;
+                    offsetY += 24;
                 }
                 //Left Rooms
                 else if (level[x, y] == 5)
                 {
                     Instantiate(LeftRoom, offset, Quaternion.identity);
-                    offsetY += 20;
+                    offsetY += 24;
                 }
                 //Left Stairs Up
                 else if (level[x, y] == 6)
                 {
                     Instantiate(LeftStairsUp, offset, Quaternion.identity);
-                    offsetY += 20;
+                    offsetY += 24;
                 }
                 //Left Stairs Down
                 else if (level[x, y] == 7)
                 {
                     Instantiate(LeftStairsDown, offset, Quaternion.identity);
-                    offsetY += 20;
+                    offsetY += 24;
                 }
                 //Normal Stairs Up
                 else if (level[x, y] == 8)
                 {
                     Instantiate(NormalStairsUp, offset, Quaternion.identity);
-                    offsetY += 20;
+                    offsetY += 24;
                 }
                 //Normal Stairs Down
                 else if (level[x, y] == 9)
                 {
                     Instantiate(NormalStairsDown, offset, Quaternion.identity);
-                    offsetY += 20;
+                    offsetY += 24;
                 }
-                else { offsetY += 20; }
+                else if(level[x,y]== 50){
+                    Instantiate(TREASUREROOM, offset, Quaternion.identity);
+                    offsetY += 24;
+                }
+                else { offsetY += 24; }
 
 
                 
