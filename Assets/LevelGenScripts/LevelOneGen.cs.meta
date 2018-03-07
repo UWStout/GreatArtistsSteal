@@ -5,7 +5,36 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - LeftShell: {fileID: 1845198780279042, guid: 8afd8785c1f07674690085ffa734027a,
+      type: 2}
+  - RightShell: {fileID: 1783036735320936, guid: 35c3ae14e31f6a84b8c45f39e8c39739,
+      type: 2}
+  - NormalShell: {fileID: 1193216918536300, guid: 5ce328c831b30ca48bd61594c97bc3f5,
+      type: 2}
+  - NormalRoom1: {instanceID: 0}
+  - NormalRoom2: {instanceID: 0}
+  - NormalRoom3: {instanceID: 0}
+  - NormalRoom4: {instanceID: 0}
+  - NormalRoom5: {instanceID: 0}
+  - NormalRoom6: {instanceID: 0}
+  - NormalRoom7: {instanceID: 0}
+  - NormalRoom8: {instanceID: 0}
+  - NormalRoom9: {instanceID: 0}
+  - NormalRoom10: {instanceID: 0}
+  - NormalRoom11: {instanceID: 0}
+  - NormalRoom12: {instanceID: 0}
+  - NormalRoom13: {instanceID: 0}
+  - NormalRoom14: {instanceID: 0}
+  - NormalRoom15: {instanceID: 0}
+  - LeftRoom: {instanceID: 0}
+  - RightRoom: {instanceID: 0}
+  - LeftStairsDown: {instanceID: 0}
+  - LeftStairsUp: {instanceID: 0}
+  - RightStairsDown: {instanceID: 0}
+  - RightStairsUp: {instanceID: 0}
+  - NormalStairsDown: {instanceID: 0}
+  - NormalStairsUp: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

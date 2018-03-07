@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelOneGen : MonoBehaviour {
-private int offsetX = 0;
-    private int offsetY = 0;
+private float offsetX = 0f;
+    private float offsetY = 0f;
     private int maxX = 7;
     private int maxY = 10;
 
@@ -146,14 +146,22 @@ for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
             {
+                Debug.Log(x + " " +y);
 				Vector3 offset = new Vector2(offsetY,offsetX);
 				if(level[x,y] == 2 || level[x,y] == 3 || level[x,y] == 4){
-					Instantiate(RightShell, offset, Quaternion.identity);
-					offsetY += 20;
+					Instantiate(LeftShell, offset, Quaternion.identity);
+					offsetY += 24;
 				}
-				else if(level[x,y] == 1)
+				else if(level[x,y] == 1 || level[x,y] >= 10 && level[x,y] <=24)
 				{
+                    Instantiate(NormalShell, offset, Quaternion.identity);
+                    offsetY += 24;
 				}
+                else if(level[x,y]==6 || level[x,y] == 5 || level[x,y] == 6){
+                    Instantiate(RightShell, offset, Quaternion.identity);
+                    offsetY += 24;
+                }
+                else{offsetY += 24;}
 
 			}
 			offsetY = 0;
