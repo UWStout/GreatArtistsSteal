@@ -201,21 +201,54 @@ if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] !
                 if (level[x,y] == 1 ||level[x,y] == 8 || level[x,y]== 9 || level[x,y] >= 10 && level[x,y] <= 24)
                 {
                     //Figures a random int for a random room to be placed
-                    int rand = Random.Range(1, 4);
-                    if (rand == 1) {
+                    
+                    if (level[x,y] == 10) {
                         Instantiate(NormalRoom1, offset, Quaternion.identity);
                     }
-                    else if(rand == 2)
+                    else if(level[x,y] == 11)
                     {
                         Instantiate(NormalRoom2, offset, Quaternion.identity);
                     }
-                    else if(rand == 3)
+                    else if(level[x,y] == 12)
                     {
                         Instantiate(NormalRoom3, offset, Quaternion.identity);
                     }
-                    else
+                    else if(level[x,y] == 13)
                     {
                         Instantiate(NormalRoom4, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 14){
+                        Instantiate(NormalRoom5, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 15){
+                        Instantiate(NormalRoom6, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 16){
+                        Instantiate(NormalRoom7, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 17){
+                        Instantiate(NormalRoom8, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 18){
+                        Instantiate(NormalRoom9, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 19){
+                        Instantiate(NormalRoom10, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 20){
+                        Instantiate(NormalRoom11, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 21){
+                        Instantiate(NormalRoom12, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 22){
+                        Instantiate(NormalRoom13, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 23){
+                        Instantiate(NormalRoom14, offset, Quaternion.identity);
+                    }
+                    else if(level[x,y] == 24){
+                        Instantiate(NormalRoom15, offset, Quaternion.identity);
                     }
 
                     offsetY += 24;

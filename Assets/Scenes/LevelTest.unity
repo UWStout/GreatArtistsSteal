@@ -280,6 +280,7 @@ MonoBehaviour:
   RightStairsUp: {fileID: 0}
   NormalStairsDown: {fileID: 0}
   NormalStairsUp: {fileID: 0}
+  TREASUREROOM: {fileID: 0}
 --- !u!4 &831949816
 Transform:
   m_ObjectHideFlags: 0
@@ -287,7 +288,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 831949814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.374486, y: 0.271259, z: 0.27539062}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -302,7 +303,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4748152830330150, guid: 95317149eca3b4b4f88144331427c0a2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -35.69
+      value: 16.87
       objectReference: {fileID: 0}
     - target: {fileID: 4748152830330150, guid: 95317149eca3b4b4f88144331427c0a2, type: 2}
       propertyPath: m_LocalPosition.y
