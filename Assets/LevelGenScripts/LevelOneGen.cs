@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelOneGen : MonoBehaviour {
-    private int offsetX = 0;
-    private int offsetY = 0;
+    private float offsetX = 0;
+    private float offsetY = 0;
     private int maxX = 7;
     private int maxY = 10;
 
@@ -62,11 +62,13 @@ public class LevelOneGen : MonoBehaviour {
 int prev = -1;
 
 //* Randomizing the Normal Rooms *//
+Debug.Log("Randomizing the Array");
 for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
             {
-                Debug.Log(x + " " + y);
+                
+                //Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 //Places NormalRooms
                 if (level[x, y] == 1)
@@ -148,12 +150,13 @@ for (int x = maxX-1; x >= 0; x--)
 
 
 // Placing the Shells
-
+Debug.Log("Placing the Shells");
 for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
             {
-                Debug.Log(x + " " +y);
+                
+                //Debug.Log(x + " " +y);
 				Vector3 offset = new Vector2(offsetY,offsetX);
 				if(level[x,y] == 2 || level[x,y] == 3 || level[x,y] == 4){
 					Instantiate(LeftShell, offset, Quaternion.identity);
@@ -177,13 +180,13 @@ for (int x = maxX-1; x >= 0; x--)
 
 // Finding the index of the treasure Room and
 // making sure it is not supposed to be an empty Room or stair room
-
-int randX = Random.Range(0,maxY);
+/* 
+int randX = Random.Range(0,maxY-1);
 int randY = Random.Range(5,6);
 if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2  ){
     while(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2){
-        randX = Random.Range(0,maxY);
-        randY = Random.Range(maxX-1,maxX);
+        randX = Random.Range(0,maxY-1);
+        randY = Random.Range(maxX-2,maxX-1);
         if(level[randX, randY] == 1 ||  level[randX,randY] == 5 ||  level[randX,randY] == 2){
             level[randX,randY] = 50;
         }
@@ -191,10 +194,14 @@ if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] !
 }
 
 //*Placing The Rooms */
+offsetY = 3.66f;
+offsetX=-4.94f;
+Debug.Log("Placing the Rooms");
         for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
             {
+                
                 Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 //Places NormalRooms
@@ -310,7 +317,7 @@ if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] !
 
                 
             }
-            offsetY = 0;
+            offsetY = 3.66f;
             offsetX += 9;
         }
 }

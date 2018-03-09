@@ -35,6 +35,7 @@ MonoImporter:
   - RightStairsUp: {instanceID: 0}
   - NormalStairsDown: {instanceID: 0}
   - NormalStairsUp: {instanceID: 0}
+  - TREASUREROOM: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
