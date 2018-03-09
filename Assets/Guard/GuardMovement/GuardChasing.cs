@@ -30,4 +30,9 @@ public class GuardChasing : MonoBehaviour {
         GuardMovement stopChasing = gameObject.GetComponentInParent<GuardMovement>();
         stopChasing.StopGuardChasing();
     }
+
+    public void flipChild()
+    {
+        
+    }
 }

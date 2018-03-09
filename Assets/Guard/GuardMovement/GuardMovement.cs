@@ -76,6 +76,7 @@ public class GuardMovement : MonoBehaviour {
                     if (wallCheckR)
                     {
                         Flip();
+                        chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
                         movingRight = false;
                         faceRight = false;
                     }
@@ -86,6 +87,7 @@ public class GuardMovement : MonoBehaviour {
                     if (wallCheckL)
                     {
                         Flip();
+                        chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
                         movingRight = true;
                         faceRight = true;
                     }
@@ -158,6 +160,7 @@ public class GuardMovement : MonoBehaviour {
         if (guardSprite.flipX == true)
         {
             guardSprite.flipX = false;
+            
         }
         else
         {
