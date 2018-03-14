@@ -33,15 +33,24 @@ public class CameraFollow : MonoBehaviour {
         }*/
 	}
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == ("leftWall"))
         {
             Debug.Log("left wall hit");
-            Vector3 position2 = transform.position;
+            /*Vector3 position2 = transform.position;
             position2.x = player.transform.position.x - 100;
             position2.y = cameraHeight;
-            transform.position = position2;
+            transform.position = position2;*/
         }
+    }
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == ("leftWall"))
+        {
+            Debug.Log("WallHit");
+        }
+        
     }*/
 }

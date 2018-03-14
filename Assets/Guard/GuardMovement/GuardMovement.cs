@@ -146,7 +146,7 @@ public class GuardMovement : MonoBehaviour {
                 alert = false;
                 Patrolling = true;
             }*/
-            anim.SetTrigger("Alert");
+            anim.SetBool("Alert", alert);
         }
         anim.SetBool("Incapacitated", Incapacitated);
         anim.SetBool("Chasing", chasing);
@@ -228,7 +228,6 @@ public class GuardMovement : MonoBehaviour {
         Debug.Log("GuardStopChasing");
         chasing = false;
         alert = true;
-        Patrolling = false;
     }
     public void GuardCuaght()
     {
