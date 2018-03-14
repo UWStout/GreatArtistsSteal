@@ -29,6 +29,11 @@ public class GuardMovement : MonoBehaviour {
     bool Incapacitated = false;
     bool chasing = false;
     bool caught = false;
+    bool alert = false;
+
+    //timer
+    private float time = 1000f;
+    private int count = 0;
 
     public Transform incapacitatedTrigger;
     public Transform chasingTrigger;
@@ -67,7 +72,7 @@ public class GuardMovement : MonoBehaviour {
         wallCheckL = Physics2D.OverlapCircle(wallNearR.position, wallRadius, whatIsGuardWall);
         wallCheckR = Physics2D.OverlapCircle(wallNearL.position, wallRadius, whatIsGuardWall);
 
-        if(Patrolling == true && Incapacitated == false && chasing == false && playerCaught == false)
+        if (Patrolling == true && Incapacitated == false && chasing == false && playerCaught == false && alert == false)//patrolling state
         {
             switch (movingRight)
             {
@@ -94,24 +99,54 @@ public class GuardMovement : MonoBehaviour {
                     break;
             }
         }
-        else if (Incapacitated == true && Patrolling == false)
+        else if (Incapacitated == true && Patrolling == false)//incapacitated state
         {
             Patrolling = false;
         }
-        else if (Incapacitated == false && chasing == true)
+        else if (Incapacitated == false && chasing == true)//chasing state
         {
             if (player.transform.localPosition.x > transform.localPosition.x)
-            {      
-                transform.position += transform.right * (walkSpeed * 2) * Time.deltaTime;  
+            {
+                transform.position += transform.right * (walkSpeed * 2) * Time.deltaTime;
             }
             else if (player.transform.localPosition.x < transform.localPosition.x)
             {
-                transform.position += -transform.right * (walkSpeed * 2) * Time.deltaTime;    
+                transform.position += -transform.right * (walkSpeed * 2) * Time.deltaTime;
             }
         }
-        else if (Incapacitated == false && playerCaught == true)
+        else if (Incapacitated == false && playerCaught == true)//player caught state
         {
             otherAnimator.SetBool("PlayerCaught", playerCaught);
+        }
+        else if (Incapacitated == false && chasing == false && Patrolling == false && alert == true)//guard alert state
+        {
+            /*while (count <= 5 && alert == true)
+            {
+                while (time > 0)
+                {
+                    time--;
+                    if (time == 1)
+                    {
+                        count++;
+                        time = 1000f;
+                    }
+                }
+
+                if (count % 2 == 0)
+                {
+                    Flip();
+                }
+                else
+                {
+                    Flip();
+                }
+            }
+            if (count == 6)
+            {
+                alert = false;
+                Patrolling = true;
+            }*/
+            anim.SetTrigger("Alert");
         }
         anim.SetBool("Incapacitated", Incapacitated);
         anim.SetBool("Chasing", chasing);
@@ -192,6 +227,8 @@ public class GuardMovement : MonoBehaviour {
     {
         Debug.Log("GuardStopChasing");
         chasing = false;
+        alert = true;
+        Patrolling = false;
     }
     public void GuardCuaght()
     {
