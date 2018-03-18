@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 
     public Transform player;
-    float cameraHeight = -5f;
+    public static float cameraHeight = -5f;
 
     public GameObject playerPosition;
     public GameObject guardPosition;
