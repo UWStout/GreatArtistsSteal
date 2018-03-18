@@ -660,9 +660,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1986646118}
-  playerPosition: {fileID: 0}
-  guardPosition: {fileID: 0}
+  playerPosition: {fileID: 1986646116}
+  guardPosition: {fileID: 1222014614}
   distance: 0
+  playerObject: {fileID: 0}
+  guardObject: {fileID: 0}
+  smoothSpeed: 0.125
   camera: {fileID: 1198571183}
 --- !u!61 &1198571188
 BoxCollider2D:
@@ -670,7 +673,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198571182}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -745,6 +748,11 @@ Transform:
   m_Father: {fileID: 1986646118}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1222014614 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1172435257471772, guid: 270708bd166d6334ca43baf504dd6337,
+    type: 2}
+  m_PrefabInternal: {fileID: 1382167244}
 --- !u!1001 &1233898282
 Prefab:
   m_ObjectHideFlags: 0
@@ -1084,6 +1092,10 @@ Prefab:
     - target: {fileID: 100000, guid: 18fcd494ab71841d695135246693eb3a, type: 2}
       propertyPath: m_TagString
       value: leftWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 18fcd494ab71841d695135246693eb3a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18fcd494ab71841d695135246693eb3a, type: 2}

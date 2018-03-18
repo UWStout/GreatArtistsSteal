@@ -10,6 +10,11 @@ public class CameraFollow : MonoBehaviour {
     public GameObject playerPosition;
     public GameObject guardPosition;
     public float distance;
+    public Transform playerObject;
+    public Transform guardObject;
+
+    public float smoothSpeed = 0.125f;
+    //public Vector3 offset;
 
     public Transform camera;
 
@@ -17,20 +22,25 @@ public class CameraFollow : MonoBehaviour {
 	void Update () {
 
         Vector3 position = transform.position;
+
+        //currently unused_______________________________________________________
+        //Vector3 smoothedPosition = Vector3.Lerp(position, position, smoothSpeed);
+        //_______________________________________________________________________
+
         position.x = player.transform.position.x;
         position.y = cameraHeight;
         transform.position = position;   
 
         //distance = Vector3.Distance(playerPosition.transform.position.x, guardPosition.transform.position.x);
 
-        /*if (playerPosition.transform.position.x < guardPosition.transform.position.x + 20)
+        if (playerPosition.transform.position.x < guardPosition.transform.position.x + 20)
         {
             position.x = player.transform.position.x + 5;
         }
         else if (playerPosition.transform.position.x > guardPosition.transform.position.x - 20)
         {
             position.x = player.transform.position.x - 5;
-        }*/
+        }
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
