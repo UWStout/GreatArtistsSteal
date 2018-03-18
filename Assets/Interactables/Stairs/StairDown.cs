@@ -16,7 +16,7 @@ public class StairDown : MonoBehaviour {
         {
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + locationDown);
             //player.transform.position = player.transform.position +9;
-            Debug.Log("PlayerMoveUp");
+            Debug.Log("PlayerMoveDown");
 
             CameraFollow.cameraHeight = CameraFollow.cameraHeight + changeHeight;
         }
