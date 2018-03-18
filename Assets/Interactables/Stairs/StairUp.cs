@@ -6,7 +6,7 @@ public class StairUp : MonoBehaviour {
 
     public Transform player;
     //public GameObject player;
-    private float locationUp = 5f;
+    private float locationUp = 4.5f;
     private bool triggerEntered = false;
     float changeHeight = 4.5f;
 

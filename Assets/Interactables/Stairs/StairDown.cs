@@ -6,7 +6,7 @@ public class StairDown : MonoBehaviour {
 
     public Transform player;
     //public GameObject player;
-    private float locationUp = -5f;
+    private float locationDown = -9f;
     private bool triggerEntered = false;
     float changeHeight = -9f;
 
@@ -14,7 +14,7 @@ public class StairDown : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
         {
-            player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + locationUp);
+            player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + locationDown);
             //player.transform.position = player.transform.position +9;
             Debug.Log("PlayerMoveUp");
 
