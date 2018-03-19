@@ -14,11 +14,12 @@ public class StairDown : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
         {
+            Vector2 before = player.transform.position;
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + locationDown);
+            Vector2 after = player.transform.position;
             //player.transform.position = player.transform.position +9;
-            Debug.Log("PlayerMoveDown");
-
-            CameraFollow.cameraHeight = CameraFollow.cameraHeight + changeHeight;
+            Debug.Log(string.Format("PlayerMoveDown: {0} vs {1}", before, after));
+            CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationDown;
         }
     }
 

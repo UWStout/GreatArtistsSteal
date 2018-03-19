@@ -6,19 +6,21 @@ public class StairUp : MonoBehaviour {
 
     public Transform player;
     //public GameObject player;
-    private float locationUp = 4.5f;
+    private float locationUp = 9f;
     private bool triggerEntered = false;
-    float changeHeight = 4.5f;
+    float changeHeight = 9f;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
         {
+            Vector2 before = player.transform.position;
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + locationUp);
+            Vector2 after = player.transform.position;
             //player.transform.position = player.transform.position +9;
-            Debug.Log("PlayerMoveUp");
+            Debug.Log(string.Format("PlayerMoveUp: {0} vs {1}", before, after));
 
-            CameraFollow.cameraHeight = CameraFollow.cameraHeight + changeHeight;
+            CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationUp;
         }
     }
 

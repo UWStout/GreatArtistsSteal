@@ -33,14 +33,14 @@ public class CameraFollow : MonoBehaviour {
 
         //distance = Vector3.Distance(playerPosition.transform.position.x, guardPosition.transform.position.x);
 
-        if (playerPosition.transform.position.x < guardPosition.transform.position.x + 20)
+        /*if (playerPosition.transform.position.x < guardPosition.transform.position.x + 20)
         {
             position.x = player.transform.position.x + 5;
         }
         else if (playerPosition.transform.position.x > guardPosition.transform.position.x - 20)
         {
             position.x = player.transform.position.x - 5;
-        }
+        }*/
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
