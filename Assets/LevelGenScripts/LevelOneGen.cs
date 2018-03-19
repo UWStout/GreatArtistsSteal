@@ -62,7 +62,7 @@ public class LevelOneGen : MonoBehaviour {
 int prev = -1;
 
 //* Randomizing the Normal Rooms *//
-Debug.Log("Randomizing the Array");
+//Debug.Log("Randomizing the Array");
 for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
@@ -146,14 +146,14 @@ for (int x = maxX-1; x >= 0; x--)
             }
 
 		}
-
+/* 
 for(int x = maxX-1; x>=0; x--){
     for(int y = 0; y < maxY; y++){
         Debug.Log("[" + x + "," + y +"]" + "=" + level[x,y]);
     }
     
 }
-
+*/
 // Placing the Shells
 Debug.Log("Placing the Shells");
 for (int x = maxX-1; x >= 0; x--)
@@ -185,7 +185,7 @@ for (int x = maxX-1; x >= 0; x--)
 
 // Finding the index of the treasure Room and
 // making sure it is not supposed to be an empty Room or stair room
-/*
+/**/
 int randX = Random.Range(0,maxY-1);
 int randY = Random.Range(5,maxX-1);
 if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2  ){
@@ -210,7 +210,7 @@ Debug.Log("Placing the Rooms");
             for (int y = 0; y < maxY; y++)
             {
                 
-                Debug.Log(x + " " + y);
+               // Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 //Places NormalRooms
                 if (level[x,y] == 1 ||level[x,y] == 8 || level[x,y]== 9 || level[x,y] >= 10 && level[x,y] <= 24)
