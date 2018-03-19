@@ -63,4 +63,13 @@ public class CameraFollow : MonoBehaviour {
         }
         
     }*/
+
+    public void StopFollow()
+    {
+        Vector3 position = transform.position;
+
+        position.x = 0;
+        position.y = cameraHeight;
+        transform.position = position;
+    }
 }
