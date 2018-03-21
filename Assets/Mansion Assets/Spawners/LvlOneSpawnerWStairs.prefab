@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1374299864361652}
+  m_IsPrefabParent: 1
+--- !u!1 &1374299864361652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4439598688742686}
+  - component: {fileID: 114143773128416178}
+  m_Layer: 0
+  m_Name: LvlOneSpawnerWStairs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4439598688742686
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374299864361652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114143773128416178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374299864361652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b841022af0ad44d82cd5c994ea3daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftShell: {fileID: 1845198780279042, guid: 8afd8785c1f07674690085ffa734027a, type: 2}
+  RightShell: {fileID: 1783036735320936, guid: 35c3ae14e31f6a84b8c45f39e8c39739, type: 2}
+  NormalShell: {fileID: 1193216918536300, guid: 5ce328c831b30ca48bd61594c97bc3f5,
+    type: 2}
+  NormalRoom1: {fileID: 1407727000384226, guid: 6fd12b12d62000c488977cbae7b074a1,
+    type: 2}
+  NormalRoom2: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom3: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom4: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom5: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom6: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom7: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom8: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom9: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom10: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom11: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom12: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom13: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom14: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalRoom15: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  LeftRoom: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753, type: 2}
+  RightRoom: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753, type: 2}
+  LeftStairsDown: {fileID: 1732860625558782, guid: 1b9a10a228f963e45957b393381e6697,
+    type: 2}
+  LeftStairsUp: {fileID: 1929571935871220, guid: 3a9c5ef934f4bbc4fbacd31dbc319966,
+    type: 2}
+  RightStairsDown: {fileID: 1783272946544252, guid: 652257c8dec0b8349b6b98294f7353f1,
+    type: 2}
+  RightStairsUp: {fileID: 1109181155689934, guid: 043a44c93c66a71418e60e87ec00ba28,
+    type: 2}
+  NormalStairsDown: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  NormalStairsUp: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+    type: 2}
+  TREASUREROOM: {fileID: 0}

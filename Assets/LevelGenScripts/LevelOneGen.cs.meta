@@ -12,7 +12,8 @@ MonoImporter:
       type: 2}
   - NormalShell: {fileID: 1193216918536300, guid: 5ce328c831b30ca48bd61594c97bc3f5,
       type: 2}
-  - NormalRoom1: {instanceID: 0}
+  - NormalRoom1: {fileID: 1407727000384226, guid: 6fd12b12d62000c488977cbae7b074a1,
+      type: 2}
   - NormalRoom2: {instanceID: 0}
   - NormalRoom3: {instanceID: 0}
   - NormalRoom4: {instanceID: 0}
@@ -29,10 +30,14 @@ MonoImporter:
   - NormalRoom15: {instanceID: 0}
   - LeftRoom: {instanceID: 0}
   - RightRoom: {instanceID: 0}
-  - LeftStairsDown: {instanceID: 0}
-  - LeftStairsUp: {instanceID: 0}
-  - RightStairsDown: {instanceID: 0}
-  - RightStairsUp: {instanceID: 0}
+  - LeftStairsDown: {fileID: 1732860625558782, guid: 1b9a10a228f963e45957b393381e6697,
+      type: 2}
+  - LeftStairsUp: {fileID: 1929571935871220, guid: 3a9c5ef934f4bbc4fbacd31dbc319966,
+      type: 2}
+  - RightStairsDown: {fileID: 1783272946544252, guid: 652257c8dec0b8349b6b98294f7353f1,
+      type: 2}
+  - RightStairsUp: {fileID: 1109181155689934, guid: 043a44c93c66a71418e60e87ec00ba28,
+      type: 2}
   - NormalStairsDown: {instanceID: 0}
   - NormalStairsUp: {instanceID: 0}
   - TREASUREROOM: {instanceID: 0}
