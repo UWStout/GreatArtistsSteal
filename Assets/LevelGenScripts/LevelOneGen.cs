@@ -185,7 +185,7 @@ for (int x = maxX-1; x >= 0; x--)
 
 // Finding the index of the treasure Room and
 // making sure it is not supposed to be an empty Room or stair room
-/**/
+/*
 int randX = Random.Range(0,maxY-1);
 int randY = Random.Range(5,maxX-1);
 if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2  ){
@@ -197,7 +197,7 @@ if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] !
         }
     }
 }
-
+*/
 
 
 //*Placing The Rooms */
