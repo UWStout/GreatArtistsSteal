@@ -19,7 +19,7 @@ public class LightingRoom : MonoBehaviour {
         if (collision.gameObject.tag == ("Player"))
         {
             Debug.Log("Player has entered room");
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
