@@ -271,37 +271,37 @@ Debug.Log("Placing the Rooms");
                 //Right Rooms
                 else if (level[x, y] == 2)
                 {
-                    Instantiate(RightRoom, offset, Quaternion.identity);
+                    Instantiate(LeftRoom, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 //Right Stairs Up
                 else if (level[x, y] == 3)
                 {
-                    Instantiate(RightStairsUp, offset, Quaternion.identity);
+                    Instantiate(LeftStairsUp, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 //Right Stairs Down
                 else if (level[x, y] == 4)
                 {
-                    Instantiate(RightStairsDown, offset, Quaternion.identity);
+                    Instantiate(LeftStairsDown, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 //Left Rooms
                 else if (level[x, y] == 5)
                 {
-                    Instantiate(LeftRoom, offset, Quaternion.identity);
+                    Instantiate(RightRoom, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 //Left Stairs Up
                 else if (level[x, y] == 6)
                 {
-                    Instantiate(LeftStairsUp, offset, Quaternion.identity);
+                    Instantiate(RightStairsUp, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 //Left Stairs Down
                 else if (level[x, y] == 7)
                 {
-                    Instantiate(LeftStairsDown, offset, Quaternion.identity);
+                    Instantiate(RightStairsDown, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 //Normal Stairs Up
