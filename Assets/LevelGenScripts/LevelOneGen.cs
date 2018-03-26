@@ -83,69 +83,96 @@ for (int x = maxX-1; x >= 0; x--)
 					
 					if(rand == 1){
 						level[x,y] = 10;
+                        prev = 1;
 					}
 					else if(rand == 2)
 					{
 						level[x,y] = 11;
+                        prev = 2;
 					}
 					else if(rand == 3)
 					{
 						level[x,y] = 12;
+                        prev = 3;
 					}
 					else if(rand == 4)
 					{
 						level[x,y] = 13;
+                        prev = 4;
 					}
 					else if(rand == 5)
 					{
 						level[x,y] = 14;
+                        prev = 5;
 					}
 					else if(rand == 6)
 					{
 						level[x,y] = 15;
+                        prev = 6;
 					}
 					else if(rand == 7)
 					{
 						level[x,y] = 16;
+                        prev = 7;
 					}
 					else if(rand == 8)
 					{
 						level[x,y] = 17;
+                        prev = 8;
 					}
 					else if(rand == 9)
 					{
 						level[x,y] = 18;
+                        prev = 9;
 					}
 					else if(rand == 10)
 					{
 						level[x,y] = 19;
+                        prev = 10;
 					}
 					else if(rand == 11)
 					{
 						level[x,y] = 20;
+                        prev = 11;
 					}
 					else if(rand == 12)
 					{
 						level[x,y] = 21;
+                        prev = 12;
 					}
 					else if(rand == 13)
 					{
 						level[x,y] = 22;
+                        prev = 13;
 					}
 					else if(rand == 14)
 					{
 						level[x,y] = 23;
+                        prev = 14;
 					}
 					else if(rand == 15)
 					{
 						level[x,y] = 24;
-					}
-					prev = level[x,y];
-                }
-                
+                        prev = 15;
+					}	
+                }   
             }
-
 		}
+        for (int x = maxX-1; x >= 0; x--)
+        {
+            for (int y = 0; y < maxY; y++)
+            {
+                if(x >0&&y>0){
+                    if((level[x,y] == level[x-1,y]&&level[x-1,y] >=0)||(level[x,y] == level[x,y-1]&&level[x,y-1]>=0)){
+                        while(level[x,y] == level[x-1,y]||level[x,y] == level[x,y-1]){
+                            level[x,y] -= 1;
+                        }
+                    }
+                }
+
+
+            }
+        }
 /* 
 for(int x = maxX-1; x>=0; x--){
     for(int y = 0; y < maxY; y++){
