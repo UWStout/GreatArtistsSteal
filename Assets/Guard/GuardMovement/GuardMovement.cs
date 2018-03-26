@@ -65,6 +65,9 @@ public class GuardMovement : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
         anim.SetBool( "Patrolling",Patrolling);
+
+        /*Animation animation = GetComponent<Animation>();            
+        animation["Incapacitated"].wrapMode = WrapMode.Once;*/
     }
 
     private void FixedUpdate()
@@ -280,15 +283,34 @@ public class GuardMovement : MonoBehaviour {
         otherAnimator.GetComponent<Animator>().SetTrigger("Caught");
         anim.SetBool("playerCaught", caught);
     }
+
+    public Sprite incapacitatedSprite;
     public void GuardIncapacitated()
     {
         Debug.Log("Guard incapacitated");
         Incapacitated = true;
-        //anim.SetTrigger("IncapacitatedOnce");
+        anim.SetBool("Incapacitated", true);
+        //gameObject.GetComponent<Animation>().Play("Incapacitated");
         gameObject.GetComponent<Collider2D>().enabled = false;
 
         //moves the guard back in space to allow the player sprite to not clip
-        //gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - 1, 1);
+        gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - .33f, transform.localPosition.z);
 
+        //array to hold all child objects
+        Debug.Log(transform.childCount);
+        int i = 0;
+        GameObject[] allChildren = new GameObject[transform.childCount];
+        foreach (Transform child in transform)
+        {
+            allChildren[i] = child.gameObject;
+            i += 1;
+        }
+        foreach(GameObject child in allChildren)
+        {
+            Destroy(child.gameObject);
+        }
+        Debug.Log(transform.childCount);
+
+        this.enabled = false;
     }
 }
