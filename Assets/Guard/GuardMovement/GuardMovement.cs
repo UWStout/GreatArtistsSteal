@@ -220,6 +220,21 @@ public class GuardMovement : MonoBehaviour {
 
     public void GuardChasing()
     {
+        if (transform.position.x < player.transform.position.x && movingRight == true)
+        {
+            transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
+        }else if (transform.position.x > player.transform.position.x && movingRight == true)
+        {
+            transform.localScale = new Vector3(guardScale, guardScale, guardScale);
+        }
+        else if (transform.position.x < player.transform.position.x && movingRight == false)
+        {
+            transform.localScale = new Vector3(guardScale, guardScale, guardScale);
+        }
+        else if (transform.position.x > player.transform.position.x && movingRight == false)
+        {
+            transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
+        }
         Debug.Log("GuardChasing");
         chasing = true;
     }
@@ -234,13 +249,30 @@ public class GuardMovement : MonoBehaviour {
         chasing = false;
         caught = true;
 
-        if (player.position.x > transform.position.x)
+        /*if (player.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
         }
         else if (player.position.x < transform.position.x)
         {
+            transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
+        }*/
+
+        if (transform.position.x < player.transform.position.x && movingRight == true)
+        {
+            transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
+        }
+        else if (transform.position.x > player.transform.position.x && movingRight == true)
+        {
             transform.localScale = new Vector3(guardScale, guardScale, guardScale);
+        }
+        else if (transform.position.x < player.transform.position.x && movingRight == false)
+        {
+            transform.localScale = new Vector3(guardScale, guardScale, guardScale);
+        }
+        else if (transform.position.x > player.transform.position.x && movingRight == false)
+        {
+            transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
         }
 
         Debug.Log("GuardCaught");
