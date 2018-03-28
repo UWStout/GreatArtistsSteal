@@ -87,6 +87,7 @@ public class GuardMovement : MonoBehaviour {
                         chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
                         caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
                         incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
+                        
                         movingRight = false;
                         faceRight = false;
                     }
@@ -295,7 +296,7 @@ public class GuardMovement : MonoBehaviour {
         Incapacitated = true;
         anim.SetBool("Incapacitated", true);
         //gameObject.GetComponent<Animation>().Play("Incapacitated");
-        gameObject.GetComponent<Collider2D>().enabled = false;
+        //gameObject.GetComponent<Collider2D>().enabled = false;
 
         //moves the guard back in space to allow the player sprite to not clip
         gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - .33f, transform.localPosition.z);
