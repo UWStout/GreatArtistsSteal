@@ -9,11 +9,14 @@ public class MoonSpawn : MonoBehaviour {
 	public GameObject cloud4;
 	public GameObject cloud5;
 
+	public float speed = 0.1f;
+
 	// Use this for initialization
 	void Start () {
+		
 		int temp = 0;
 		int low = 1;
-		int high = 8;
+		int high = 10;
 		temp = Random.Range (low, high);
 		for(int i=0; i<temp; i++){
 			Instantiate(cloud1, transform.position, transform.rotation);
@@ -41,6 +44,6 @@ public class MoonSpawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		transform.Translate (speed* Time.deltaTime, 0f, 0f);
 	}
 }
