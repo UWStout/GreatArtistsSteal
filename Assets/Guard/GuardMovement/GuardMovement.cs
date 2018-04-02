@@ -126,21 +126,24 @@ public class GuardMovement : MonoBehaviour {
         {
             otherAnimator.SetBool("PlayerCaught", playerCaught);
         }
-        else if (Incapacitated == false && chasing == false && Patrolling == false && alert == true)//guard alert state
+        /*else if (Incapacitated == false && chasing == false && Patrolling == false && alert == true)//guard alert state
         {
-
-
+            //anim.SetBool("Alert", true);
+            Debug.Log("Alert Started");
             StartCoroutine(AlertGuard());
             StartCoroutine(delay());
+            //StartCoroutine(delay());
 
-            Patrolling = false;
+            
+            //anim.SetBool("Alert", false);
             alert = false;
+            //Patrolling = true;
 
             //StartCoroutine(StartPatrolling());
-        }
+        }*/
         anim.SetBool("Incapacitated", Incapacitated);
         anim.SetBool("Chasing", chasing);
-        anim.SetBool("Alert", alert);
+        
     }
 
     private void Update()
@@ -231,9 +234,12 @@ public class GuardMovement : MonoBehaviour {
     public void StopGuardChasing()
     {
         Debug.Log("GuardStopChasing");
+        //StartCoroutine(AlertGuard());
+        //StartCoroutine(AlertGuard());
         chasing = false;
-        Patrolling = false;
-        alert = true;
+        //StartCoroutine(delay());
+        //Patrolling = true;
+        //alert = true;
     }
     public void GuardCuaght()
     {
@@ -309,8 +315,8 @@ public class GuardMovement : MonoBehaviour {
         //chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
         //caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
         //incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
-        yield return new WaitForSeconds(1f);
-        Patrolling = true;
+        //yield return new WaitForSeconds(1f);
+        //Patrolling = true;
     }
 
     IEnumerator StartPatrolling()
@@ -321,7 +327,7 @@ public class GuardMovement : MonoBehaviour {
 
     IEnumerator delay()
     {
-        yield return new WaitForSeconds(2f);
-        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+        yield return new WaitForSeconds(1f);
+        //Patrolling = true;
     }
 }
