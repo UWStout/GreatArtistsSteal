@@ -341,11 +341,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 72.41
+      value: 125.56
       objectReference: {fileID: 0}
     - target: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.64
+      value: -7.77
       objectReference: {fileID: 0}
     - target: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_LocalPosition.z
@@ -399,6 +399,10 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172435257471772, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
+      propertyPath: m_TagString
+      value: Guard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
@@ -559,6 +563,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ff99f50ccc82740abbb0ae16777395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &365047637 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337,
+    type: 2}
+  m_PrefabInternal: {fileID: 210851290}
 --- !u!1001 &467149528
 Prefab:
   m_ObjectHideFlags: 0
@@ -1125,7 +1134,7 @@ MonoBehaviour:
   guardPosition: {fileID: 0}
   distance: 0
   playerObject: {fileID: 0}
-  guardObject: {fileID: 0}
+  guardObject: {fileID: 365047637}
   smoothSpeed: 0.125
   camera: {fileID: 1198571183}
 --- !u!61 &1198571188
@@ -1777,7 +1786,7 @@ GameObject:
   - component: {fileID: 1986646123}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
