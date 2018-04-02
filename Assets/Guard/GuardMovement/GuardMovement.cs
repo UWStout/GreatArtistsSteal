@@ -249,7 +249,7 @@ public class GuardMovement : MonoBehaviour {
         {
             Debug.Log("Guard moving right with player on left");
             //Flip();
-            movingRight = false;
+            movingRight = true;
             /*chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
             caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
             incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
@@ -261,7 +261,7 @@ public class GuardMovement : MonoBehaviour {
             /*chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
             caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
             incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
-            movingRight = true;
+            movingRight = false;
             
         }
         else if (transform.position.x > player.transform.position.x && movingRight == true)
@@ -314,7 +314,8 @@ public class GuardMovement : MonoBehaviour {
         Patrolling = false;
         chasing = false;
         alert = false;
-        anim.SetBool("Incapacitated", true);
+        //anim.SetBool("Incapacitated", true);
+        anim.SetTrigger("Incap");
         //anim.SetBool("Incapacitated", false);
         //gameObject.GetComponent<Animation>().Play("Incapacitated");
         //gameObject.GetComponent<Collider2D>().enabled = false;
@@ -337,7 +338,8 @@ public class GuardMovement : MonoBehaviour {
         Debug.Log(transform.childCount);
 
 
-        
+        //gameObject.GetComponent<Animator>().enabled = false;
+        StartCoroutine(DelayAnimationDisable());
         this.enabled = false;
 
         //moves the guard back in space to allow the player sprite to not clip
@@ -367,9 +369,9 @@ public class GuardMovement : MonoBehaviour {
         //Patrolling = true;
     }*/
 
-    /*IEnumerator DelayAnimation()
+    IEnumerator DelayAnimationDisable()
     {
-        yield return new WaitForSeconds(1f);
-        anim.SetBool("Incapacitated", false);
-    }*/
+        yield return new WaitForSeconds(.5f);
+        gameObject.GetComponent<Animator>().enabled = false;
+    }
 }
