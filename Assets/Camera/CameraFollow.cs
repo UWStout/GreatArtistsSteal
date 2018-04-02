@@ -18,8 +18,8 @@ public class CameraFollow : MonoBehaviour {
 
     public Transform camera;
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 
         Vector3 position = transform.position;
 
@@ -27,9 +27,26 @@ public class CameraFollow : MonoBehaviour {
         //Vector3 smoothedPosition = Vector3.Lerp(position, position, smoothSpeed);
         //_______________________________________________________________________
 
-        position.x = player.transform.position.x;
+        if (player.position.x <= 4)
+        {
+            position.x = 4;
+            position.y = cameraHeight;
+        }
+        else if (player.position.x >= 220)
+        {
+            position.x = 220;
+            position.y = cameraHeight;
+        }
+        else
+        {
+            position.x = player.transform.position.x;
+            position.y = cameraHeight;
+            transform.position = position;
+        }
+
+        /*position.x = player.transform.position.x;
         position.y = cameraHeight;
-        transform.position = position;   
+        transform.position = position;  */
 
         //distance = Vector3.Distance(playerPosition.transform.position.x, guardPosition.transform.position.x);
 
@@ -41,35 +58,6 @@ public class CameraFollow : MonoBehaviour {
         {
             position.x = player.transform.position.x - 5;
         }*/
-	}
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == ("leftWall"))
-        {
-            Debug.Log("left wall hit");
-            /*Vector3 position2 = transform.position;
-            position2.x = player.transform.position.x - 100;
-            position2.y = cameraHeight;
-            transform.position = position2;*/
-        }
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == ("leftWall"))
-        {
-            Debug.Log("WallHit");
-        }
-        
-    }*/
-
-    public void StopFollow()
-    {
-        Vector3 position = transform.position;
-
-        position.x = 0;
-        position.y = cameraHeight;
-        transform.position = position;
-    }
 }

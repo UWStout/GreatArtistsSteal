@@ -16,7 +16,7 @@ public class LightingRoom : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ("Player"))
+        if (collision.transform.tag == ("Player"))
         {
             Debug.Log("Player has entered room");
             //Destroy(gameObject);

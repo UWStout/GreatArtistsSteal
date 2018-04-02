@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraStop : MonoBehaviour {
+public class StealIndicator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,13 +16,9 @@ public class CameraStop : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        CameraFollow follow = gameObject.GetComponent<CameraFollow>();
-
-        if(gameObject.transform.tag == ("Player"))
+        if (collision.transform.tag == ("Player"))
         {
-            Debug.Log("StopCameraMovemnt.x");
-            //follow.StopFollow();
-            
+            Debug.Log("AnimationStart");
         }
     }
 }
