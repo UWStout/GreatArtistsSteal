@@ -55,48 +55,24 @@ MonoBehaviour:
   RightShell: {fileID: 1783036735320936, guid: 35c3ae14e31f6a84b8c45f39e8c39739, type: 2}
   NormalShell: {fileID: 1193216918536300, guid: 5ce328c831b30ca48bd61594c97bc3f5,
     type: 2}
-  NormalRoom1: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
+  NormalRoom1: {fileID: 1407727000384226, guid: 6fd12b12d62000c488977cbae7b074a1,
     type: 2}
-  NormalRoom2: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom3: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom4: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom5: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom6: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom7: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom8: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom9: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom10: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom11: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom12: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom13: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom14: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalRoom15: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  LeftRoom: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753, type: 2}
-  RightRoom: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753, type: 2}
-  LeftStairsDown: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  LeftStairsUp: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  RightStairsDown: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  RightStairsUp: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalStairsDown: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
-  NormalStairsUp: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
-    type: 2}
+  NormalRoom2: {fileID: 0}
+  NormalRoom3: {fileID: 0}
+  NormalRoom4: {fileID: 0}
+  NormalRoom5: {fileID: 0}
+  NormalRoom6: {fileID: 0}
+  NormalRoom7: {fileID: 0}
+  NormalRoom8: {fileID: 0}
+  NormalRoom9: {fileID: 0}
+  NormalRoom10: {fileID: 0}
+  NormalRoom11: {fileID: 0}
+  NormalRoom12: {fileID: 0}
+  NormalRoom13: {fileID: 0}
+  NormalRoom14: {fileID: 0}
+  NormalRoom15: {fileID: 0}
+  LeftRoom: {fileID: 0}
+  RightRoom: {fileID: 0}
+  StairsUp: {fileID: 0}
+  StairsDown: {fileID: 0}
   TREASUREROOM: {fileID: 0}

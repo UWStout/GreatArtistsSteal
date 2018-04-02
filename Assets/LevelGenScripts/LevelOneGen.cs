@@ -29,12 +29,16 @@ public class LevelOneGen : MonoBehaviour {
 	public GameObject NormalRoom15;
     public GameObject LeftRoom;
     public GameObject RightRoom;
+    public GameObject StairsUp;
+    public GameObject StairsDown;
+    /*
     public GameObject LeftStairsDown;
     public GameObject LeftStairsUp;
     public GameObject RightStairsDown;
     public GameObject RightStairsUp;
     public GameObject NormalStairsDown;
     public GameObject NormalStairsUp;
+    */
 
     public GameObject TREASUREROOM;
 
@@ -303,6 +307,7 @@ Debug.Log("Placing the Rooms");
                     offsetY += 24;
                 }
                 //Right Stairs Up
+                /*
                 else if (level[x, y] == 3)
                 {
                     Instantiate(LeftStairsUp, offset, Quaternion.identity);
@@ -313,7 +318,7 @@ Debug.Log("Placing the Rooms");
                 {
                     Instantiate(LeftStairsDown, offset, Quaternion.identity);
                     offsetY += 24;
-                }
+                }*/
                 //Left Rooms
                 else if (level[x, y] == 5)
                 {
@@ -321,6 +326,7 @@ Debug.Log("Placing the Rooms");
                     offsetY += 24;
                 }
                 //Left Stairs Up
+                /*/
                 else if (level[x, y] == 6)
                 {
                     Instantiate(RightStairsUp, offset, Quaternion.identity);
@@ -331,8 +337,9 @@ Debug.Log("Placing the Rooms");
                 {
                     Instantiate(RightStairsDown, offset, Quaternion.identity);
                     offsetY += 24;
-                }
+                }*/
                 //Normal Stairs Up
+                /*
                 else if (level[x, y] == 8)
                 {
                     Instantiate(NormalStairsUp, offset, Quaternion.identity);
@@ -347,6 +354,14 @@ Debug.Log("Placing the Rooms");
                 else if(level[x,y]== 50){
                     Instantiate(TREASUREROOM, offset, Quaternion.identity);
                     offsetY += 24;
+                }*/
+                else if(level[x,y] == 3 || level[x,y] == 6 || level[x,y] == 8){
+                    Instantiate(StairsUp, offset, Quaternion.identity);
+                    offsetY+=24;
+                }
+                else if(level[x,y] == 4 || level[x,y] == 7 || level[x,y] == 9){
+                    Instantiate(StairsDown, offset, Quaternion.identity);
+                    offsetY+=24;
                 }
                 else { offsetY += 24; }
 
