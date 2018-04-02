@@ -312,7 +312,7 @@ public class GuardMovement : MonoBehaviour {
         this.enabled = false;
 
         //moves the guard back in space to allow the player sprite to not clip
-        gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - .33f, transform.localPosition.z);
+        gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - .22f, transform.localPosition.z);
     }
 
     /*IEnumerator AlertGuard()
