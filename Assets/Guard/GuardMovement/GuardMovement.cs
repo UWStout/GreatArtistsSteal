@@ -128,37 +128,19 @@ public class GuardMovement : MonoBehaviour {
         }
         else if (Incapacitated == false && chasing == false && Patrolling == false && alert == true)//guard alert state
         {
-            /*while (count <= 5 && alert == true)
-            {
-                while (time > 0)
-                {
-                    time--;
-                    if (time == 1)
-                    {
-                        count++;
-                        time = 1000f;
-                    }
-                }
 
-                if (count % 2 == 0)
-                {
-                    Flip();
-                }
-                else
-                {
-                    Flip();
-                }
-            }
-            if (count == 6)
-            {
-                alert = false;
-                Patrolling = true;
-            }*/
-            anim.SetBool("Alert", alert);
+
+            StartCoroutine(AlertGuard());
+            StartCoroutine(delay());
+
+            Patrolling = false;
+            alert = false;
+
+            //StartCoroutine(StartPatrolling());
         }
         anim.SetBool("Incapacitated", Incapacitated);
         anim.SetBool("Chasing", chasing);
-
+        anim.SetBool("Alert", alert);
     }
 
     private void Update()
@@ -250,6 +232,7 @@ public class GuardMovement : MonoBehaviour {
     {
         Debug.Log("GuardStopChasing");
         chasing = false;
+        Patrolling = false;
         alert = true;
     }
     public void GuardCuaght()
@@ -317,5 +300,28 @@ public class GuardMovement : MonoBehaviour {
         Debug.Log(transform.childCount);
 
         this.enabled = false;
+    }
+
+    IEnumerator AlertGuard()
+    {
+        yield return new WaitForSeconds(1f);
+        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+        //chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
+        //caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
+        //incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
+        yield return new WaitForSeconds(1f);
+        Patrolling = true;
+    }
+
+    IEnumerator StartPatrolling()
+    {
+        yield return new WaitForSeconds(2f);
+        Patrolling = true;
+    }
+
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(2f);
+        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
     }
 }
