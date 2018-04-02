@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GuardChasing : MonoBehaviour {
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GuardMovement chasing = gameObject.GetComponentInParent<GuardMovement>();
@@ -25,8 +26,4 @@ public class GuardChasing : MonoBehaviour {
         
     }
 
-    public void flipChild()
-    {
-        
-    }
 }

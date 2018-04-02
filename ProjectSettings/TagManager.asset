@@ -44,11 +44,11 @@ TagManager:
   - name: Background
     uniqueID: 287954947
     locked: 0
-  - name: Guard
-    uniqueID: 1425539811
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Guard
+    uniqueID: 1425539811
     locked: 0
   - name: Character
     uniqueID: 2465886971

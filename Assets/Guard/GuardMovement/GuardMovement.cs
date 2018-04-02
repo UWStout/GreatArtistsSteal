@@ -45,6 +45,9 @@ public class GuardMovement : MonoBehaviour {
     public Transform playerObject;
     public GameObject otherObject;
 
+    public bool stopChasingSwapLeft = false;
+    public bool stopChasingSwapRight = false;
+
     //animator
     Animator anim;
 
@@ -70,6 +73,26 @@ public class GuardMovement : MonoBehaviour {
         animation["Incapacitated"].wrapMode = WrapMode.Once;*/
     }
 
+    /*public void Switch()
+    {
+        if (stopChasingSwapRight == true)
+        {
+            Flip();
+            chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
+            caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
+            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
+            stopChasingSwapRight = false;
+        }
+        if (stopChasingSwapLeft == true)
+        {
+            Flip();
+            chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
+            caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
+            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
+            stopChasingSwapLeft = false;
+        }
+    }*/
+
     private void FixedUpdate()
     {
         wallCheckL = Physics2D.OverlapCircle(wallNearR.position, wallRadius, whatIsGuardWall);
@@ -83,13 +106,15 @@ public class GuardMovement : MonoBehaviour {
                     moveRight();
                     if (wallCheckR)
                     {
+                        //Switch();
                         Flip();
                         chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
                         caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
                         incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
                         
                         movingRight = false;
-                        faceRight = false;                    
+                        faceRight = false;    
+                        
                     }
                     break;
 
@@ -97,15 +122,19 @@ public class GuardMovement : MonoBehaviour {
                     moveLeft();
                     if (wallCheckL)
                     {
+                        //Switch();
                         Flip();
                         chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
                         caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
                         incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
                         movingRight = true;
                         faceRight = true;
+
                     }
-                    break;
+                    break;              
             }
+
+            
         }
         else if (Incapacitated == true && Patrolling == false)//incapacitated state
         {
@@ -251,10 +280,10 @@ public class GuardMovement : MonoBehaviour {
             //Flip();
             /*chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
             caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
-            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
-            //transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
+            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
+            transform.localScale = new Vector3(-guardScale, guardScale, guardScale);*/
             movingRight = true;
-            
+            stopChasingSwapLeft = true;
         }
         else if (transform.position.x < player.transform.position.x && movingRight == true)
         {
@@ -262,10 +291,10 @@ public class GuardMovement : MonoBehaviour {
             //Flip();
             /*chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
             caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
-            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
-            //transform.localScale = new Vector3(guardScale, guardScale, guardScale);
+            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
+            transform.localScale = new Vector3(guardScale, guardScale, guardScale);*/
             movingRight = false;
-            
+            stopChasingSwapRight = true;
         }
         else if (transform.position.x > player.transform.position.x && movingRight == true)
         {
