@@ -238,7 +238,7 @@ public class GuardMovement : MonoBehaviour {
         //StartCoroutine(AlertGuard());
         chasing = false;
         //StartCoroutine(delay());
-        //Patrolling = true;
+        Patrolling = true;
         //alert = true;
     }
     public void GuardCuaght()
@@ -283,12 +283,14 @@ public class GuardMovement : MonoBehaviour {
     {
         Debug.Log("Guard incapacitated");
         Incapacitated = true;
+        Patrolling = false;
+        chasing = false;
+        alert = false;
         anim.SetBool("Incapacitated", true);
         //gameObject.GetComponent<Animation>().Play("Incapacitated");
         //gameObject.GetComponent<Collider2D>().enabled = false;
 
-        //moves the guard back in space to allow the player sprite to not clip
-        gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - .33f, transform.localPosition.z);
+        
 
         //array to hold all child objects
         Debug.Log(transform.childCount);
@@ -305,10 +307,15 @@ public class GuardMovement : MonoBehaviour {
         }
         Debug.Log(transform.childCount);
 
+        
+
         this.enabled = false;
+
+        //moves the guard back in space to allow the player sprite to not clip
+        gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - .33f, transform.localPosition.z);
     }
 
-    IEnumerator AlertGuard()
+    /*IEnumerator AlertGuard()
     {
         yield return new WaitForSeconds(1f);
         gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
@@ -329,5 +336,5 @@ public class GuardMovement : MonoBehaviour {
     {
         yield return new WaitForSeconds(1f);
         //Patrolling = true;
-    }
+    }*/
 }
