@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     bool grounded = false;//not grounded
     public Transform groundCheck;//transform at player feet to check if grounded or not
     float groundRadius = 0.2f;//how large the circle is when checking distance to ground
-    public float jumpForce = 300f;//how high the player can jump
+    public float jumpForce = 200f;//how high the player can jump
     public LayerMask whatIsGround;//checks which layer is currently considered the ground
     public float gravityForce = -40f;
 

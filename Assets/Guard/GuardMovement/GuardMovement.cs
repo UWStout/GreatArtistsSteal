@@ -89,7 +89,7 @@ public class GuardMovement : MonoBehaviour {
                         incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
                         
                         movingRight = false;
-                        faceRight = false;
+                        faceRight = false;                    
                     }
                     break;
 
@@ -240,6 +240,34 @@ public class GuardMovement : MonoBehaviour {
         //StartCoroutine(delay());
         Patrolling = true;
         //alert = true;
+
+        if (transform.position.x < player.transform.position.x && movingRight == false)
+        {
+            Debug.Log("Guard moving right with player on right");
+        }
+        else if (transform.position.x > player.transform.position.x && movingRight == false)
+        {
+            Debug.Log("Guard moving right with player on left");
+            //Flip();
+            movingRight = false;
+            /*chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
+            caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
+            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
+        }
+        else if (transform.position.x < player.transform.position.x && movingRight == true)
+        {
+            Debug.Log("Guard moving left with player on right");
+            //Flip();
+            /*chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
+            caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
+            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
+            movingRight = true;
+            
+        }
+        else if (transform.position.x > player.transform.position.x && movingRight == true)
+        {
+            Debug.Log("Guard moving left with player on left");
+        }
     }
     public void GuardCuaght()
     {
@@ -287,10 +315,11 @@ public class GuardMovement : MonoBehaviour {
         chasing = false;
         alert = false;
         anim.SetBool("Incapacitated", true);
+        //anim.SetBool("Incapacitated", false);
         //gameObject.GetComponent<Animation>().Play("Incapacitated");
         //gameObject.GetComponent<Collider2D>().enabled = false;
 
-        
+
 
         //array to hold all child objects
         Debug.Log(transform.childCount);
@@ -307,8 +336,8 @@ public class GuardMovement : MonoBehaviour {
         }
         Debug.Log(transform.childCount);
 
-        
 
+        
         this.enabled = false;
 
         //moves the guard back in space to allow the player sprite to not clip
@@ -336,5 +365,11 @@ public class GuardMovement : MonoBehaviour {
     {
         yield return new WaitForSeconds(1f);
         //Patrolling = true;
+    }*/
+
+    /*IEnumerator DelayAnimation()
+    {
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("Incapacitated", false);
     }*/
 }
