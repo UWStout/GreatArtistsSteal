@@ -236,6 +236,15 @@ public class GuardMovement : MonoBehaviour {
         Patrolling = true;
     }
 
+    public void GuardAlert()
+    {
+        Patrolling = false;
+        anim.SetBool("Alert", true);
+
+        Debug.Log("GUARDALERT");
+        StartCoroutine(AlertFlip());
+    }
+
     public void GuardCuaght()
     {
         PlayerMovement playerControl = otherObject.GetComponent<PlayerMovement>();
@@ -301,6 +310,13 @@ public class GuardMovement : MonoBehaviour {
 
         //moves the guard back in space to allow the player sprite to not clip
         gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - .22f, transform.localPosition.z);
+    }
+
+    IEnumerator AlertFlip()
+    {
+        yield return new WaitForSeconds(3f);
+        anim.SetBool("Alert", false);
+        Patrolling = true;
     }
 
     IEnumerator DelayAnimationDisable()

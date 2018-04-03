@@ -22,6 +22,7 @@ public class GuardChasing : MonoBehaviour {
         if (collision.gameObject.tag == ("Player"))
         {
             stopChasing.StopGuardChasing();
+            stopChasing.GuardAlert();
         }
         
     }
