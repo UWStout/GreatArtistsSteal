@@ -438,6 +438,21 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61456778875858896, guid: 270708bd166d6334ca43baf504dd6337,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61456778875858896, guid: 270708bd166d6334ca43baf504dd6337,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 61456778875858896, guid: 270708bd166d6334ca43baf504dd6337,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
   m_IsPrefabParent: 0
@@ -1839,6 +1854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca5a5047abe3434fa1b8e5831f85279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canControl: 1
   topSpeed: 4
   groundCheck: {fileID: 613873401}
   jumpForce: 690
