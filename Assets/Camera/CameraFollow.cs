@@ -83,7 +83,8 @@ public class CameraFollow : MonoBehaviour {
             position.y = cameraHeight;
             transform.position = position;*/
             transform.position = new Vector3(xPos, cameraHeight, -13);
-        }else if (((player.position.x > 4) || (player.position.x < 220)) && (pull == true))
+        }
+        else if (((player.position.x > 4) || (player.position.x < 220)) && (pull == true))
         {
             if (player.position.x < guardObject.position.x)
             {
