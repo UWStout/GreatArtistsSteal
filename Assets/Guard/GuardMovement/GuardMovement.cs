@@ -27,7 +27,7 @@ public class GuardMovement : MonoBehaviour {
     bool Patrolling = true;
     bool playerCaught = false;
     bool Incapacitated = false;
-    bool chasing = false;
+    public bool chasing = false;
     bool caught = false;
     bool alert = false;
 
