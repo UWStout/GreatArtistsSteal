@@ -63,9 +63,6 @@ public class GuardMovement : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
         anim.SetBool( "Patrolling",Patrolling);
-
-        /*Animation animation = GetComponent<Animation>();            
-        animation["Incapacitated"].wrapMode = WrapMode.Once;*/
     }
 
 
@@ -145,6 +142,7 @@ public class GuardMovement : MonoBehaviour {
             chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
             caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
             incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
+            transform.localScale = new Vector3(guardScale, guardScale, guardScale);
             swap = false;
         }
 
@@ -180,7 +178,7 @@ public class GuardMovement : MonoBehaviour {
 
     }
 
-            public void GuardChasing()
+    public void GuardChasing()
     {
         if (transform.position.x < player.transform.position.x && movingRight == true)
         {
@@ -200,14 +198,14 @@ public class GuardMovement : MonoBehaviour {
         Debug.Log("GuardChasing");
         chasing = true;
     }
+
     public void StopGuardChasing()
     {
         Debug.Log("GuardStopChasing");
-        //StartCoroutine(AlertGuard());
-        //StartCoroutine(AlertGuard());
+
         chasing = false;
         //StartCoroutine(delay());
-        Patrolling = true;
+        
         //alert = true;
 
         if (transform.position.x < player.transform.position.x && movingRight == false)
@@ -220,8 +218,8 @@ public class GuardMovement : MonoBehaviour {
             /*Flip();
             chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
             caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
-            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
-            //transform.localScale = new Vector3(-guardScale, guardScale, guardScale);*/
+            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
+            transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
             movingRight = true;
             stopChasingSwapLeft = true;
             swap = true;
@@ -232,8 +230,8 @@ public class GuardMovement : MonoBehaviour {
             /*Flip();
             chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
             caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
-            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);
-            //transform.localScale = new Vector3(guardScale, guardScale, guardScale);*/
+            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
+            transform.localScale = new Vector3(guardScale, guardScale, guardScale);
             movingRight = false;
             stopChasingSwapRight = true;
             swap = true;
@@ -242,7 +240,10 @@ public class GuardMovement : MonoBehaviour {
         {
             Debug.Log("Guard moving left with player on left");
         }
+
+        Patrolling = true;
     }
+
     public void GuardCuaght()
     {
         chasing = false;
@@ -279,13 +280,8 @@ public class GuardMovement : MonoBehaviour {
         Patrolling = false;
         chasing = false;
         alert = false;
-        //anim.SetBool("Incapacitated", true);
+
         anim.SetTrigger("Incap");
-        //anim.SetBool("Incapacitated", false);
-        //gameObject.GetComponent<Animation>().Play("Incapacitated");
-        //gameObject.GetComponent<Collider2D>().enabled = false;
-
-
 
         //array to hold all child objects
         Debug.Log(transform.childCount);
