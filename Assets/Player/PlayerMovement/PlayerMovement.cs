@@ -55,6 +55,10 @@ public class PlayerMovement : MonoBehaviour {
                 Flip();
             }
         }
+        else if (canControl == false)
+        {
+            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        }
         
     }
 
@@ -84,6 +88,10 @@ public class PlayerMovement : MonoBehaviour {
                 sprint = false;
             }
             anim.SetBool("Sprint", sprint);
+        }
+        else if (canControl == false)
+        {
+            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         }
         
     }
