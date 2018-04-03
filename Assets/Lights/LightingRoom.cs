@@ -8,11 +8,6 @@ public class LightingRoom : MonoBehaviour {
     private bool guardInRoom = false;
     private bool playerInRoom = false;
     private bool guardIsChasing = false;
-
-	// Use this for initialization
-	void Start () {
-        
-	}
 	
 	// Update is called once per frame
 	void Update () {

@@ -238,6 +238,8 @@ public class GuardMovement : MonoBehaviour {
 
     public void GuardCuaght()
     {
+        PlayerMovement playerControl = otherObject.GetComponent<PlayerMovement>();
+
         chasing = false;
         caught = true;
 
@@ -262,6 +264,8 @@ public class GuardMovement : MonoBehaviour {
         playerCaught = true;
         otherAnimator.GetComponent<Animator>().SetTrigger("Caught");
         anim.SetBool("playerCaught", caught);
+
+        playerControl.canControl = false;
     }
 
     public Sprite incapacitatedSprite;
