@@ -24,6 +24,9 @@ public class LightingRoom : MonoBehaviour {
         if (chasingScript.chasing == true)
         {
             guardIsChasing = true;
+        }else if (chasingScript.chasing == false)
+        {
+            guardIsChasing = false;
         }
 
         if ((guardInRoom == true) && (playerInRoom == true) && (guardIsChasing == true))
@@ -33,7 +36,7 @@ public class LightingRoom : MonoBehaviour {
 
 	}
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         
         if (collision.transform.tag == ("Player"))
@@ -48,4 +51,18 @@ public class LightingRoom : MonoBehaviour {
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.transform.tag == ("Player"))
+        {
+            playerInRoom = false;
+        }
+
+        if (collision.transform.tag == ("Guard"))
+        {
+            Debug.Log("Guard has entered the room");
+            guardInRoom = false;
+        }
+    }
 }
