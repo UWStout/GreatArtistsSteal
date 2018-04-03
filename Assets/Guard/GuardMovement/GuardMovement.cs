@@ -238,6 +238,7 @@ public class GuardMovement : MonoBehaviour {
 
     public void GuardAlert()
     {
+        
         Patrolling = false;
         anim.SetBool("Alert", true);
 
