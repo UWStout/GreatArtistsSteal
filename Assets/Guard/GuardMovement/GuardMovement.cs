@@ -215,10 +215,6 @@ public class GuardMovement : MonoBehaviour {
         else if (transform.position.x > player.transform.position.x && movingRight == false)
         {
             Debug.Log("Guard moving right with player on left");
-            /*Flip();
-            chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
-            caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
-            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
             transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
             movingRight = true;
             stopChasingSwapLeft = true;
@@ -227,10 +223,6 @@ public class GuardMovement : MonoBehaviour {
         else if (transform.position.x < player.transform.position.x && movingRight == true)
         {
             Debug.Log("Guard moving left with player on right");
-            /*Flip();
-            chasingTrigger.transform.localScale = new Vector3(chasingTrigger.transform.localScale.x * -1, chasingTrigger.transform.localScale.y, chasingTrigger.transform.localScale.z);
-            caughtTrigger.transform.localScale = new Vector3(caughtTrigger.transform.localScale.x * -1, caughtTrigger.transform.localScale.y, caughtTrigger.transform.localScale.z);
-            incapacitatedTrigger.transform.localScale = new Vector3(incapacitatedTrigger.transform.localScale.x * -1, incapacitatedTrigger.transform.localScale.y, incapacitatedTrigger.transform.localScale.z);*/
             transform.localScale = new Vector3(guardScale, guardScale, guardScale);
             movingRight = false;
             stopChasingSwapRight = true;
