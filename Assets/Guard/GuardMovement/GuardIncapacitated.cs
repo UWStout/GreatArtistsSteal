@@ -21,7 +21,7 @@ public class GuardIncapacitated : MonoBehaviour {
 
         if (collision.gameObject.tag == ("Player"))
         {
-            rb.AddForce(transform.up * 1500);
+            rb.AddForce(transform.up * 1300);
             Debug.Log("Guard Incapacitated");
             incapacitated.GuardIncapacitated();
         }

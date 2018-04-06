@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GuardMovement : MonoBehaviour {
 
-    private float guardScale = 0.8f;
+    private float guardScale = 1f;
 
     //determine sprite direction
     bool faceRight = true;

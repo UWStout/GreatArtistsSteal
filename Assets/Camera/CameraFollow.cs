@@ -57,12 +57,12 @@ public class CameraFollow : MonoBehaviour {
         float xPos3 = Mathf.Lerp(transform.position.x, player.transform.position.x - 1.5f, 50 * smoothSpeed * Time.deltaTime);
 
 
-        if ((player.position.x <= 4) && (pull == false))
+        if ((player.position.x <= 3) && (pull == false))
         {
             position.x = 4;
             position.y = cameraHeight;
         }
-        else if ((player.position.x <= 4) && (pull == true))
+        else if ((player.position.x <= 3) && (pull == true))
         {
             position.x = 4;
             position.y = cameraHeight;
@@ -77,14 +77,14 @@ public class CameraFollow : MonoBehaviour {
             position.x = 4;
             position.y = cameraHeight;
         }
-        else if (((player.position.x > 4) || (player.position.x < 220)) && (pull == false))
+        else if (((player.position.x > 3) || (player.position.x < 220)) && (pull == false))
         {
             /*position.x = player.transform.position.x;
             position.y = cameraHeight;
             transform.position = position;*/
             transform.position = new Vector3(xPos, cameraHeight, -13);
         }
-        else if (((player.position.x > 4) || (player.position.x < 220)) && (pull == true))
+        else if (((player.position.x > 3) || (player.position.x < 220)) && (pull == true))
         {
             if (player.position.x < guardObject.position.x)
             {
