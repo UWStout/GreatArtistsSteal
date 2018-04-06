@@ -7,11 +7,20 @@ public class Steal : MonoBehaviour {
     private bool canSteal = false;
     public GameObject scoreCount;
 
+    Animator anim;
+
+    private void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
+
     private void Update()
     {
         if (canSteal == true)
         {
             Score newScore = scoreCount.gameObject.GetComponent<Score>();
+
+            anim.SetBool("Active", true);
 
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -19,6 +28,9 @@ public class Steal : MonoBehaviour {
                 Destroy(gameObject);
                 newScore.AddScore();
             }
+       }else if (canSteal == false)
+        {
+            anim.SetBool("Active", false);
         }
     }
 

@@ -333,6 +333,11 @@ Prefab:
       propertyPath: scoreCount
       value: 
       objectReference: {fileID: 634388249}
+    - target: {fileID: 61706882445758876, guid: 5a89e207b0895934aacc80e61de717e8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a89e207b0895934aacc80e61de717e8, type: 2}
   m_IsPrefabParent: 0
@@ -461,7 +466,7 @@ Prefab:
         type: 3}
     - target: {fileID: 1172435257471772, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_LocalScale.x
@@ -478,6 +483,26 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &290275983 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1620459855095090, guid: 5a89e207b0895934aacc80e61de717e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 154399104}
+--- !u!58 &290275984
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 290275983}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.2
 --- !u!1001 &329778131
 Prefab:
   m_ObjectHideFlags: 0
@@ -594,7 +619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &336422400
 Transform:
   m_ObjectHideFlags: 0
@@ -924,6 +949,26 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18fcd494ab71841d695135246693eb3a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1036302301 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1767186085776660, guid: cd5ac9343d50dcd4a923f841b6431d59,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595986822}
+--- !u!58 &1036302302
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036302301}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.2
 --- !u!1001 &1037950206
 Prefab:
   m_ObjectHideFlags: 0
@@ -1452,6 +1497,11 @@ Prefab:
       propertyPath: scoreCount
       value: 
       objectReference: {fileID: 634388249}
+    - target: {fileID: 61604737627331432, guid: cd5ac9343d50dcd4a923f841b6431d59,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd5ac9343d50dcd4a923f841b6431d59, type: 2}
   m_IsPrefabParent: 0
@@ -1545,6 +1595,11 @@ Prefab:
       propertyPath: scoreCount
       value: 
       objectReference: {fileID: 634388249}
+    - target: {fileID: 58216792153339854, guid: 7b73821a076a001448477b8e8a0df34e,
+        type: 2}
+      propertyPath: m_Radius
+      value: 2.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b73821a076a001448477b8e8a0df34e, type: 2}
   m_IsPrefabParent: 0
@@ -1576,6 +1631,26 @@ Transform:
   m_Father: {fileID: 1986646118}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1697866017 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1490599135320884, guid: 11c7c80ffaf55c649b3108953fe0a12c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1819804249}
+--- !u!58 &1697866018
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697866017}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.2
 --- !u!1 &1705611191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,6 +1805,11 @@ Prefab:
       propertyPath: scoreCount
       value: 
       objectReference: {fileID: 634388249}
+    - target: {fileID: 61111803469338606, guid: 11c7c80ffaf55c649b3108953fe0a12c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11c7c80ffaf55c649b3108953fe0a12c, type: 2}
   m_IsPrefabParent: 0
