@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour {
             //get movement direction of player
             float move = Input.GetAxis("Horizontal");
 
+            
+
             GetComponent<Rigidbody2D>().velocity = new Vector2(move * topSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
             anim.SetFloat("Speed", Mathf.Abs(move));
@@ -66,6 +68,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (canControl == true)
         {
+
             if (grounded && Input.GetKeyDown(KeyCode.Space))//determines whether or not the player is near the ground and can jump or not
             {
                 //adding jumpforce to the y-axis of the rigidBody
@@ -80,7 +83,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 sprint = true;
                 topSpeed = 10f;
-
+                
             }
             else if (Input.GetKeyUp(KeyCode.LeftShift))
             {

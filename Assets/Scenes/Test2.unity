@@ -350,7 +350,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 71.23
+      value: 65.5
       objectReference: {fileID: 0}
     - target: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1349,7 +1349,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557a791330e0a6d449b5f96c31a851b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: LightOn
+    clip: {fileID: 8300000, guid: 0fccae7597d1b5d47b53b69592a2e87b, type: 3}
+    volume: 1
+    pitch: 2.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Steal
+    clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &1210958907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,7 +1926,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1986646116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.8, y: -2.05, z: -0.02}
+  m_LocalPosition: {x: 46.9, y: -2.05, z: -0.02}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 613873401}

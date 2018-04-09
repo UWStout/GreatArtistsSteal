@@ -26,6 +26,7 @@ public class LightingRoom : MonoBehaviour {
 
         if ((guardInRoom == true) && (playerInRoom == true) && (guardIsChasing == true))
         {
+            FindObjectOfType<AudioManager>().Play("LightOn");
             Destroy(gameObject);
         }
 
