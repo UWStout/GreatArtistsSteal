@@ -18,6 +18,7 @@ public class Steal : MonoBehaviour {
     {
         if (canSteal == true)
         {
+            //scoreCount = GetComponent<>();
             Score newScore = scoreCount.gameObject.GetComponent<Score>();
 
             anim.SetBool("Active", true);
