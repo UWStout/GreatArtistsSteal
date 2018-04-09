@@ -57,3 +57,6 @@ TagManager:
   - name: Darkness
     uniqueID: 3060447229
     locked: 0
+  - name: Flashlight
+    uniqueID: 3052888731
+    locked: 0
