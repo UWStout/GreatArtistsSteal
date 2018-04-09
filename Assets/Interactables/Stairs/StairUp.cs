@@ -8,6 +8,7 @@ public class StairUp : MonoBehaviour {
     //public GameObject player;
     private float locationUp = 9f;
     private bool triggerEntered = false;
+    private Animator upstairs;
     float changeHeight = 9f;
 
     private void Update()
@@ -28,6 +29,7 @@ public class StairUp : MonoBehaviour {
     {
         if (collision.gameObject.tag == ("Player"))
         {
+            upstairs.GetComponent<Animation>().Play("UpGoingUp");
             triggerEntered = true;
             Debug.Log("can interact");         
         } 
