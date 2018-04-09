@@ -1359,7 +1359,7 @@ MonoBehaviour:
   - name: Steal
     clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 1.2
     loop: 0
     source: {fileID: 0}
 --- !u!1 &1210958907
