@@ -226,7 +226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &15028206
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -415,7 +415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &76083920
 Transform:
   m_ObjectHideFlags: 0
@@ -1077,7 +1077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &248877793
 Transform:
   m_ObjectHideFlags: 0
@@ -1978,7 +1978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &476741941
 Transform:
   m_ObjectHideFlags: 0
@@ -2108,7 +2108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &540970288
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2357,7 +2357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &565564476
 Transform:
   m_ObjectHideFlags: 0
@@ -2416,7 +2416,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1975102965653738, guid: cfbb2d76fc7a5d04e971fc93b5236166, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfbb2d76fc7a5d04e971fc93b5236166, type: 2}
@@ -2804,7 +2804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &620883759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2932,7 +2932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &627810319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3405,7 +3405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1481719950300746, guid: a79e4365c55172d41aa27bde9fe26a3e, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a79e4365c55172d41aa27bde9fe26a3e, type: 2}
@@ -3940,7 +3940,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1449516592154806, guid: c0517d886def2fb4bb99c5a9da2e1558, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0517d886def2fb4bb99c5a9da2e1558, type: 2}
@@ -4471,7 +4471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1380786924310642, guid: c95f4b1db3a72614194035b46ba4f2f8, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c95f4b1db3a72614194035b46ba4f2f8, type: 2}
@@ -4968,7 +4968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1028613326
 Transform:
   m_ObjectHideFlags: 0
@@ -5405,7 +5405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1620445358777624, guid: 9aab9a4ed75b9034faa11734e450a148, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9aab9a4ed75b9034faa11734e450a148, type: 2}
@@ -5715,7 +5715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1070110644
 Transform:
   m_ObjectHideFlags: 0
@@ -5897,7 +5897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1126599625
 Transform:
   m_ObjectHideFlags: 0
@@ -5929,7 +5929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1165331462
 Transform:
   m_ObjectHideFlags: 0
@@ -6354,7 +6354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1239924625
 Transform:
   m_ObjectHideFlags: 0
@@ -6386,7 +6386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1257292015
 Transform:
   m_ObjectHideFlags: 0
@@ -6445,7 +6445,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1415401685695880, guid: df63b182d8146784d998439df0c1157e, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df63b182d8146784d998439df0c1157e, type: 2}
@@ -6464,7 +6464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1297544538
 Transform:
   m_ObjectHideFlags: 0
@@ -6523,7 +6523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1916718917189162, guid: f7d5d4d41e4958d42823c89c8244bac9, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7d5d4d41e4958d42823c89c8244bac9, type: 2}
@@ -6832,7 +6832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1325606879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6907,7 +6907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1343390474
 Transform:
   m_ObjectHideFlags: 0
@@ -6939,7 +6939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1385284223
 Transform:
   m_ObjectHideFlags: 0
@@ -7068,7 +7068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1411024307
 Transform:
   m_ObjectHideFlags: 0
@@ -7972,7 +7972,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1300738506279924, guid: ca11a9f43fa38ff459f7025055330ce8, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca11a9f43fa38ff459f7025055330ce8, type: 2}
@@ -8453,7 +8453,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1104928557769134, guid: 5211fe9b78fe93c428d01743bcea4077, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5211fe9b78fe93c428d01743bcea4077, type: 2}
@@ -8775,7 +8775,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1179455721800082, guid: dc3b5434db145d642903e7c0ba81d68a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 61319264264003852, guid: dc3b5434db145d642903e7c0ba81d68a,
         type: 2}
@@ -9020,7 +9020,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1058351265989340, guid: 0e8e0f021c3913e45abbd3a4697a2697, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e8e0f021c3913e45abbd3a4697a2697, type: 2}
@@ -9085,7 +9085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1756766541
 Transform:
   m_ObjectHideFlags: 0
@@ -9298,7 +9298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1699091860304106, guid: 613fba29fb90ca04f8a6a311bb9154de, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 613fba29fb90ca04f8a6a311bb9154de, type: 2}
@@ -9418,7 +9418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1781732897
 Animator:
   serializedVersion: 3
@@ -9843,7 +9843,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1246143189594872, guid: 48bd222b1a9a7754ea521a2a6e764ac3, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48bd222b1a9a7754ea521a2a6e764ac3, type: 2}
@@ -10206,7 +10206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1916950756
 Transform:
   m_ObjectHideFlags: 0
@@ -10307,7 +10307,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1247869322269136, guid: b3301e7e80a2d0c4eb57216a72f84558, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3301e7e80a2d0c4eb57216a72f84558, type: 2}
@@ -10713,7 +10713,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1801052007146378, guid: 9a69c1326a0ad944a9da581c743600f2, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a69c1326a0ad944a9da581c743600f2, type: 2}
@@ -10737,7 +10737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1994555811
 Transform:
   m_ObjectHideFlags: 0
@@ -11237,7 +11237,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1482374581226520, guid: cf610e55bb1301448a6ee7a1a8e60b53, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf610e55bb1301448a6ee7a1a8e60b53, type: 2}
@@ -11256,7 +11256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2133654395
 Transform:
   m_ObjectHideFlags: 0

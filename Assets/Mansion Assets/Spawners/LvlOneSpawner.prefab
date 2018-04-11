@@ -89,5 +89,6 @@ MonoBehaviour:
   RightRoom: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753, type: 2}
   StairsUp: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753, type: 2}
   StairsDown: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753, type: 2}
+  Darkness: {fileID: 1969760634471528, guid: 434f15a69fe052840863795f07c22816, type: 2}
   TREASUREROOM: {fileID: 1645980686681286, guid: f8c20cae4e7b04a4c9a0b1b4ce206753,
     type: 2}

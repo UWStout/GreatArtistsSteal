@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LightingRoom : MonoBehaviour {
 
-    public GameObject guard;
+    GameObject guard;
     private bool guardInRoom = false;
     private bool playerInRoom = false;
     private bool guardIsChasing = false;
