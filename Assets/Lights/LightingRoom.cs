@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class LightingRoom : MonoBehaviour {
 
-    public GameObject guard;
+    GameObject guard;
     private bool guardInRoom = false;
     private bool playerInRoom = false;
     private bool guardIsChasing = false;
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        guard = GameObject.FindGameObjectWithTag("Guard");
+    }
+
+    // Update is called once per frame
+    void Update () {
         Debug.Log("Guard is chasing: "+guardIsChasing);
         Debug.Log("Guard is in room: "+guardInRoom);
         Debug.Log("Player is in room: "+playerInRoom);
