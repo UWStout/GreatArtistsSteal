@@ -16,7 +16,7 @@ public class CameraFollow : MonoBehaviour {
     private GameObject[] guard;
     private float distanceToGuard = 22f;
 
-    public float smoothSpeed = 80f;
+    public float smoothSpeed = 10f;
     //public Vector3 offset;
 
     public Transform camera;

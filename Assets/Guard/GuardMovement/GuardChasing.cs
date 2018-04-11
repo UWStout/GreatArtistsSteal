@@ -12,6 +12,8 @@ public class GuardChasing : MonoBehaviour {
         if (collision.gameObject.tag == ("Player"))
         {
             chasing.GuardChasing();
+            Animator anim = gameObject.GetComponentInParent<Animator>();
+            anim.SetBool("Alert", false);
         }
     }
 

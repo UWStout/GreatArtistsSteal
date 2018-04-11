@@ -11,11 +11,13 @@ public class Steal : MonoBehaviour {
 
     private void Start()
     {
+      
         anim = gameObject.GetComponent<Animator>();
     }
 
     private void Update()
     {
+        
         if (canSteal == true)
         {
             //scoreCount = GetComponent<>();
