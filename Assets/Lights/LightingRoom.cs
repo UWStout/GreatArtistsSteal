@@ -16,25 +16,21 @@ public class LightingRoom : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        Debug.Log("Guard is chasing: "+guardIsChasing);
-        Debug.Log("Guard is in room: "+guardInRoom);
-        Debug.Log("Player is in room: "+playerInRoom);
+        // Debug.Log("Guard is chasing: "+guardIsChasing);
+        // Debug.Log("Guard is in room: "+guardInRoom);
+        // Debug.Log("Player is in room: "+playerInRoom);
 
-        GuardMovement chasingScript = guard.GetComponent<GuardMovement>();
-        if (chasingScript.chasing == true)
-        {
-            guardIsChasing = true;
-        }else if (chasingScript.chasing == false)
-        {
-            guardIsChasing = false;
+        if(guard != null) {        
+            GuardMovement chasingScript = guard.GetComponent<GuardMovement>();
+            guardIsChasing = (chasingScript != null) && chasingScript.chasing;
         }
 
-        if ((guardInRoom == true) && (playerInRoom == true) && (guardIsChasing == true))
+        // Turn on the lights
+        if (guardInRoom && playerInRoom && guardIsChasing)
         {
             FindObjectOfType<AudioManager>().Play("LightOn");
             Destroy(gameObject);
         }
-
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
