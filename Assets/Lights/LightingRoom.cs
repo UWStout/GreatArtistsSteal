@@ -9,8 +9,12 @@ public class LightingRoom : MonoBehaviour {
     private bool guardInRoom = false;
     private bool playerInRoom = false;
     private bool guardIsChasing = false;
-    private int lastLog = (int)Math.Floor(Time.time);
+    private int lastLog = 0;
 	
+    void Start() {
+        int lastLog = (int)Math.Floor(Time.time);        
+    }
+
 	// Update is called once per frame
 	void Update () {
         // Log info every second
