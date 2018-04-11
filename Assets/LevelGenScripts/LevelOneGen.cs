@@ -50,7 +50,7 @@ public class LevelOneGen : MonoBehaviour {
         Vector2 originPostion = transform.position;
 
         //Creates the Array
-        /*
+        
         int[,] level = new int[,] { { 4, 1, 5, 0, 0, 0, 0, 2, 9, 5 },
                                     { 3, 1, 7, 0, 0, 0, 0, 4, 8, 7 },
                                     { 4, 1, 8, 1, 1, 1, 1, 8, 1, 6 },
@@ -59,14 +59,6 @@ public class LevelOneGen : MonoBehaviour {
                                     { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
                                     { 2, 1, 1, 1, 1, 1, 1, 1, 1, 6 }, };
 
-        */
-        int[,] level = new int[,] { { 4, 1, 1, 0, 0, 0, 0, 1, 9, 1 },
-                                    { 3, 1, 7, 0, 0, 0, 0, 4, 8, 7 },
-                                    { 4, 1, 8, 1, 1, 1, 1, 8, 1, 6 },
-                                    { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
-                                    { 4, 1, 1, 1, 1, 1, 1, 1, 1, 6 },
-                                    { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
-                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 6 }, };
 
 
 
@@ -307,7 +299,7 @@ Debug.Log("Placing the Rooms");
 
                     offsetY += 24;
                 }
-                //Right Rooms
+                //Right Rooms/*
                 else if (level[x, y] == 2)
                 {
                     Instantiate(LeftRoom, offset, Quaternion.identity);

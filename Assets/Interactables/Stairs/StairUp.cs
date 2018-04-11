@@ -8,20 +8,24 @@ public class StairUp : MonoBehaviour {
     //public GameObject player;
     private float locationUp = 9f;
     private bool triggerEntered = false;
-    private Animator upstairs;
+    public GameObject Player;
+    private Animator anim;
+    private bool enter;
     float changeHeight = 9f;
 
+
+ void Start() {
+         anim = GetComponent<Animator>();
+     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
         {
-            Vector2 before = player.transform.position;
-            player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + locationUp);
-            Vector2 after = player.transform.position;
-            //player.transform.position = player.transform.position +9;
-            Debug.Log(string.Format("PlayerMoveUp: {0} vs {1}", before, after));
-
-            CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationUp;
+           
+            Player.SetActive(false);
+            anim.Play("UpGoingUp");
+            StartCoroutine(Delay());
+                      
         }
     }
 
@@ -29,9 +33,8 @@ public class StairUp : MonoBehaviour {
     {
         if (collision.gameObject.tag == ("Player"))
         {
-            upstairs.GetComponent<Animation>().Play("UpGoingUp");
             triggerEntered = true;
-            Debug.Log("can interact");         
+            Debug.Log("can interact"); 
         } 
     }
 
@@ -43,4 +46,17 @@ public class StairUp : MonoBehaviour {
             Debug.Log("cant interact");
         }
     }
+
+IEnumerator Delay() {
+        yield return new WaitForSeconds(1f);
+        Vector2 before = player.transform.position;
+        player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + locationUp);
+        Vector2 after = player.transform.position;
+        //player.transform.position = player.transform.position +9;
+        Debug.Log(string.Format("PlayerMoveUp: {0} vs {1}", before, after));
+        CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationUp; 
+        yield return new WaitForSeconds(1f);
+        Player.SetActive(true); 
+    }
+    
 }

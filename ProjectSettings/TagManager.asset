@@ -45,6 +45,9 @@ TagManager:
   - name: Background
     uniqueID: 287954947
     locked: 0
+  - name: A
+    uniqueID: 1869387249
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -56,7 +59,4 @@ TagManager:
     locked: 0
   - name: Darkness
     uniqueID: 3060447229
-    locked: 0
-  - name: Flashlight
-    uniqueID: 3052888731
     locked: 0
