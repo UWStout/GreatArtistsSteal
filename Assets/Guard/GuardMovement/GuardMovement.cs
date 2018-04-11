@@ -244,6 +244,7 @@ public class GuardMovement : MonoBehaviour {
 
         Debug.Log("GUARDALERT");
         StartCoroutine(AlertFlip());
+
     }
 
     public void GuardCuaght()
