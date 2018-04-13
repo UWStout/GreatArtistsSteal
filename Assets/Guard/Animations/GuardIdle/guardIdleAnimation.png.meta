@@ -1,0 +1,782 @@
+fileFormatVersion: 2
+guid: d4ce07db321cd704bb6eda293ad9f296
+timeCreated: 1523637752
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: guardIdleAnimation_0
+    21300002: guardIdleAnimation_1
+    21300004: guardIdleAnimation_2
+    21300006: guardIdleAnimation_3
+    21300008: guardIdleAnimation_4
+    21300010: guardIdleAnimation_5
+    21300012: guardIdleAnimation_6
+    21300014: guardIdleAnimation_7
+    21300016: guardIdleAnimation_8
+    21300018: guardIdleAnimation_9
+    21300020: guardIdleAnimation_10
+    21300022: guardIdleAnimation_11
+    21300024: guardIdleAnimation_12
+    21300026: guardIdleAnimation_13
+    21300028: guardIdleAnimation_14
+    21300030: guardIdleAnimation_15
+    21300032: guardIdleAnimation_16
+    21300034: guardIdleAnimation_17
+    21300036: guardIdleAnimation_18
+    21300038: guardIdleAnimation_19
+    21300040: guardIdleAnimation_20
+    21300042: guardIdleAnimation_21
+    21300044: guardIdleAnimation_22
+    21300046: guardIdleAnimation_23
+    21300048: guardIdleAnimation_24
+    21300050: guardIdleAnimation_25
+    21300052: guardIdleAnimation_26
+    21300054: guardIdleAnimation_27
+    21300056: guardIdleAnimation_28
+    21300058: guardIdleAnimation_29
+    21300060: guardIdleAnimation_30
+    21300062: guardIdleAnimation_31
+    21300064: guardIdleAnimation_32
+    21300066: guardIdleAnimation_33
+    21300068: guardIdleAnimation_34
+    21300070: guardIdleAnimation_35
+    21300072: guardIdleAnimation_36
+    21300074: guardIdleAnimation_37
+    21300076: guardIdleAnimation_38
+    21300078: guardIdleAnimation_39
+    21300080: guardIdleAnimation_40
+    21300082: guardIdleAnimation_41
+    21300084: guardIdleAnimation_42
+    21300086: guardIdleAnimation_43
+    21300088: guardIdleAnimation_44
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: guardIdleAnimation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_1
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_2
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_3
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_4
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_5
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_6
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_7
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_8
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 1600
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_10
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_11
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_12
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_13
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_14
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_15
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_16
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_17
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 1200
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_19
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_20
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_21
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_22
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_23
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_24
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_25
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_26
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 800
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_28
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_29
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_30
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_31
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_32
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_33
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_34
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_35
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 400
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_37
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_38
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_39
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_40
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_41
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_42
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_43
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: guardIdleAnimation_44
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 0
+        width: 343
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
