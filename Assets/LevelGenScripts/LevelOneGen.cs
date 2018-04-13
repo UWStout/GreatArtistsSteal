@@ -8,31 +8,31 @@ public class LevelOneGen : MonoBehaviour {
     private int maxX = 7;
     private int maxY = 10;
 
-	public GameObject LeftShell;
-	public GameObject RightShell;
-	public GameObject NormalShell;
+	public GameObject LeftShell;// = GameObject.Find("LeftShell");
+	public GameObject RightShell;// = GameObject.Find("RightShell");
+	public GameObject NormalShell;// = GameObject.Find("NormalShell");
 
-    public GameObject NormalRoom1;
-    public GameObject NormalRoom2;
-    public GameObject NormalRoom3;
-    public GameObject NormalRoom4;
-	public GameObject NormalRoom5;
-	public GameObject NormalRoom6;
-	public GameObject NormalRoom7;
-	public GameObject NormalRoom8;
-	public GameObject NormalRoom9;
-	public GameObject NormalRoom10;
-	public GameObject NormalRoom11;
-	public GameObject NormalRoom12;
-	public GameObject NormalRoom13;
-	public GameObject NormalRoom14;
-	public GameObject NormalRoom15;
-    public GameObject LeftRoom;
-    public GameObject RightRoom;
-    public GameObject StairsUp;
-    public GameObject StairsDown;
-
-    public GameObject Darkness;
+    public GameObject NormalRoom1;//  = GameObject.Find("NormalRoom1");
+    public GameObject NormalRoom2;//  = GameObject.Find("NormalRoom2");
+    public GameObject NormalRoom3;// = GameObject.Find("NormalRoom3");
+    public GameObject NormalRoom4;// = GameObject.Find("NormalRoom4");
+	public GameObject NormalRoom5;// = GameObject.Find("NormalRoom5");
+	public GameObject NormalRoom6;// = GameObject.Find("NormalRoom6");
+	public GameObject NormalRoom7;// = GameObject.Find("NormalRoom7");
+	public GameObject NormalRoom8;// = GameObject.Find("NormalRoom8");
+	public GameObject NormalRoom9;// = GameObject.Find("NormalRoom9");
+	public GameObject NormalRoom10;// = GameObject.Find("NormalRoom10");
+	public GameObject NormalRoom11;// = GameObject.Find("NormalRoom11");
+	public GameObject NormalRoom12;// = GameObject.Find("NormalRoom12");
+	public GameObject NormalRoom13;// = GameObject.Find("NormalRoom13");
+	public GameObject NormalRoom14;// = GameObject.Find("NormalRoom14");
+	public GameObject NormalRoom15;// = GameObject.Find("NormalRoom15");
+    public GameObject LeftRoom;// = GameObject.Find("LeftRoom");
+    public GameObject RightRoom;// = GameObject.Find("RightRoom");
+    public GameObject StairsUp;// = GameObject.Find("StairsUp");
+    public GameObject StairsDown;// = GameObject.Find("StairsDown");
+    public GameObject Darkness;// = GameObject.Find("Darkness");
+    public GameObject TREASUREROOM;// = GameObject.Find("TREASUREROOM");
     /*
     public GameObject LeftStairsDown;
     public GameObject LeftStairsUp;
@@ -42,12 +42,38 @@ public class LevelOneGen : MonoBehaviour {
     public GameObject NormalStairsUp;
     */
 
-    public GameObject TREASUREROOM;
+    
 
 
     // Use this for initialization
     void Start()
     {
+        /*
+        LeftShell = GameObject.Find("Assets/Mansion Assets/Room Stucture/RoomShells/LeftRoomShell");
+        RightShell = GameObject.Find("RightShell");
+        NormalShell = GameObject.Find("NormalShell");
+        NormalRoom1 = GameObject.Find("NormalRoom1");
+        NormalRoom2 = GameObject.Find("NormalRoom2");
+        NormalRoom3 = GameObject.Find("NormalRoom3");
+        NormalRoom4 = GameObject.Find("NormalRoom4");
+        NormalRoom5 = GameObject.Find("NormalRoom5");
+        NormalRoom6 = GameObject.Find("NormalRoom6");
+        NormalRoom7 = GameObject.Find("NormalRoom7");
+        NormalRoom8 = GameObject.Find("NormalRoom8");
+        NormalRoom9 = GameObject.Find("NormalRoom9");
+        NormalRoom10 = GameObject.Find("NormalRoom10");
+        NormalRoom11 = GameObject.Find("NormalRoom11");
+        NormalRoom12 = GameObject.Find("NormalRoom12");
+        NormalRoom13 = GameObject.Find("NormalRoom13");
+        NormalRoom14 = GameObject.Find("NormalRoom14");
+        NormalRoom15 = GameObject.Find("NormalRoom15");
+        LeftRoom = GameObject.Find("LeftRoom");
+        RightRoom = GameObject.Find("RightRoom");
+        StairsUp = GameObject.Find("StairsUp");
+        StairsDown = GameObject.Find("StairsDown");
+        Darkness = GameObject.Find("Darkness");
+        TREASUREROOM = GameObject.Find("TREASUREROOM");
+        */
 
         Vector2 originPostion = transform.position;
 
@@ -217,7 +243,7 @@ for (int x = maxX-1; x >= 0; x--)
 
 // Finding the index of the treasure Room and
 // making sure it is not supposed to be an empty Room or stair room
-/*
+/*/
 int randY = Random.Range(0,9);
 int randX = Random.Range(5,6);
 if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2  ){
@@ -246,7 +272,7 @@ Debug.Log("Placing the Rooms");
                // Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 //Places NormalRooms
-                if (level[x,y] == 1 ||level[x,y] == 8 || level[x,y]== 9 || level[x,y] >= 10 && level[x,y] <= 24)
+                if (level[x,y] == 1 || level[x,y] >= 10 && level[x,y] <= 24)
                 {
                     //Figures a random int for a random room to be placed
                     
@@ -320,6 +346,7 @@ Debug.Log("Placing the Rooms");
                 else if (level[x, y] == 2)
                 {
                     Instantiate(LeftRoom, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 //Right Stairs Up
@@ -339,6 +366,7 @@ Debug.Log("Placing the Rooms");
                 else if (level[x, y] == 5)
                 {
                     Instantiate(RightRoom, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 //Left Stairs Up
@@ -373,10 +401,12 @@ Debug.Log("Placing the Rooms");
                 }*/
                 else if(level[x,y] == 3 || level[x,y] == 6 || level[x,y] == 8){
                     Instantiate(StairsUp, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY+=24;
                 }
                 else if(level[x,y] == 4 || level[x,y] == 7 || level[x,y] == 9){
                     Instantiate(StairsDown, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY+=24;
                 }
                 else { offsetY += 24; }
