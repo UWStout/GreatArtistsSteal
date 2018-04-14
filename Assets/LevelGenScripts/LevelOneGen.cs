@@ -191,7 +191,7 @@ for (int x = maxX-1; x >= 0; x--)
                 
                 //Debug.Log(x + " " +y);
 				Vector3 offset = new Vector2(offsetY,offsetX);
-				if(level[x,y] == 2 || level[x,y] == 3 || level[x,y] == 4){
+				if(level[x,y] == 2 || level[x,y] == 3 || level[x,y] == 4||level[x,y] == 25){
 					Instantiate(LeftShell, offset, Quaternion.identity);
 					offsetY += 24;
 				}

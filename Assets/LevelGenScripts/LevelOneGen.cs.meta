@@ -51,6 +51,8 @@ MonoImporter:
   - Darkness: {fileID: 1969760634471528, guid: 434f15a69fe052840863795f07c22816, type: 2}
   - TREASUREROOM: {fileID: 1466316477964748, guid: a5ab6167cba099c449d1fcbe64e3e4e0,
       type: 2}
+  - StartEndRoom: {fileID: 1557914575471214, guid: 66cae55f1f4a8d84895ba233931ce76b,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

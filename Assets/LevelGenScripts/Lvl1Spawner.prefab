@@ -51,27 +51,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b841022af0ad44d82cd5c994ea3daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftShell: {fileID: 0}
-  RightShell: {fileID: 0}
-  NormalShell: {fileID: 0}
-  NormalRoom1: {fileID: 0}
-  NormalRoom2: {fileID: 0}
-  NormalRoom3: {fileID: 0}
-  NormalRoom4: {fileID: 0}
-  NormalRoom5: {fileID: 0}
-  NormalRoom6: {fileID: 0}
-  NormalRoom7: {fileID: 0}
-  NormalRoom8: {fileID: 0}
-  NormalRoom9: {fileID: 0}
-  NormalRoom10: {fileID: 0}
-  NormalRoom11: {fileID: 0}
-  NormalRoom12: {fileID: 0}
-  NormalRoom13: {fileID: 0}
-  NormalRoom14: {fileID: 0}
-  NormalRoom15: {fileID: 0}
-  LeftRoom: {fileID: 0}
-  RightRoom: {fileID: 0}
-  StairsUp: {fileID: 0}
-  StairsDown: {fileID: 0}
-  Darkness: {fileID: 0}
-  TREASUREROOM: {fileID: 0}
+  LeftShell: {fileID: 1845198780279042, guid: 8afd8785c1f07674690085ffa734027a, type: 2}
+  RightShell: {fileID: 1783036735320936, guid: 35c3ae14e31f6a84b8c45f39e8c39739, type: 2}
+  NormalShell: {fileID: 1193216918536300, guid: 5ce328c831b30ca48bd61594c97bc3f5,
+    type: 2}
+  NormalRoom1: {fileID: 1300738506279924, guid: ca11a9f43fa38ff459f7025055330ce8,
+    type: 2}
+  NormalRoom2: {fileID: 1449516592154806, guid: c0517d886def2fb4bb99c5a9da2e1558,
+    type: 2}
+  NormalRoom3: {fileID: 1723451211510770, guid: 83e00b170f5fc8647bd335ff79b9f0ae,
+    type: 2}
+  NormalRoom4: {fileID: 1246143189594872, guid: 48bd222b1a9a7754ea521a2a6e764ac3,
+    type: 2}
+  NormalRoom5: {fileID: 1415401685695880, guid: df63b182d8146784d998439df0c1157e,
+    type: 2}
+  NormalRoom6: {fileID: 1975102965653738, guid: cfbb2d76fc7a5d04e971fc93b5236166,
+    type: 2}
+  NormalRoom7: {fileID: 1247869322269136, guid: b3301e7e80a2d0c4eb57216a72f84558,
+    type: 2}
+  NormalRoom8: {fileID: 1620445358777624, guid: 9aab9a4ed75b9034faa11734e450a148,
+    type: 2}
+  NormalRoom9: {fileID: 1179455721800082, guid: dc3b5434db145d642903e7c0ba81d68a,
+    type: 2}
+  NormalRoom10: {fileID: 1699091860304106, guid: 613fba29fb90ca04f8a6a311bb9154de,
+    type: 2}
+  NormalRoom11: {fileID: 1916718917189162, guid: f7d5d4d41e4958d42823c89c8244bac9,
+    type: 2}
+  NormalRoom12: {fileID: 1380786924310642, guid: c95f4b1db3a72614194035b46ba4f2f8,
+    type: 2}
+  NormalRoom13: {fileID: 1058351265989340, guid: 0e8e0f021c3913e45abbd3a4697a2697,
+    type: 2}
+  NormalRoom14: {fileID: 1801052007146378, guid: 9a69c1326a0ad944a9da581c743600f2,
+    type: 2}
+  NormalRoom15: {fileID: 1104928557769134, guid: 5211fe9b78fe93c428d01743bcea4077,
+    type: 2}
+  LeftRoom: {fileID: 1975102965653738, guid: cfbb2d76fc7a5d04e971fc93b5236166, type: 2}
+  RightRoom: {fileID: 1247869322269136, guid: b3301e7e80a2d0c4eb57216a72f84558, type: 2}
+  StairsUp: {fileID: 1300208532001542, guid: 154db1c2946c7a24297294f08a0ed95a, type: 2}
+  StairsDown: {fileID: 1377089946235208, guid: 1f415caa1c4cdcf4a90a7a552c8f364c, type: 2}
+  Darkness: {fileID: 1969760634471528, guid: 434f15a69fe052840863795f07c22816, type: 2}
+  TREASUREROOM: {fileID: 1466316477964748, guid: a5ab6167cba099c449d1fcbe64e3e4e0,
+    type: 2}
+  StartEndRoom: {fileID: 1557914575471214, guid: 66cae55f1f4a8d84895ba233931ce76b,
+    type: 2}
