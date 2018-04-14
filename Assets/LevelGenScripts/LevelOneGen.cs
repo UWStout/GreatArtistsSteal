@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class LevelOneGen : MonoBehaviour {
     private float offsetX = 0;
+    private int GuardCounter=0;
     private float offsetY = 0;
     private int maxX = 7;
     private int maxY = 10;
+    private GameObject Guard;
 
 	public GameObject LeftShell;// = GameObject.Find("LeftShell");
 	public GameObject RightShell;// = GameObject.Find("RightShell");
@@ -33,14 +35,8 @@ public class LevelOneGen : MonoBehaviour {
     public GameObject StairsDown;// = GameObject.Find("StairsDown");
     public GameObject Darkness;// = GameObject.Find("Darkness");
     public GameObject TREASUREROOM;// = GameObject.Find("TREASUREROOM");
-    /*
-    public GameObject LeftStairsDown;
-    public GameObject LeftStairsUp;
-    public GameObject RightStairsDown;
-    public GameObject RightStairsUp;
-    public GameObject NormalStairsDown;
-    public GameObject NormalStairsUp;
-    */
+    
+    public GameObject StartEndRoom;
 
     
 
@@ -48,33 +44,8 @@ public class LevelOneGen : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        /*
-        LeftShell = GameObject.Find("Assets/Mansion Assets/Room Stucture/RoomShells/LeftRoomShell");
-        RightShell = GameObject.Find("RightShell");
-        NormalShell = GameObject.Find("NormalShell");
-        NormalRoom1 = GameObject.Find("NormalRoom1");
-        NormalRoom2 = GameObject.Find("NormalRoom2");
-        NormalRoom3 = GameObject.Find("NormalRoom3");
-        NormalRoom4 = GameObject.Find("NormalRoom4");
-        NormalRoom5 = GameObject.Find("NormalRoom5");
-        NormalRoom6 = GameObject.Find("NormalRoom6");
-        NormalRoom7 = GameObject.Find("NormalRoom7");
-        NormalRoom8 = GameObject.Find("NormalRoom8");
-        NormalRoom9 = GameObject.Find("NormalRoom9");
-        NormalRoom10 = GameObject.Find("NormalRoom10");
-        NormalRoom11 = GameObject.Find("NormalRoom11");
-        NormalRoom12 = GameObject.Find("NormalRoom12");
-        NormalRoom13 = GameObject.Find("NormalRoom13");
-        NormalRoom14 = GameObject.Find("NormalRoom14");
-        NormalRoom15 = GameObject.Find("NormalRoom15");
-        LeftRoom = GameObject.Find("LeftRoom");
-        RightRoom = GameObject.Find("RightRoom");
-        StairsUp = GameObject.Find("StairsUp");
-        StairsDown = GameObject.Find("StairsDown");
-        Darkness = GameObject.Find("Darkness");
-        TREASUREROOM = GameObject.Find("TREASUREROOM");
-        */
-
+        
+        Guard = GameObject.Find("Guard");
         Vector2 originPostion = transform.position;
 
         //Creates the Array
@@ -85,7 +56,7 @@ public class LevelOneGen : MonoBehaviour {
                                     { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
                                     { 4, 1, 1, 1, 1, 1, 1, 1, 1, 6 },
                                     { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
-                                    { 2, 1, 1, 1, 1, 1, 1, 1, 1, 6 }, };
+                                    { 25, 1, 1, 1, 1, 1, 1, 1, 1, 6 }, };
 
 
 
@@ -98,7 +69,6 @@ for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
             {
-                
                 //Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 //Places NormalRooms
@@ -258,6 +228,22 @@ if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] !
 }
  */
 
+ int randTR = Random.Range(0,2);
+ if(randTR == 0){
+    level[0,9] = 50;
+ }
+ /*/
+ else if(randTR == 1){
+     level[0,7] = 50;
+ }
+ else if(randTR == 2){
+     level[0,0] = 50;
+ }
+ */
+ else if(randTR == 1 || randTR == 2){
+    level[0,2] = 50;
+ }
+ 
 
 //*Placing The Rooms */
 offsetY = 3.66f;
@@ -267,10 +253,16 @@ Debug.Log("Placing the Rooms");
         for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
-            {
-                
+            {   
                // Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
+                Vector3 GuardOffset = new Vector2(offsetY,offsetX-2.5f);
+
+                if((GuardCounter % 8 == 0 || GuardCounter % 8 == 4) && GuardCounter != 0 && level[x,y] != 0){
+                    Instantiate(Guard, GuardOffset, Quaternion.identity);
+                }
+
+
                 //Places NormalRooms
                 if (level[x,y] == 1 || level[x,y] >= 10 && level[x,y] <= 24)
                 {
@@ -342,63 +334,29 @@ Debug.Log("Placing the Rooms");
 
                     offsetY += 24;
                 }
-                //Right Rooms/*
+                else if(level[x,y] == 25){
+                    Instantiate(StartEndRoom, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
+                    offsetY += 24;
+                }
                 else if (level[x, y] == 2)
                 {
                     Instantiate(LeftRoom, offset, Quaternion.identity);
                     Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
-                //Right Stairs Up
-                /*
-                else if (level[x, y] == 3)
-                {
-                    Instantiate(LeftStairsUp, offset, Quaternion.identity);
-                    offsetY += 24;
-                }
-                //Right Stairs Down
-                else if (level[x, y] == 4)
-                {
-                    Instantiate(LeftStairsDown, offset, Quaternion.identity);
-                    offsetY += 24;
-                }*/
-                //Left Rooms
                 else if (level[x, y] == 5)
                 {
                     Instantiate(RightRoom, offset, Quaternion.identity);
                     Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
-                //Left Stairs Up
-                /*/
-                else if (level[x, y] == 6)
-                {
-                    Instantiate(RightStairsUp, offset, Quaternion.identity);
-                    offsetY += 24;
-                }
-                //Left Stairs Down
-                else if (level[x, y] == 7)
-                {
-                    Instantiate(RightStairsDown, offset, Quaternion.identity);
-                    offsetY += 24;
-                }*/
-                //Normal Stairs Up
-                /*
-                else if (level[x, y] == 8)
-                {
-                    Instantiate(NormalStairsUp, offset, Quaternion.identity);
-                    offsetY += 24;
-                }
-                //Normal Stairs Down
-                else if (level[x, y] == 9)
-                {
-                    Instantiate(NormalStairsDown, offset, Quaternion.identity);
-                    offsetY += 24;
-                }
+                
                 else if(level[x,y]== 50){
                     Instantiate(TREASUREROOM, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
-                }*/
+                }
                 else if(level[x,y] == 3 || level[x,y] == 6 || level[x,y] == 8){
                     Instantiate(StairsUp, offset, Quaternion.identity);
                     Instantiate(Darkness, offset, Quaternion.identity);
@@ -412,7 +370,7 @@ Debug.Log("Placing the Rooms");
                 else { offsetY += 24; }
 
 
-                
+                GuardCounter+=1;
             }
             offsetY = 3.66f;
             offsetX += 9;
