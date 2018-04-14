@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StairUp : MonoBehaviour {
 
-    public Transform player;
+    //public Transform player;
     //public GameObject player;
     private float locationUp = 9f;
     private bool triggerEntered = false;
@@ -15,7 +15,9 @@ public class StairUp : MonoBehaviour {
 
 
  void Start() {
-         anim = GetComponent<Animator>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+        //player.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+        anim = GetComponent<Animator>();
      }
     private void Update()
     {
@@ -23,7 +25,6 @@ public class StairUp : MonoBehaviour {
         {
            
             Player.SetActive(false);
-            anim.Play("UpGoingUp");
             StartCoroutine(Delay());
                       
         }
@@ -43,15 +44,16 @@ public class StairUp : MonoBehaviour {
         if (collision.gameObject.tag == ("Player"))
         {
             triggerEntered = false;
-            Debug.Log("cant interact");
+            Debug.Log("can't interact");
         }
     }
 
 IEnumerator Delay() {
+        anim.Play("UpGoingUp");
         yield return new WaitForSeconds(1f);
-        Vector2 before = player.transform.position;
-        player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + locationUp);
-        Vector2 after = player.transform.position;
+        Vector2 before = Player.transform.position;
+        Player.transform.position = new Vector2(Player.transform.position.x, Player.transform.position.y + locationUp);
+        Vector2 after = Player.transform.position;
         //player.transform.position = player.transform.position +9;
         Debug.Log(string.Format("PlayerMoveUp: {0} vs {1}", before, after));
         CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationUp; 

@@ -9,22 +9,23 @@ public class LightingRoom : MonoBehaviour {
     private bool guardInRoom = false;
     private bool playerInRoom = false;
     private bool guardIsChasing = false;
-    private int lastLog = 0;
-	
-    void Start() {
-        int lastLog = (int)Math.Floor(Time.time);        
-    }
+    //private int lastLog;
 
+    void start(){
+        //lastLog = (int)Math.Floor(Time.time);
+        guard = GameObject.FindGameObjectWithTag("Guard");
+    }
+	
 	// Update is called once per frame
 	void Update () {
         // Log info every second
-        int curTimeSecs = (int)Math.Floor(Time.time);
+        /*int curTimeSecs = (int)Math.Floor(Time.time);
         if (curTimeSecs > lastLog) {
             Debug.Log("Chasing: " + guardIsChasing +
                       ", GuardRoom: " + guardInRoom +
                       ", PlayerRoom: " + playerInRoom);
             lastLog = curTimeSecs;
-        }
+        }*/
 
         // Update guard state
         if(guard != null) {        
@@ -50,7 +51,6 @@ public class LightingRoom : MonoBehaviour {
 
         if (collision.transform.tag == ("Guard"))
         {
-            Debug.Log("Guard has entered the room");
             guardInRoom = true;
         }
     }
@@ -65,7 +65,6 @@ public class LightingRoom : MonoBehaviour {
 
         if (collision.transform.tag == ("Guard"))
         {
-            Debug.Log("Guard has entered the room");
             guardInRoom = false;
         }
     }

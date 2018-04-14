@@ -8,6 +8,7 @@ TagManager:
   - rightWall
   - Light
   - Guard
+  - GUI
   layers:
   - Default
   - TransparentFX
