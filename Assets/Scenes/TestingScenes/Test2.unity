@@ -633,7 +633,7 @@ Prefab:
         type: 3}
     - target: {fileID: 1172435257471772, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
       propertyPath: m_LocalScale.x
@@ -1976,7 +1976,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Timer
+  m_Text: '0:00
 
 '
 --- !u!222 &1709185670
@@ -1996,7 +1996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6763b053b92902f44b5de028b681f774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playTime: 0
   timerText: {fileID: 1709185669}
 --- !u!1001 &1819804249
 Prefab:
