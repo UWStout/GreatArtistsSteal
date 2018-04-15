@@ -15,7 +15,6 @@ public class LightingRoom : MonoBehaviour {
     void start(){
         lastLog = (int)Math.Floor(Time.time);
         guard = GameObject.FindGameObjectWithTag("Guard");
-        
     }
 	
 	// Update is called once per frame
@@ -30,10 +29,20 @@ public class LightingRoom : MonoBehaviour {
         }
 
         // Update guard state
-        if (guard != null)
+        /*if (guard != null)
         {
             GuardMovement chasingScript = guard.GetComponent<GuardMovement>();
             guardIsChasing = (chasingScript != null) && chasingScript.chasing;
+        }*/
+
+        GuardMovement chasingScript = guard.GetComponent<GuardMovement>();
+        if (chasingScript.chasing == true)
+        {
+            guardIsChasing = true;
+        }
+        else if (chasingScript.chasing == false)
+        {
+            guardIsChasing = false;
         }
 
         // Turn on the lights
