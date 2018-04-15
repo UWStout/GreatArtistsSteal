@@ -256,7 +256,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: GuardIdleAnimation
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -268,7 +268,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f34f0f1556a7698419921173e5c94d25, type: 2}
+  m_Motion: {fileID: 7400000, guid: e4c9672b3a4838a428a33310bbc5d415, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
