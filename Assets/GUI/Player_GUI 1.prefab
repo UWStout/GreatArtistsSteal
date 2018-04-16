@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 114516839983525824}
   - component: {fileID: 114332456944609514}
   m_Layer: 5
-  m_Name: Player_GUI_Updated
+  m_Name: Player_GUI 1
   m_TagString: GUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
