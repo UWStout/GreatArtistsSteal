@@ -291,6 +291,8 @@ public class GuardMovement : MonoBehaviour {
         Debug.Log(transform.childCount);
 
         playerControl.canControl = false;
+
+        this.enabled = false;
     }
 
     public Sprite incapacitatedSprite;
