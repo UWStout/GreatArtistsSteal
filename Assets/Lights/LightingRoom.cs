@@ -5,79 +5,57 @@ using UnityEngine;
 
 public class LightingRoom : MonoBehaviour {
 
-    GameObject guard;
-    private bool guardInRoom = false;
-    private bool playerInRoom = false;
-    private bool guardIsChasing = false;
-    private int lastLog;
-    
+    GameObject guard;//set to an array of gameobjects of guards
+    GameObject player;
 
-    void start(){
-        lastLog = (int)Math.Floor(Time.time);
-        guard = GameObject.FindGameObjectWithTag("Guard");
+    void Start() {
+        guard = null;
+        player = null;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        // Log info every second
-        int curTimeSecs = (int)Math.Floor(Time.time);
-        if (curTimeSecs > lastLog) {
-            Debug.Log("Chasing: " + guardIsChasing +
-                      ", GuardRoom: " + guardInRoom +
-                      ", PlayerRoom: " + playerInRoom);
-            lastLog = curTimeSecs;
-        }
-
         // Update guard state
-        /*if (guard != null)
+        if (guard != null && player != null)
         {
+            Debug.Log("Both in same room.");
             GuardMovement chasingScript = guard.GetComponent<GuardMovement>();
-            guardIsChasing = (chasingScript != null) && chasingScript.chasing;
-        }*/
-
-        GuardMovement chasingScript = guard.GetComponent<GuardMovement>();
-        if (chasingScript.chasing == true)
-        {
-            guardIsChasing = true;
-        }
-        else if (chasingScript.chasing == false)
-        {
-            guardIsChasing = false;
-        }
-
-        // Turn on the lights
-        if (guardInRoom && playerInRoom && guardIsChasing)
-        {
-            FindObjectOfType<AudioManager>().Play("LightOn");
-            Destroy(gameObject);
+            if ((chasingScript != null) && chasingScript.chasing)
+            {
+                Debug.Log("GOTCHA!");
+//                FindObjectOfType<AudioManager>().Play("LightOn");
+                Destroy(gameObject);
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        Debug.Log("Enter: " + collision.gameObject.tag);
+
         if (collision.transform.tag == ("Player"))
         {
-            playerInRoom = true;
+            player = collision.gameObject;
         }
 
         if (collision.transform.tag == ("Guard"))
         {
-            guardInRoom = true;
+            guard = collision.gameObject;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("Exit: " + collision.gameObject.tag);
 
         if (collision.transform.tag == ("Player"))
         {
-            playerInRoom = false;
+            player = null;
         }
 
         if (collision.transform.tag == ("Guard"))
         {
-            guardInRoom = false;
+            guard = null;
         }
     }
 }
