@@ -262,101 +262,101 @@ Debug.Log("Placing the Rooms");
                     
                     if (level[x,y] == 10) {
                         Instantiate(NormalRoom1, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 11)
                     {
                         Instantiate(NormalRoom2, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);                      
+                        Instantiate(Darkness, offset, Quaternion.identity);                      
                     }
                     else if(level[x,y] == 12)
                     {
                         Instantiate(NormalRoom3, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 13)
                     {
                         Instantiate(NormalRoom4, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 14){
                         Instantiate(NormalRoom5, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 15){
                         Instantiate(NormalRoom6, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 16){
                         Instantiate(NormalRoom7, offset, Quaternion.identity);
-                        ///Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 17){
                         Instantiate(NormalRoom8, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 18){
                         Instantiate(NormalRoom9, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 19){
                         Instantiate(NormalRoom10, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 20){
                         Instantiate(NormalRoom11, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 21){
                         Instantiate(NormalRoom12, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 22){
                         Instantiate(NormalRoom13, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 23){
                         Instantiate(NormalRoom14, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 24){
                         Instantiate(NormalRoom15, offset, Quaternion.identity);
-                        //Instantiate(Darkness, offset, Quaternion.identity);
+                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
 
                     offsetY += 24;
                 }
                 else if(level[x,y] == 25){
                     Instantiate(StartEndRoom, offset, Quaternion.identity);
-                    //Instantiate(Darkness, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 else if (level[x, y] == 2)
                 {
                     Instantiate(LeftRoom, offset, Quaternion.identity);
-                    //Instantiate(Darkness, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 else if (level[x, y] == 5)
                 {
                     Instantiate(RightRoom, offset, Quaternion.identity);
-                    //Instantiate(Darkness, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 
                 else if(level[x,y]== 50){
                     Instantiate(TREASUREROOM, offset, Quaternion.identity);
-                    //Instantiate(Darkness, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 else if(level[x,y] == 3 || level[x,y] == 6 || level[x,y] == 8){
                     Instantiate(StairsUp, offset, Quaternion.identity);
-                    //Instantiate(Darkness, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY+=24;
                 }
                 else if(level[x,y] == 4 || level[x,y] == 7 || level[x,y] == 9){
                     Instantiate(StairsDown, offset, Quaternion.identity);
-                    //Instantiate(Darkness, offset, Quaternion.identity);
+                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY+=24;
                 }
                 else { offsetY += 24; }
