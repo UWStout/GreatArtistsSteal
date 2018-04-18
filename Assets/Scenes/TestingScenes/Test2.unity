@@ -395,6 +395,10 @@ Prefab:
       propertyPath: otherObject
       value: 
       objectReference: {fileID: 1986646116}
+    - target: {fileID: 1172435257471772, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 270708bd166d6334ca43baf504dd6337, type: 2}
   m_IsPrefabParent: 0
@@ -982,6 +986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703322884}
   - component: {fileID: 1703322885}
+  - component: {fileID: 1703322886}
   m_Layer: 0
   m_Name: UI_DEATH_ENVELOPS_THE_PLAYER
   m_TagString: Untagged
@@ -1046,6 +1051,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1703322886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1703322883}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e524131106ed964b8ed35ef73dd77f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1819804249
 Prefab:
   m_ObjectHideFlags: 0
@@ -1160,7 +1176,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1986646116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.11, y: -2.05, z: -0.02}
+  m_LocalPosition: {x: 201.88, y: -2.05, z: -0.02}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 613873401}

@@ -64,4 +64,15 @@ public class CameraFollow : MonoBehaviour {
         }
 
     }
+
+    public void LerpUp()
+    {
+        float yPos = Mathf.Lerp(transform.position.y, transform.position.y + 9f, 10 * smoothSpeed * Time.deltaTime);
+        transform.position = new Vector3(player.position.x, yPos, -13);
+    }
+
+    public void LerpDown()
+    {
+
+    }
 }
