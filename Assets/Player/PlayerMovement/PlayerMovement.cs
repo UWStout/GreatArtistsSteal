@@ -94,7 +94,8 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (canControl == false)
         {
-            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            Debug.Log("Player cant control");
+            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
         }
         
     }
