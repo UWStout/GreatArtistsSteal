@@ -21,18 +21,17 @@ public class Key : MonoBehaviour {
 	void Update () {
 		if(canGrab == true && Chest.activeSelf == false){
 			if(Input.GetKeyDown(KeyCode.E)){
-				key.SetActive(false);
             	Debug.Log("Collected Key");
+				key.SetActive(true);
+				hasKey = true;
 			}
 		}
 		if(canGrab == true && Chest.activeSelf == true){
 			if (Input.GetKeyDown(KeyCode.E))
             	{
 					Debug.Log("Opened Chest");
-                	//Destroy(Chest);
 					Chest.SetActive(false);
 					key.SetActive(true);
-					hasKey = true;
 				}
 		}
 	}

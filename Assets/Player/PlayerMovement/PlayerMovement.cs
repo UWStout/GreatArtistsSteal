@@ -79,13 +79,13 @@ public class PlayerMovement : MonoBehaviour {
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, gravityForce));
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
             {
                 sprint = true;
                 topSpeed = 10f;
                 
             }
-            else if (Input.GetKeyUp(KeyCode.LeftShift))
+            else if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
             {
                 topSpeed = 4f;
                 sprint = false;

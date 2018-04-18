@@ -6,8 +6,8 @@ public class LevelOneGen : MonoBehaviour {
     private float offsetX = 0;
     private int GuardCounter=0;
     private float offsetY = 0;
-    private int maxX = 7;
-    private int maxY = 10;
+    private int maxX = 7;//was 4
+    private int maxY = 10;//was 8
     private GameObject Guard;
 
 	public GameObject LeftShell;// = GameObject.Find("LeftShell");
@@ -57,6 +57,14 @@ public class LevelOneGen : MonoBehaviour {
                                     { 4, 1, 1, 1, 1, 1, 1, 1, 1, 6 },
                                     { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
                                     { 25, 1, 1, 1, 1, 1, 1, 1, 1, 6 }, };
+        
+        /* 
+        int[,] level = new int[,] { { 4, 1, 5, 0, 0, 2, 9, 5 },
+                                    { 3, 1, 7, 0, 0, 4, 8, 7 },
+                                    { 4, 1, 8, 1, 1, 8, 1, 6 },
+                                    { 3, 1, 1, 1, 1, 1, 1, 7 },
+                                    { 25, 1, 1, 1, 1, 1, 1, 6 }, };
+                                    */
 
 
 
@@ -230,7 +238,7 @@ if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] !
 
  int randTR = Random.Range(0,2);
  if(randTR == 0){
-    level[0,9] = 50;
+    level[0,7] = 50;
  }
  else if(randTR == 1 || randTR == 2){
     level[0,2] = 50;
@@ -250,7 +258,7 @@ Debug.Log("Placing the Rooms");
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 Vector3 GuardOffset = new Vector2(offsetY,offsetX-2.5f);
 
-                if((GuardCounter % 8 == 0 || GuardCounter % 8 == 4) && GuardCounter != 0 && level[x,y] != 0){
+                if((GuardCounter % 10 == 0) && GuardCounter != 0 && level[x,y] != 0){
                     Instantiate(Guard, GuardOffset, Quaternion.identity);
                 }
 
@@ -349,6 +357,7 @@ Debug.Log("Placing the Rooms");
                     Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
+                
                 else if(level[x,y] == 3 || level[x,y] == 6 || level[x,y] == 8){
                     Instantiate(StairsUp, offset, Quaternion.identity);
                     Instantiate(Darkness, offset, Quaternion.identity);
@@ -359,6 +368,7 @@ Debug.Log("Placing the Rooms");
                     Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY+=24;
                 }
+                
                 else { offsetY += 24; }
 
 
