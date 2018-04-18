@@ -273,7 +273,7 @@ public class GuardMovement : MonoBehaviour {
 
         Debug.Log("GuardCaught");
         playerCaught = true;
-        otherAnimator.GetComponent<Animator>().SetTrigger("Caught");
+        //otherAnimator.GetComponent<Animator>().SetTrigger("Caught");
         anim.SetBool("playerCaught", caught);
 
         Debug.Log(transform.childCount);

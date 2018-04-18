@@ -39,7 +39,7 @@ public class LightingRoom : MonoBehaviour {
         if (collision.transform.tag == ("Player"))
         {
             player = collision.gameObject;
-            if (Key.hasKey == true)
+            /*if (Key.hasKey == true)
             {
                 playerGUI.gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 playerGUI.gameObject.transform.GetChild(1).gameObject.SetActive(true);
@@ -52,7 +52,7 @@ public class LightingRoom : MonoBehaviour {
                 playerGUI.gameObject.transform.GetChild(1).gameObject.SetActive(false);
                 playerGUI.gameObject.transform.GetChild(2).gameObject.SetActive(false);
                 playerGUI.gameObject.transform.GetChild(3).gameObject.SetActive(false);
-            }
+            }*/
         }
 
         if (collision.transform.tag == ("Guard"))
@@ -69,7 +69,7 @@ public class LightingRoom : MonoBehaviour {
         if (collision.transform.tag == ("Player"))
         {
             player = null;
-            if (Key.hasKey == true)
+            /*if (Key.hasKey == true)
             {
                 playerGUI.gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 playerGUI.gameObject.transform.GetChild(1).gameObject.SetActive(false);
@@ -82,7 +82,7 @@ public class LightingRoom : MonoBehaviour {
                 playerGUI.gameObject.transform.GetChild(1).gameObject.SetActive(false);
                 playerGUI.gameObject.transform.GetChild(2).gameObject.SetActive(true);
                 playerGUI.gameObject.transform.GetChild(3).gameObject.SetActive(false);
-            }
+            }*/
         }
 
         if (collision.transform.tag == ("Guard"))
