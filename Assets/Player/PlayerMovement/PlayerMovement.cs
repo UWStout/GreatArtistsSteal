@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             
             gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            //Time.timeScale = 0.0f;
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
         }
         
     }
