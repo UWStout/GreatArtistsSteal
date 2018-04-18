@@ -59,7 +59,9 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (canControl == false)
         {
+            
             gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            //Time.timeScale = 0.0f;
         }
         
     }
@@ -95,7 +97,7 @@ public class PlayerMovement : MonoBehaviour {
         else if (canControl == false)
         {
             Debug.Log("Player cant control");
-            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+            //gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
         }
         
     }
