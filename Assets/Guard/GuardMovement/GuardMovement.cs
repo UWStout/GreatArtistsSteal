@@ -276,7 +276,23 @@ public class GuardMovement : MonoBehaviour {
         otherAnimator.GetComponent<Animator>().SetTrigger("Caught");
         anim.SetBool("playerCaught", caught);
 
+        Debug.Log(transform.childCount);
+        int i = 0;
+        GameObject[] allChildren = new GameObject[transform.childCount];
+        foreach (Transform child in transform)
+        {
+            allChildren[i] = child.gameObject;
+            i += 1;
+        }
+        foreach (GameObject child in allChildren)
+        {
+            Destroy(child.gameObject);
+        }
+        Debug.Log(transform.childCount);
+
         playerControl.canControl = false;
+
+        this.enabled = false;
     }
 
     public Sprite incapacitatedSprite;
