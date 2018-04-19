@@ -7,13 +7,12 @@ public class MainMenu : MonoBehaviour {
 
 	public void Play(){
 
-		SceneManager.LoadScene("Level One");
+		SceneManager.LoadScene("levelBriefing");
 
 	}
 
 	public void Credits(){
 		SceneManager.LoadScene("main Credits");
-		Debug.Log ("Worked");
 	}
 
 	public void Highscore(){
