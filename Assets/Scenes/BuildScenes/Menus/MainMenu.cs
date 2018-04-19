@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
-	public void Start(){
+	public void Play(){
 
 		SceneManager.LoadScene("Level One");
 
 	}
 
 	public void Credits(){
-
+		SceneManager.LoadScene("main Credits");
+		Debug.Log ("Worked");
 	}
 
 	public void Highscore(){
@@ -20,6 +21,6 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void Quit(){
-
+		Application.Quit ();
 	}
 }
