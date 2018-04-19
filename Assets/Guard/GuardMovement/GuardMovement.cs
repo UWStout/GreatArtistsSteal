@@ -68,6 +68,7 @@ public class GuardMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+
         wallCheckL = Physics2D.OverlapCircle(wallNearR.position, wallRadius, whatIsGuardWall);
         wallCheckR = Physics2D.OverlapCircle(wallNearL.position, wallRadius, whatIsGuardWall);
 
@@ -136,6 +137,7 @@ public class GuardMovement : MonoBehaviour {
 
     private void Update()
     {
+
         if (Patrolling == true && swap == true)
         {
             Flip();
@@ -304,6 +306,7 @@ public class GuardMovement : MonoBehaviour {
         chasing = false;
         alert = false;
 
+        //anim.SetBool("Incapacitated", true);
         anim.SetTrigger("Incap");
 
         //array to hold all child objects
@@ -317,7 +320,7 @@ public class GuardMovement : MonoBehaviour {
         }
         foreach(GameObject child in allChildren)
         {
-            Destroy(child.gameObject);
+            child.gameObject.SetActive(false);
         }
         Debug.Log(transform.childCount);
 
@@ -328,6 +331,8 @@ public class GuardMovement : MonoBehaviour {
 
         //moves the guard back in space to allow the player sprite to not clip
         gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y - .22f, transform.localPosition.z);
+
+        StartCoroutine(RespawnGuard());
     }
 
     IEnumerator AlertFlip()
@@ -341,5 +346,39 @@ public class GuardMovement : MonoBehaviour {
     {
         yield return new WaitForSeconds(.5f);
         gameObject.GetComponent<Animator>().enabled = false;
+    }
+
+    IEnumerator RespawnGuard()
+    {
+        yield return new WaitForSeconds(10f);
+        this.enabled = true;
+        gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y + .22f, transform.localPosition.z);
+        
+
+        Debug.Log(transform.childCount);
+        int i = 0;
+        GameObject[] allChildren = new GameObject[transform.childCount];
+        foreach (Transform child in transform)
+        {
+            allChildren[i] = child.gameObject;
+            i += 1;
+        }
+        foreach (GameObject child in allChildren)
+        {
+            child.gameObject.SetActive(true);
+        }
+        Debug.Log(transform.childCount);
+
+        anim.ResetTrigger("Incap");
+        //anim.SetBool("Incapacitated", false);
+        //anim.SetTrigger("Incap");
+        anim.SetBool("Patrolling", true);
+
+        Debug.Log("YOUVE MADE IT THIS FAR");
+
+        Patrolling = true;
+        Incapacitated = false;
+        chasing = false;
+        alert = false;
     }
 }
