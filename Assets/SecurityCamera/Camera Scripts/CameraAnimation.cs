@@ -20,6 +20,7 @@ public class CameraAnimation : MonoBehaviour {
     private bool resetPos = false;
 
     private float speed = 0.375f;
+    private float counter = 0f;
 
     private bool patrolling = true;
 
@@ -40,7 +41,6 @@ public class CameraAnimation : MonoBehaviour {
 
     private void Update()
     {
-        Debug.Log(timeLeft);
         if (countDown == true)
         {
             timeLeft -= Time.deltaTime;
@@ -62,13 +62,15 @@ public class CameraAnimation : MonoBehaviour {
             Debug.Log("Reset starting point of trigger");    
             resetPos = false;
             patrolling = true;
+            counter = 0;
         }
 
         if (patrolling == true && resetPos == false)
         {
-            
+            counter += Time.deltaTime * speed;
+
             trigger.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(4.44f, 8.68f);  
-            trigger.transform.position = Vector3.Lerp(startPos, endPos, Mathf.PingPong(Time.time * speed, 1f));
+            trigger.transform.position = Vector3.Lerp(startPos, endPos, Mathf.PingPong(counter, 1f));
         }
         else if (patrolling == false)
         {
