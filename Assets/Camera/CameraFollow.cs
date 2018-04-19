@@ -22,6 +22,10 @@ public class CameraFollow : MonoBehaviour {
     public Transform camera;
     //private bool pull = false;
 
+    private bool lerpUp = false;
+    private bool lerpDown = false;
+    private float counter = 0f;
+
 
     private void Start()
     {
@@ -63,16 +67,32 @@ public class CameraFollow : MonoBehaviour {
             transform.position = new Vector3(xPos, cameraHeight, -13);
         }
 
+        
+        /*if (lerpUp == true)
+        {
+            counter += Time.deltaTime * .5f;
+
+            while (counter <= 5)
+            {
+                transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, transform.localPosition.y + 9, Time.deltaTime * 2f), transform.localPosition.z);
+            }
+            
+        }
+
+        if (lerpDown == true)
+        {
+            transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, transform.localPosition.y - 9, Time.deltaTime * 2f), transform.localPosition.z);
+        }*/
+
     }
 
-    public void LerpUp()
+    /*public void LerpUp()
     {
-        float yPos = Mathf.Lerp(transform.position.y, transform.position.y + 9f, 10 * smoothSpeed * Time.deltaTime);
-        transform.position = new Vector3(player.position.x, yPos, -13);
+        lerpUp = true;
     }
 
     public void LerpDown()
     {
-
-    }
+        lerpDown = true;
+    }*/
 }

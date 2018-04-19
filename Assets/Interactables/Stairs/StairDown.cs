@@ -21,6 +21,10 @@ public class StairDown : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
         {
+            //CameraFollow moveCam = GameObject.FindGameObjectWithTag("Camera").gameObject.GetComponent<CameraFollow>();
+            //moveCam.LerpDown();
+
+
             Player.SetActive(false);
             StartCoroutine(Delay());
         }
