@@ -81,6 +81,15 @@ public class PlayerMovement : MonoBehaviour {
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, gravityForce));
             }
 
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                anim.SetBool("Crouching", true);
+            }
+            else if (Input.GetKeyUp(KeyCode.S))
+            {
+                anim.SetBool("Crouching", false);
+            }
+
             if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
             {
                 sprint = true;
