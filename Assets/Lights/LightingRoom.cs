@@ -25,7 +25,7 @@ public class LightingRoom : MonoBehaviour {
             if ((chasingScript != null) && chasingScript.chasing)
             {
                 Debug.Log("GOTCHA!");
-//                FindObjectOfType<AudioManager>().Play("LightOn");
+                FindObjectOfType<AudioManager>().Play("LightOn");
                 Destroy(gameObject);
             }
         }
