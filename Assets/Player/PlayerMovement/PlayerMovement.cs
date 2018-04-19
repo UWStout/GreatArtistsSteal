@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour {
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, gravityForce));
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            /*if (Input.GetKeyDown(KeyCode.S))
             {
                 anim.SetBool("Crouching", true);
                 if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
@@ -94,13 +94,13 @@ public class PlayerMovement : MonoBehaviour {
             {
                 anim.SetBool("Crouching", false);
                 anim.SetBool("CrouchWalk", false);
-            }
+            }*/
 
 
             if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
             {
-                anim.SetBool("Crouching", false);
-                anim.SetBool("CrouchWalk", false);
+                //anim.SetBool("Crouching", false);
+                //anim.SetBool("CrouchWalk", false);
                 sprint = true;
                 topSpeed = 10f;
                 
