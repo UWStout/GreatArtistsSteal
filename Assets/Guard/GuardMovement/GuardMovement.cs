@@ -350,7 +350,7 @@ public class GuardMovement : MonoBehaviour {
 
     IEnumerator RespawnGuard()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(30f);
         this.enabled = true;
         gameObject.transform.position = new Vector3(transform.localPosition.x, transform.localPosition.y + .22f, transform.localPosition.z);
         
@@ -369,16 +369,24 @@ public class GuardMovement : MonoBehaviour {
         }
         Debug.Log(transform.childCount);
 
-        anim.ResetTrigger("Incap");
-        //anim.SetBool("Incapacitated", false);
-        //anim.SetTrigger("Incap");
-        anim.SetBool("Patrolling", true);
-
-        Debug.Log("YOUVE MADE IT THIS FAR");
+        
 
         Patrolling = true;
         Incapacitated = false;
         chasing = false;
         alert = false;
+
+        anim.enabled = false;
+        anim.enabled = true;
+        anim.Rebind();
+        //anim.SetBool("Reset", true);
+        //anim.ResetTrigger("Incap");
+        //anim.SetTrigger("Incap");
+        //anim.SetBool("Incapacitated", false);
+        //anim.SetTrigger("Incap");
+        //anim.SetBool("Incapacitated", false);
+        //anim.SetBool("Patrolling", true);
+
+        Debug.Log("YOUVE MADE IT THIS FAR");
     }
 }
