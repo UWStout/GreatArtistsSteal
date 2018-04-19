@@ -996,6 +996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825636773d31cd849a1591838bcbd814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  otherObject: {fileID: 1986646116}
+  followSpeed: {fileID: 1245295888}
 --- !u!111 &1245295888
 Animation:
   m_ObjectHideFlags: 0
@@ -1004,7 +1006,7 @@ Animation:
   m_GameObject: {fileID: 1245295882}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 22a1b5d9dea30414297bba7c26a71315, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 22a1b5d9dea30414297bba7c26a71315, type: 2}
   m_WrapMode: 0
