@@ -84,14 +84,23 @@ public class PlayerMovement : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.S))
             {
                 anim.SetBool("Crouching", true);
+                if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
+                {
+                    anim.SetBool("CrouchWalk", true);
+                    anim.SetBool("KeyDown", true);
+                }
             }
             else if (Input.GetKeyUp(KeyCode.S))
             {
                 anim.SetBool("Crouching", false);
+                anim.SetBool("CrouchWalk", false);
             }
+
 
             if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
             {
+                anim.SetBool("Crouching", false);
+                anim.SetBool("CrouchWalk", false);
                 sprint = true;
                 topSpeed = 10f;
                 
