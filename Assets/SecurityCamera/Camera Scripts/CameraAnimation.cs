@@ -10,8 +10,6 @@ public class CameraAnimation : MonoBehaviour {
     private Vector3 endPos;
     private Vector3 centerPos;
 
-    private float fraction = 0f;
-
     private bool resetPos = false;
 
     private float speed = 0.375f;
@@ -28,40 +26,30 @@ public class CameraAnimation : MonoBehaviour {
 
         centerPos = new Vector3(transform.position.x + 9.6f, trigger.transform.position.y, transform.position.z);
 
-        trigger.transform.position = startPos;
+        //trigger.transform.position = startPos;
     }
 
     private void Update()
     {
-       
-        if (patrolling == true)
+        if (resetPos == true)
         {
-            if (resetPos == true)
-            {
-                trigger.transform.position = startPos;
-                resetPos = false;
-            }
-            
-            trigger.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(4.44f, 8.68f);
+            trigger.transform.position = startPos;
+            Debug.Log("Reset starting point of trigger");    
+            resetPos = false;
+            patrolling = true;
+        }
 
-            /*if (fraction < 1)
-            {
-                fraction += Time.deltaTime * speed;
-                trigger.transform.position = Vector3.Lerp(startPos, endPos, fraction);
-            }*/
-           
-            trigger.transform.position = Vector3.Lerp(startPos, endPos, Mathf.PingPong(Time.time * speed, 1));
+        if (patrolling == true && resetPos == false)
+        {
+            
+            trigger.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(4.44f, 8.68f);  
+            trigger.transform.position = Vector3.Lerp(startPos, endPos, Mathf.PingPong(Time.time * speed, 1f));
         }
         else if (patrolling == false)
         {
             trigger.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(23.5f, 8.68f);
             trigger.position = centerPos;
         }
-    }
-
-    public void Patrolling()
-    {
-
     }
 
     public void Spotted()
@@ -77,7 +65,7 @@ public class CameraAnimation : MonoBehaviour {
 
     public void UnSpotted()
     {
-        patrolling = true;
+        patrolling = false;
         anim.SetBool("Spotted", false);
         resetPos = true;
     }
