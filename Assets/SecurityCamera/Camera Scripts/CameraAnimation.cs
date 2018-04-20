@@ -69,7 +69,6 @@ public class CameraAnimation : MonoBehaviour {
         if (patrolling == true && resetPos == false)
         {
             counter += Time.deltaTime * speed;
-
             trigger.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(4.44f, 8.68f);  
             trigger.transform.position = Vector3.Lerp(startPos, endPos, Mathf.PingPong(counter, 1f));
         }

@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour {
     private void Start()
     {
         //PLAY GAME MUSIC IN BACKGROUND
-        //Play("NAMEOFSOUND");
+        Play("BackgroundMusic");
     }
 
     public void Play (string name)
