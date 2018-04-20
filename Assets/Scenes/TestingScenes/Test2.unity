@@ -1031,7 +1031,7 @@ Prefab:
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4463041216701494, guid: f20070db170afee48b687838fbb52b9e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1078,7 +1078,7 @@ Prefab:
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.data[2].volume
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
@@ -1108,22 +1108,22 @@ Prefab:
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.data[3].name
-      value: PlayerRunning
+      value: PlayerJump
       objectReference: {fileID: 0}
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: afc81148cf88b3c48bfbd59d42bdfa91, type: 3}
+      objectReference: {fileID: 8300000, guid: beff89d2999f1504ebc3c1973ba71cb2, type: 3}
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.data[3].volume
-      value: 0.8
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.data[3].pitch
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
@@ -1148,7 +1148,7 @@ Prefab:
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.data[3].loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f20070db170afee48b687838fbb52b9e, type: 2}

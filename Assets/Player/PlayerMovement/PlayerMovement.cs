@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour {
             if (grounded && Input.GetKeyDown(KeyCode.Space))//determines whether or not the player is near the ground and can jump or not
             {
                 //adding jumpforce to the y-axis of the rigidBody
-                
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
             }
             if (!grounded)//adding faster fall speed to character when player is not grounded
