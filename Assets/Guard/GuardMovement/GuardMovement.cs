@@ -306,6 +306,8 @@ public class GuardMovement : MonoBehaviour {
         chasing = false;
         alert = false;
 
+        FindObjectOfType<AudioManager>().Play("GuardIncapacitated");
+
         //anim.SetBool("Incapacitated", true);
         anim.SetTrigger("Incap");
 
