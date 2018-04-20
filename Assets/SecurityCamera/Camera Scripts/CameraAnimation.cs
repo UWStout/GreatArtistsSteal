@@ -26,6 +26,7 @@ public class CameraAnimation : MonoBehaviour {
 
     private void Start()
     {
+        otherObject = GameObject.Find("Player");
         otherAnimator = otherObject.GetComponent<Animator>();
 
         startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);

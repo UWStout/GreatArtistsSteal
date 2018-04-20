@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61540208886510324}
   m_Layer: 0
   m_Name: Darkness
-  m_TagString: Untagged
+  m_TagString: Darkness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

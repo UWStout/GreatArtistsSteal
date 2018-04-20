@@ -22,7 +22,7 @@ public class Key : MonoBehaviour {
 		if(canGrab == true && Chest.activeSelf == false){
 			if(Input.GetKeyDown(KeyCode.E)){
             	Debug.Log("Collected Key");
-				key.SetActive(true);
+				key.SetActive(false);
 				hasKey = true;
 			}
 		}

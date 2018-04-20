@@ -5,10 +5,14 @@ using UnityEngine;
 public class LevelOneGen : MonoBehaviour {
     private float offsetX = 0;
     private int GuardCounter=0;
+
+    private int CameraCounter = 0;
     private float offsetY = 0;
     private int maxX = 7;//was 4
     private int maxY = 10;//was 8
+
     private GameObject Guard;
+    public GameObject SecCamera;
 
 	public GameObject LeftShell;// = GameObject.Find("LeftShell");
 	public GameObject RightShell;// = GameObject.Find("RightShell");
@@ -46,6 +50,7 @@ public class LevelOneGen : MonoBehaviour {
     {
         
         Guard = GameObject.Find("Guard");
+        //SecCamera = GameObject.FindGameObjectWithTag("SecCamera");
         Vector2 originPostion = transform.position;
 
         //Creates the Array
@@ -57,14 +62,7 @@ public class LevelOneGen : MonoBehaviour {
                                     { 4, 1, 1, 1, 1, 1, 1, 1, 1, 6 },
                                     { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
                                     { 25, 1, 1, 1, 1, 1, 1, 1, 1, 6 }, };
-        
-        /* 
-        int[,] level = new int[,] { { 4, 1, 5, 0, 0, 2, 9, 5 },
-                                    { 3, 1, 7, 0, 0, 4, 8, 7 },
-                                    { 4, 1, 8, 1, 1, 8, 1, 6 },
-                                    { 3, 1, 1, 1, 1, 1, 1, 7 },
-                                    { 25, 1, 1, 1, 1, 1, 1, 6 }, };
-                                    */
+
 
 
 
@@ -257,8 +255,13 @@ Debug.Log("Placing the Rooms");
                // Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 Vector3 GuardOffset = new Vector2(offsetY,offsetX-2.5f);
+                Vector3 CameraOffset = new Vector2(offsetY,offsetX+3f);
 
-                if((GuardCounter % 10 == 0) && GuardCounter != 0 && level[x,y] != 0){
+                if(CameraCounter % 2 == 0 && CameraCounter !=0 && level[x,y] != 0){
+                    Instantiate(SecCamera, CameraOffset, Quaternion.identity);
+                }
+
+                if((GuardCounter % 4 == 0) && GuardCounter != 0 && level[x,y] != 0){
                     Instantiate(Guard, GuardOffset, Quaternion.identity);
                 }
 
@@ -373,9 +376,22 @@ Debug.Log("Placing the Rooms");
 
 
                 GuardCounter+=1;
+                CameraCounter+=1;
             }
             offsetY = 3.66f;
             offsetX += 9;
         }
+        InvokeRepeating("Lighting", 10f, 10f);
 }
+
+   
+    void Lighting(){
+        int randX = Random.Range(0, maxX);
+        int randY = Random.Range(0, maxY);
+        bool lit = false;
+        while(!lit){
+            break;
+        }
+    }
+
 }
