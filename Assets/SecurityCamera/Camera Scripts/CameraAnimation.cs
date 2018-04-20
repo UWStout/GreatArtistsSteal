@@ -14,7 +14,7 @@ public class CameraAnimation : MonoBehaviour {
     private Vector3 endPos;
     private Vector3 centerPos;
 
-    private float timeLeft = 10f;
+    private float timeLeft = 6f;
     private bool countDown = false;
 
     private bool resetPos = false;
@@ -46,7 +46,7 @@ public class CameraAnimation : MonoBehaviour {
         {
             timeLeft -= Time.deltaTime;
 
-            if (timeLeft <= 4)
+            if (timeLeft <= 3)
             {
                 anim.SetBool("Follow", true);
             }
@@ -118,7 +118,7 @@ public class CameraAnimation : MonoBehaviour {
         anim.SetBool("Spotted", false);
         resetPos = true;
         countDown = false;
-        timeLeft = 10f;
+        timeLeft = 6f;
         anim.SetBool("Follow", false);
     }
 }
