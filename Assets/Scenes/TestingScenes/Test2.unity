@@ -516,7 +516,7 @@ SpriteRenderer:
   m_SortingLayerID: 1984667677
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a5589588305de8643a86a7ba1c9372e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 031cf2d88907608409e95a53b9c2dc1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1523,7 +1523,7 @@ Prefab:
         type: 2}
       propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: beff89d2999f1504ebc3c1973ba71cb2, type: 3}
+      objectReference: {fileID: 8300000, guid: 3adb070347dc99c458026e3ea99e6e56, type: 3}
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.data[3].volume
@@ -1543,7 +1543,7 @@ Prefab:
         type: 2}
       propertyPath: sounds.Array.data[4].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 17473a4a5984a86479848cc5e2f21cc3, type: 3}
+      objectReference: {fileID: 8300000, guid: 8a059c4bc37044148ab1d63864660972, type: 3}
     - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
         type: 2}
       propertyPath: sounds.Array.data[4].volume
