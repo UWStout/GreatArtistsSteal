@@ -14,10 +14,10 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void Highscore(){
-
+		SceneManager.LoadScene ("highScores");
 	}
 
-	public void Quit(){
-		Application.Quit ();
+	public void MenuQuit(){
+		Application.Quit();
 	}
 }
