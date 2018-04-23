@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212725412906598892}
   - component: {fileID: 114698448858989154}
   - component: {fileID: 61540208886510324}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Darkness
   m_TagString: Darkness
   m_Icon: {fileID: 0}

@@ -90,6 +90,7 @@ MonoBehaviour:
   StairsUp: {fileID: 1300208532001542, guid: 154db1c2946c7a24297294f08a0ed95a, type: 2}
   StairsDown: {fileID: 1377089946235208, guid: 1f415caa1c4cdcf4a90a7a552c8f364c, type: 2}
   Darkness: {fileID: 1969760634471528, guid: 434f15a69fe052840863795f07c22816, type: 2}
+  Light: {fileID: 1185961293300288, guid: 70ec4dc23e22d7d418d31d290bc9f7e0, type: 2}
   TREASUREROOM: {fileID: 1466316477964748, guid: a5ab6167cba099c449d1fcbe64e3e4e0,
     type: 2}
   StartEndRoom: {fileID: 1557914575471214, guid: 66cae55f1f4a8d84895ba233931ce76b,

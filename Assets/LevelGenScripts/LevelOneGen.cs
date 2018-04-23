@@ -6,12 +6,15 @@ public class LevelOneGen : MonoBehaviour {
     private float offsetX = 0;
     private int GuardCounter=0;
 
+    public float interval;
+
     private float offsetY = 0;
     private int maxX = 7;//was 4
     private int maxY = 10;//was 8
 
+    public static GameObject[,] Dark;
+    public static int[,] iDark;
     private GameObject Guard;
-
 	public GameObject LeftShell;// = GameObject.Find("LeftShell");
 	public GameObject RightShell;// = GameObject.Find("RightShell");
 	public GameObject NormalShell;// = GameObject.Find("NormalShell");
@@ -36,6 +39,7 @@ public class LevelOneGen : MonoBehaviour {
     public GameObject StairsUp;// = GameObject.Find("StairsUp");
     public GameObject StairsDown;// = GameObject.Find("StairsDown");
     public GameObject Darkness;// = GameObject.Find("Darkness");
+    public GameObject Light;
     public GameObject TREASUREROOM;// = GameObject.Find("TREASUREROOM");
     
     public GameObject StartEndRoom;
@@ -43,15 +47,19 @@ public class LevelOneGen : MonoBehaviour {
     
 
 
+
     // Use this for initialization
     void Start()
     {
+        Cursor.visible = false;
         
         Guard = GameObject.Find("Guard");
+        
         //SecCamera = GameObject.FindGameObjectWithTag("SecCamera");
         Vector2 originPostion = transform.position;
 
         //Creates the Array
+
         
         int[,] level = new int[,] { { 4, 1, 5, 0, 0, 0, 0, 2, 9, 5 },
                                     { 3, 1, 7, 0, 0, 0, 0, 4, 8, 7 },
@@ -61,8 +69,15 @@ public class LevelOneGen : MonoBehaviour {
                                     { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
                                     { 25, 1, 1, 1, 1, 1, 1, 1, 1, 6 }, };
 
+        int[,] iDark = new int[,]  { { 1, 1, 1, 0, 0, 0, 0, 1, 1, 1 },
+                                    { 1, 1, 1, 0, 0, 0, 0, 1, 1, 1 },
+                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, };
 
-
+        GameObject[,] Dark= new GameObject[maxX,maxY];
 
 
 int prev = -1;
@@ -187,7 +202,7 @@ for(int x = maxX-1; x>=0; x--){
 }
 */
 // Placing the Shells
-Debug.Log("Placing the Shells");
+//Debug.Log("Placing the Shells");
 for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
@@ -215,22 +230,7 @@ for (int x = maxX-1; x >= 0; x--)
             offsetX += 9;
 		}
 
-// Finding the index of the treasure Room and
-// making sure it is not supposed to be an empty Room or stair room
-/*/
-int randY = Random.Range(0,9);
-int randX = Random.Range(5,6);
-if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2  ){
-    while(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] != 2){
-        randY = Random.Range(0,maxY-1);
-        randX = Random.Range(maxX-2,maxX-1);
-        Debug.Log(randX+ " " + randY);
-        if(level[randX, randY] == 1 ||  level[randX,randY] == 5 ||  level[randX,randY] == 2){
-            level[randX,randY] = 50;
-        }
-    }
-}
- */
+
 
  int randTR = Random.Range(0,2);
  if(randTR == 0){
@@ -245,7 +245,8 @@ if(level[randX, randY] != 1 ||  level[randX,randY] != 5 ||  level[randX,randY] !
 offsetY = 3.66f;
 offsetX=-4.94f;
 
-Debug.Log("Placing the Rooms");
+
+//Debug.Log("Placing the Rooms");
         for (int x = maxX-1; x >= 0; x--)
         {
             for (int y = 0; y < maxY; y++)
@@ -266,102 +267,81 @@ Debug.Log("Placing the Rooms");
                     
                     if (level[x,y] == 10) {
                         Instantiate(NormalRoom1, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 11)
                     {
-                        Instantiate(NormalRoom2, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);                      
+                        Instantiate(NormalRoom2, offset, Quaternion.identity);                    
                     }
                     else if(level[x,y] == 12)
                     {
                         Instantiate(NormalRoom3, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 13)
                     {
                         Instantiate(NormalRoom4, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 14){
                         Instantiate(NormalRoom5, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 15){
                         Instantiate(NormalRoom6, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 16){
                         Instantiate(NormalRoom7, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 17){
                         Instantiate(NormalRoom8, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 18){
                         Instantiate(NormalRoom9, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 19){
                         Instantiate(NormalRoom10, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 20){
                         Instantiate(NormalRoom11, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 21){
                         Instantiate(NormalRoom12, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 22){
                         Instantiate(NormalRoom13, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 23){
                         Instantiate(NormalRoom14, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
                     else if(level[x,y] == 24){
                         Instantiate(NormalRoom15, offset, Quaternion.identity);
-                        Instantiate(Darkness, offset, Quaternion.identity);
                     }
 
                     offsetY += 24;
                 }
                 else if(level[x,y] == 25){
                     Instantiate(StartEndRoom, offset, Quaternion.identity);
-                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 else if (level[x, y] == 2)
                 {
                     Instantiate(LeftRoom, offset, Quaternion.identity);
-                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 else if (level[x, y] == 5)
                 {
                     Instantiate(RightRoom, offset, Quaternion.identity);
-                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 
                 else if(level[x,y]== 50){
                     Instantiate(TREASUREROOM, offset, Quaternion.identity);
-                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY += 24;
                 }
                 
                 else if(level[x,y] == 3 || level[x,y] == 6 || level[x,y] == 8){
                     Instantiate(StairsUp, offset, Quaternion.identity);
-                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY+=24;
                 }
                 else if(level[x,y] == 4 || level[x,y] == 7 || level[x,y] == 9){
                     Instantiate(StairsDown, offset, Quaternion.identity);
-                    Instantiate(Darkness, offset, Quaternion.identity);
                     offsetY+=24;
                 }
                 
@@ -373,17 +353,47 @@ Debug.Log("Placing the Rooms");
             offsetY = 3.66f;
             offsetX += 9;
         }
-        InvokeRepeating("Lighting", 10f, 10f);
-}
+        //Create Dark Object Array
+offsetX = -4.94f;
+offsetY = 3.66f;
 
-   
-    void Lighting(){
-        int randX = Random.Range(0, maxX);
-        int randY = Random.Range(0, maxY);
-        bool lit = false;
-        while(!lit){
-            break;
+        for (int x = maxX-1; x >= 0; x--)
+        {
+            for (int y = 0; y < maxY; y++)
+            {
+                //Debug.Log(x + " , " + y);
+               if(iDark[x,y] == 1){
+                    Vector3 offsetD = new Vector3(offsetY,offsetX, 0);
+                    Dark[x,y] = (GameObject)Instantiate(Darkness, offsetD, Quaternion.identity);
+                    offsetY += 24;
+                }
+                else {
+                    offsetY += 24;
+                }
+            }
+        
+            offsetY = 3.66f;
+            offsetX += 9;
         }
+           //InvokeRepeating("Lighting", interval, interval);
     }
+  
 
+    public void Lighting(){
+        //RandomLights.RandomOff(maxX,maxY);
+        bool lit = false;
+        int litCtr = 0;
+        while(!lit){
+            if(litCtr == ((maxX-1)*(maxY-1))){
+                lit = true;
+            }
+            int randX = Random.Range(0,maxX);
+            int randY = Random.Range(0,maxY);
+			GameObject.Destroy(LevelOneGen.Dark[randX,randY].gameObject);
+
+            litCtr ++;
+
+            //}
+        }
+    }    
 }
