@@ -27,7 +27,7 @@ public class Steal : MonoBehaviour {
 
             anim.SetBool("Active", true);
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Interact"))
             {
                 FindObjectOfType<AudioManager>().Play("Steal");
                 Debug.Log("10$");

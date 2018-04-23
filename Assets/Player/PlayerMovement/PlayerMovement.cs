@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour {
     //reference to the PlayerAnimatorController
     Animator anim;
 
+    private float counter = 0f;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -70,9 +72,13 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (canControl == true)
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Time.timeScale = 0f;
+            }
 
 
-            if (grounded && Input.GetKeyDown(KeyCode.Space))//determines whether or not the player is near the ground and can jump or not
+            if ((grounded && Input.GetKeyDown(KeyCode.Space)) || (grounded && Input.GetButtonDown("Jump")))//determines whether or not the player is near the ground and can jump or not
             {
                 //adding jumpforce to the y-axis of the rigidBody
                 FindObjectOfType<AudioManager>().Play("PlayerJump");
@@ -99,7 +105,7 @@ public class PlayerMovement : MonoBehaviour {
             }*/
 
 
-            if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift) || (Input.GetButtonDown("Controller_Sprint")))
             {
                 //anim.SetBool("Crouching", false);
                 //anim.SetBool("CrouchWalk", false);
@@ -107,7 +113,7 @@ public class PlayerMovement : MonoBehaviour {
                 topSpeed = 10f;
                 
             }
-            else if (Input.GetKeyUp(KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift))
+            else if (Input.GetKeyUp(KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift) || (Input.GetButtonUp("Controller_Sprint")))
             {
                 topSpeed = 4f;
                 sprint = false;
