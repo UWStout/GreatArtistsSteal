@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
+        type: 2}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 17473a4a5984a86479848cc5e2f21cc3, type: 3}
+    - target: {fileID: 114206839965206364, guid: f20070db170afee48b687838fbb52b9e,
+        type: 2}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: beff89d2999f1504ebc3c1973ba71cb2, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f20070db170afee48b687838fbb52b9e, type: 2}
   m_IsPrefabParent: 0
