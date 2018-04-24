@@ -68,12 +68,15 @@ public class PlayerMovement : MonoBehaviour {
         
     }
 
+	public GameObject pauseMenu;
     private void Update()
     {
         if (canControl == true)
         {
+			
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+				pauseMenu.SetActive (true);
                 Time.timeScale = 0f;
             }
 

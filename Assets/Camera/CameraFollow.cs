@@ -25,6 +25,9 @@ public class CameraFollow : MonoBehaviour {
     private bool lerpUp = false;
     private bool lerpDown = false;
     private float counter = 0f;
+	private float movementTime = .45f;
+	float lerpValue = 0f;
+
 
 
     private void Start()
@@ -36,57 +39,67 @@ public class CameraFollow : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        distance = Vector3.Distance(player.transform.position, guardObject.transform.position);
+		distance = Vector3.Distance (player.transform.position, guardObject.transform.position);
 
-        Vector3 position = transform.position;
+		Vector3 position = transform.position;
 
-        //currently unused_______________________________________________________
-        //Vector3 smoothedPosition = Vector3.Lerp(position, position, smoothSpeed);
-        //_______________________________________________________________________
+		//currently unused_______________________________________________________
+		//Vector3 smoothedPosition = Vector3.Lerp(position, position, smoothSpeed);
+		//_______________________________________________________________________
 
-        float xPos = Mathf.Lerp(transform.position.x, player.transform.position.x, 50 * smoothSpeed * Time.deltaTime);
-        float xPos2 = Mathf.Lerp(transform.position.x, player.transform.position.x + 1.5f, 50 * smoothSpeed * Time.deltaTime);
-        float xPos3 = Mathf.Lerp(transform.position.x, player.transform.position.x - 1.5f, 50 * smoothSpeed * Time.deltaTime);
+		float xPos = Mathf.Lerp (transform.position.x, player.transform.position.x, 50 * smoothSpeed * Time.deltaTime);
+		float xPos2 = Mathf.Lerp (transform.position.x, player.transform.position.x + 1.5f, 50 * smoothSpeed * Time.deltaTime);
+		float xPos3 = Mathf.Lerp (transform.position.x, player.transform.position.x - 1.5f, 50 * smoothSpeed * Time.deltaTime);
 
 
-        if ((player.position.x <= 3))
-        {
-            position.x = 3;
-            position.y = cameraHeight;
-        }
-        else if ((player.position.x >= 221))
-        {
-            position.x = 221;
-            position.y = cameraHeight;
-        }
-        else if (((player.position.x > 3) || (player.position.x < 220)))
-        {
-            /*position.x = player.transform.position.x;
+		if ((player.position.x <= 3)) {
+			position.x = 3;
+			position.y = cameraHeight;
+		} else if ((player.position.x >= 221)) {
+			position.x = 221;
+			position.y = cameraHeight;
+		} else if (((player.position.x > 3) || (player.position.x < 220))) {
+			/*position.x = player.transform.position.x;
             position.y = cameraHeight;
             transform.position = position;*/
-            transform.position = new Vector3(xPos, cameraHeight, -13);
-        }
-
+			transform.position = new Vector3 (xPos, cameraHeight, -13);
+		}
         
-        /*if (lerpUp == true)
-        {
-            counter += Time.deltaTime * .5f;
+		Vector3 posUpEnd = new Vector3 (transform.position.x, transform.position.y + 9, transform.position.z);
+		if (lerpUp == true) {
+			if (lerpValue < 1) {
+				lerpValue += Time.deltaTime * movementTime;
+				transform.position = Vector3.Lerp (transform.localPosition, posUpEnd, lerpValue);
+			} else {
+				lerpValue = 0;
+				//transform.position = new Vector3(xPos, cameraHeight, -13);
 
-            while (counter <= 5)
-            {
-                transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, transform.localPosition.y + 9, Time.deltaTime * 2f), transform.localPosition.z);
-            }
-            
+				cameraHeight = cameraHeight + 9f;
+				lerpUp = false;
+				Debug.Log("Stop lerp up");
+			}
+
+		}
+
+		Vector3 posDownEnd = new Vector3 (transform.position.x, transform.position.y - 9, transform.position.z);
+		if (lerpDown == true)
+        {
+			if (lerpValue < 1) {
+				lerpValue += Time.deltaTime * movementTime;
+				transform.position = Vector3.Lerp (transform.localPosition, posDownEnd, lerpValue);
+			} else {
+				lerpValue = 0;
+				//transform.position = new Vector3(xPos, cameraHeight, -13);
+
+				cameraHeight = cameraHeight - 9f;
+				lerpDown = false;
+				Debug.Log("Stop Lerp down");
+			}
         }
 
-        if (lerpDown == true)
-        {
-            transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, transform.localPosition.y - 9, Time.deltaTime * 2f), transform.localPosition.z);
-        }*/
+	}
 
-    }
-
-    /*public void LerpUp()
+    public void LerpUp()
     {
         lerpUp = true;
     }
@@ -94,5 +107,5 @@ public class CameraFollow : MonoBehaviour {
     public void LerpDown()
     {
         lerpDown = true;
-    }*/
+    }
 }

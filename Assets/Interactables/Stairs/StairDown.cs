@@ -21,8 +21,8 @@ public class StairDown : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
         {
-            //CameraFollow moveCam = GameObject.FindGameObjectWithTag("Camera").gameObject.GetComponent<CameraFollow>();
-            //moveCam.LerpDown();
+            CameraFollow moveCam = GameObject.FindGameObjectWithTag("Camera").gameObject.GetComponent<CameraFollow>();
+            moveCam.LerpDown();
 
 
             Player.SetActive(false);
@@ -56,7 +56,7 @@ public class StairDown : MonoBehaviour {
         Vector2 after = Player.transform.position;
         //player.transform.position = player.transform.position +9;
         Debug.Log(string.Format("PlayerMoveDown: {0} vs {1}", before, after));
-        CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationDown;
+        //CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationDown;
         yield return new WaitForSeconds(1f);
         Player.SetActive(true); 
     }

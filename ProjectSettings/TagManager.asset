@@ -12,6 +12,7 @@ TagManager:
   - Camera
   - Darkness
   - SecCamera
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

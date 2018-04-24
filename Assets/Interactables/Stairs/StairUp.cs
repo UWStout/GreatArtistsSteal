@@ -26,8 +26,8 @@ public class StairUp : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
         {
-            //CameraFollow moveCam = GameObject.FindGameObjectWithTag("Camera").gameObject.GetComponent<CameraFollow>();
-            //moveCam.LerpUp();
+            CameraFollow moveCam = GameObject.FindGameObjectWithTag("Camera").gameObject.GetComponent<CameraFollow>();
+            moveCam.LerpUp();
 
 
             Player.SetActive(false);
@@ -64,7 +64,7 @@ IEnumerator Delay() {
         Vector2 after = Player.transform.position;
         //player.transform.position = player.transform.position +9;
         Debug.Log(string.Format("PlayerMoveUp: {0} vs {1}", before, after));
-        CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationUp; 
+        //CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationUp; 
         
         yield return new WaitForSeconds(1f);
         Player.SetActive(true); 
