@@ -23,7 +23,7 @@ public class StairDown : MonoBehaviour {
         {
             CameraFollow moveCam = GameObject.FindGameObjectWithTag("Camera").gameObject.GetComponent<CameraFollow>();
             moveCam.LerpDown();
-
+            //Debug.Log("Lerp down called from stairs down");
 
             Player.SetActive(false);
             StartCoroutine(Delay());

@@ -27,8 +27,7 @@ public class CameraFollow : MonoBehaviour {
     private float counter = 0f;
 	private float movementTime = .45f;
 	float lerpValue = 0f;
-
-
+    private float oldHeight = 0.0f;
 
     private void Start()
     {
@@ -39,7 +38,47 @@ public class CameraFollow : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-		distance = Vector3.Distance (player.transform.position, guardObject.transform.position);
+        Debug.Log("LerpDown Value: " + lerpDown);
+
+        if (lerpUp)
+        {
+            lerpValue += Time.deltaTime * movementTime;
+            if (lerpValue < 1)
+            {
+                cameraHeight = Mathf.Lerp(oldHeight, oldHeight + 9f, lerpValue);
+            }
+            else
+            {
+                lerpValue = 0f;
+                cameraHeight = oldHeight + 9f;
+                lerpUp = false;
+                Debug.Log("Stop lerp up");
+            }
+        }
+        else if (lerpDown)
+        {
+            Debug.Log("Lerp down == true");
+            lerpValue += Time.deltaTime * movementTime;
+            if (lerpValue < 1)
+            {
+                Debug.Log("Start lerping downwards");
+                cameraHeight = Mathf.Lerp(oldHeight, oldHeight - 9f, lerpValue);
+            }
+            else
+            {
+                lerpValue = 0f;
+                cameraHeight = oldHeight - 9f;
+                lerpDown = false;
+                Debug.Log("Stop lerp Down");
+            }
+        }
+        else
+        {
+            oldHeight = cameraHeight;
+        }
+
+
+        distance = Vector3.Distance (player.transform.position, guardObject.transform.position);
 
 		Vector3 position = transform.position;
 
@@ -65,38 +104,6 @@ public class CameraFollow : MonoBehaviour {
 			transform.position = new Vector3 (xPos, cameraHeight, -13);
 		}
         
-		Vector3 posUpEnd = new Vector3 (transform.position.x, transform.position.y + 9, transform.position.z);
-		if (lerpUp == true) {
-			if (lerpValue < 1) {
-				lerpValue += Time.deltaTime * movementTime;
-				transform.position = Vector3.Lerp (transform.localPosition, posUpEnd, lerpValue);
-			} else {
-				lerpValue = 0;
-				//transform.position = new Vector3(xPos, cameraHeight, -13);
-
-				cameraHeight = cameraHeight + 9f;
-				lerpUp = false;
-				Debug.Log("Stop lerp up");
-			}
-
-		}
-
-		Vector3 posDownEnd = new Vector3 (transform.position.x, transform.position.y - 9, transform.position.z);
-		if (lerpDown == true)
-        {
-			if (lerpValue < 1) {
-				lerpValue += Time.deltaTime * movementTime;
-				transform.position = Vector3.Lerp (transform.localPosition, posDownEnd, lerpValue);
-			} else {
-				lerpValue = 0;
-				//transform.position = new Vector3(xPos, cameraHeight, -13);
-
-				cameraHeight = cameraHeight - 9f;
-				lerpDown = false;
-				Debug.Log("Stop Lerp down");
-			}
-        }
-
 	}
 
     public void LerpUp()
@@ -106,6 +113,7 @@ public class CameraFollow : MonoBehaviour {
 
     public void LerpDown()
     {
+        Debug.Log("Lerp Down Function being called");
         lerpDown = true;
     }
 }
