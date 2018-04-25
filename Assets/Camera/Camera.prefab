@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114726381201097350}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 1, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -101,6 +101,10 @@ MonoBehaviour:
   playerPosition: {fileID: 0}
   guardPosition: {fileID: 0}
   distance: 0
+  playerObject: {fileID: 0}
+  guardObject: {fileID: 0}
+  smoothSpeed: 10
+  camera: {fileID: 4748152830330150}
 --- !u!124 &124130010148475216
 Behaviour:
   m_ObjectHideFlags: 1

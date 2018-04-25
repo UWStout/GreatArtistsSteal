@@ -6,11 +6,10 @@ public class LevelOneGen : MonoBehaviour {
     private float offsetX = 0;
     private int GuardCounter=0;
 
-    public float interval;
-
     private float offsetY = 0;
     private int maxX = 7;//was 4
     private int maxY = 10;//was 8
+
 
     public static GameObject[,] Dark;
     public static int[,] iDark;
@@ -39,7 +38,6 @@ public class LevelOneGen : MonoBehaviour {
     public GameObject StairsUp;// = GameObject.Find("StairsUp");
     public GameObject StairsDown;// = GameObject.Find("StairsDown");
     public GameObject Darkness;// = GameObject.Find("Darkness");
-    public GameObject Light;
     public GameObject TREASUREROOM;// = GameObject.Find("TREASUREROOM");
     
     public GameObject StartEndRoom;
@@ -375,11 +373,14 @@ offsetY = 3.66f;
             offsetY = 3.66f;
             offsetX += 9;
         }
-           //InvokeRepeating("Lighting", interval, interval);
     }
+
+    
+
+}
   
 
-    public void Lighting(){
+    /*public void Lighting(){
         //RandomLights.RandomOff(maxX,maxY);
         bool lit = false;
         int litCtr = 0;
@@ -394,6 +395,4 @@ offsetY = 3.66f;
             litCtr ++;
 
             //}
-        }
-    }    
-}
+        }*/
