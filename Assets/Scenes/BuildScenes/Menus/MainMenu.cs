@@ -13,9 +13,15 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene("main Credits");
 	}
 
+	public void ControlsMenu(){
+		SceneManager.LoadScene ("main Controls");
+	}
+
 	public void Highscore(){
 		SceneManager.LoadScene ("highScores");
 	}
+
+	//public void 
 
 	public void MenuQuit(){
 		Application.Quit();
