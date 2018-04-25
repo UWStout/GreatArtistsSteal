@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private float counter = 0f;
 
+    public GameObject GUI;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -61,9 +63,11 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (canControl == false)
         {
-            
+            GUI.SetActive(false);
+            StartCoroutine(delayPause());
             gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            
         }
         
     }
@@ -73,11 +77,19 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (canControl == true)
         {
-			
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-				pauseMenu.SetActive (true);
-                Time.timeScale = 0f;
+                if (Time.timeScale == 1)
+                {
+                    Time.timeScale = 0;
+                    pauseMenu.SetActive(true);
+                }
+                else
+                {
+                    Time.timeScale = 1;
+                    pauseMenu.SetActive(false);
+                }          
+
             }
 
 
@@ -142,6 +154,15 @@ public class PlayerMovement : MonoBehaviour {
         theScale.x *= -1;
         //apply the flip to the local scale of the player
         transform.localScale = theScale;
+    }
+
+    
+    IEnumerator delayPause()
+    {
+        yield return new WaitForSeconds(4f);
+        
+        Time.timeScale = 0;
+        
     }
 
 }
