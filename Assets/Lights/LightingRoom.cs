@@ -34,7 +34,7 @@ public class LightingRoom : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject playerGUI = GameObject.FindGameObjectWithTag("GUI");
-        Debug.Log("Enter: " + collision.gameObject.tag);
+        //Debug.Log("Enter: " + collision.gameObject.tag);
 
         if (collision.transform.tag == ("Player"))
         {

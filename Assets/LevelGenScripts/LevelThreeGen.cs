@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelTwoGen : MonoBehaviour {
+public class LevelThreeGen : MonoBehaviour {
     private float offsetX = 0;
     private int GuardCounter=0;
 
@@ -59,31 +59,35 @@ public class LevelTwoGen : MonoBehaviour {
         //Creates the Array
 
         
-        int[,] level = new int[,] { {2, 1, 9, 1, 1, 9, 1, 5},
-									{4, 1, 8, 1, 1, 8, 1, 34},
-									{3, 1, 7, 0, 0, 0, 0, 0},
-									{4, 1, 6, 0, 0, 0, 0, 0},
-									{3, 1, 7, 0, 0, 0, 0, 0},
-									{4, 1, 8, 1, 1, 9, 1, 5},
-									{3, 1, 1, 1, 1, 8, 1, 7},
-									{0, 0, 0, 0, 0, 4, 1, 6},
-									{0, 0, 0, 0, 0, 3, 1, 7},
-									{0, 0, 0, 0, 0, 4, 1, 6},
-									{2, 1, 1, 9, 1, 8, 1, 7},
-									{25, 1, 1, 8, 1, 1, 1, 6}};
+        int[,] level = new int[,] { 
+			{0, 0, 2, 9, 1, 1, 1, 5},
+			{0, 0, 4, 8, 1, 1, 9, 34},
+			{0, 0, 3, 7, 0, 0, 3, 7},
+			{0, 0, 4, 6, 0, 0, 4, 6},
+			{0, 0, 3, 7, 0, 0, 3, 7},
+			{4, 1, 1, 8, 1, 1, 9, 6},
+			{3, 9, 1, 1, 1, 1, 8, 7},
+			{4, 6, 0, 0, 4, 1, 1, 6},
+			{3, 7, 0, 0, 3, 7, 0, 0},
+			{4, 6, 0, 0, 4, 6, 0, 0},
+			{3, 1, 1, 1, 8, 7, 0, 0},
+			{25, 1, 1, 1, 1, 6, 0, 0}
+		};
 
-        int[,] iDark = new int[,] { {1, 1, 1, 1, 1, 1, 1, 1},
-									{1, 1, 1, 1, 1, 1, 1, 1},
-									{1, 1, 1, 0, 0, 0, 0, 0},
-									{1, 1, 1, 0, 0, 0, 0, 0},
-									{1, 1, 1, 0, 0, 0, 0, 0},
-									{1, 1, 1, 1, 1, 1, 1, 1},
-									{1, 1, 1, 1, 1, 1, 1, 1},
-									{0, 0, 0, 0, 0, 1, 1, 1},
-									{0, 0, 0, 0, 0, 1, 1, 1},
-									{0, 0, 0, 0, 0, 1, 1, 1},
-									{1, 1, 1, 1, 1, 1, 1, 1},
-									{1, 1, 1, 1, 1, 1, 1, 1}};
+        int[,] iDark = new int[,] {  
+			{0, 0, 1, 1, 1, 1, 1, 1},
+			{0, 0, 1, 1, 1, 1, 1, 1},
+			{0, 0, 1, 1, 0, 0, 1, 1},
+			{0, 0, 1, 1, 0, 0, 1, 1},
+			{0, 0, 1, 1, 0, 0, 1, 1},
+			{1, 1, 1, 1, 1, 1, 1, 1},
+			{1, 1, 1, 1, 1, 1, 1, 1},
+			{1, 1, 0, 0, 1, 1, 1, 1},
+			{1, 1, 0, 0, 1, 1, 0, 0},
+			{1, 1, 0, 0, 1, 1, 0, 0},
+			{1, 1, 1, 1, 1, 1, 0, 0},
+			{1, 1, 1, 1, 1, 1, 0, 0}
+		};
 
         GameObject[,] Dark= new GameObject[maxX,maxY];
 
@@ -263,14 +267,15 @@ offsetX=-4.94f;
                // Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 Vector3 GuardOffset = new Vector2(offsetY,offsetX-2.5f);
-
-                if((GuardCounter % 3 == 0) && GuardCounter != 0 && level[x,y] != 0 && ((x>=7 &&y>5)||(x<=5&&y<3))){
+				
+                if((GuardCounter % 4 == 0) && x>5 && GuardCounter != 0 && level[x,y] != 0){
 					//Debug.Log("Guard at " + x + " , " + y);
-                    Instantiate(Guard, GuardOffset, Quaternion.identity);
+                    Instantiate(Guard, new Vector3(offsetY,offsetX-2.5f,0), Quaternion.identity);
                 }
-				if(x == 6 && (y == 2||y==6)){
-                    Instantiate(Guard, GuardOffset, Quaternion.identity);
-
+				
+				if((x == 0 && y == 7)||(x == 1 && y == 3)||(x == 2 && y == 6) ||(x == 2 && y == 3)||(x == 3 && y == 7)||(x == 4 && y == 6)||
+					(x == 4 && y == 2) ||(x == 5 && y == 6)){
+					Instantiate(Guard, new Vector3(offsetY,offsetX-2.5f,0), Quaternion.identity);
 				}
 
 
@@ -359,7 +364,7 @@ offsetX=-4.94f;
                     offsetY+=24;
                 }
                 
-                else { offsetY += 24; }
+                else {offsetY += 24; }
 
 
                 GuardCounter+=1;
