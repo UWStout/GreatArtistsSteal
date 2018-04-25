@@ -15,13 +15,13 @@ public class Exit : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		hasKey = Key.hasKey;
-		Scene currentScene = SceneManager.GetActiveScene();
+		//Scene currentScene = SceneManager.GetActiveScene();
 		if(canInteract == true && hasKey == true){
 			if(Input.GetKeyDown(KeyCode.E)){
 				Debug.Log("YAY");
-				if(currentScene.name == "Level One"){
-					SceneManager.LoadScene("levelBriefing");
-				}
+				//if(currentScene.name == "Level One"){
+				//	SceneManager.LoadScene("levelBriefing");
+				//}
 			}
 		}
 	}

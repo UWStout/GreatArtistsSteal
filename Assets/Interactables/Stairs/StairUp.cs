@@ -63,7 +63,7 @@ IEnumerator Delay() {
         Player.transform.position = new Vector2(Player.transform.position.x, Player.transform.position.y + locationUp);
         Vector2 after = Player.transform.position;
         //player.transform.position = player.transform.position +9;
-        Debug.Log(string.Format("PlayerMoveUp: {0} vs {1}", before, after));
+        //Debug.Log(string.Format("PlayerMoveUp: {0} vs {1}", before, after));
         //CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationUp; 
         
         yield return new WaitForSeconds(1f);

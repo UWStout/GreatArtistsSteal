@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelOneGen : MonoBehaviour {
+public class LevelTwoGen : MonoBehaviour {
     private float offsetX = 0;
     private int GuardCounter=0;
 
     private float offsetY = 0;
-    private int maxX = 7;//was 4
-    private int maxY = 10;//was 8
+    private int maxX = 12;
+    private int maxY = 8;
 
 
     public static GameObject[,] Dark;
@@ -59,21 +59,31 @@ public class LevelOneGen : MonoBehaviour {
         //Creates the Array
 
         
-        int[,] level = new int[,] { { 4, 1, 5, 0, 0, 0, 0, 2, 9, 5 },
-                                    { 3, 1, 7, 0, 0, 0, 0, 4, 8, 7 },
-                                    { 4, 1, 8, 1, 1, 1, 1, 8, 1, 6 },
-                                    { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
-                                    { 4, 1, 1, 1, 1, 1, 1, 1, 1, 6 },
-                                    { 3, 1, 1, 1, 1, 1, 1, 1, 1, 7 },
-                                    { 25, 1, 1, 1, 1, 1, 1, 1, 1, 6 }, };
+        int[,] level = new int[,] { {2, 1, 9, 1, 1, 9, 1, 5},
+									{4, 1, 8, 1, 1, 8, 1, 34},
+									{3, 1, 7, 0, 0, 0, 0, 0},
+									{4, 1, 6, 0, 0, 0, 0, 0},
+									{3, 1, 7, 0, 0, 0, 0, 0},
+									{4, 1, 8, 1, 1, 9, 1, 5},
+									{3, 1, 1, 1, 1, 8, 1, 7},
+									{0, 0, 0, 0, 0, 4, 1, 6},
+									{0, 0, 0, 0, 0, 3, 1, 7},
+									{0, 0, 0, 0, 0, 4, 1, 6},
+									{2, 1, 1, 9, 1, 8, 1, 7},
+									{25, 1, 1, 8, 1, 1, 1, 6}};
 
-        int[,] iDark = new int[,]  { { 1, 1, 1, 0, 0, 0, 0, 1, 1, 1 },
-                                    { 1, 1, 1, 0, 0, 0, 0, 1, 1, 1 },
-                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-                                    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, };
+        int[,] iDark = new int[,] { {1, 1, 1, 1, 1, 1, 1, 1},
+									{1, 1, 1, 1, 1, 1, 1, 1},
+									{1, 1, 1, 0, 0, 0, 0, 0},
+									{1, 1, 1, 0, 0, 0, 0, 0},
+									{1, 1, 1, 0, 0, 0, 0, 0},
+									{1, 1, 1, 1, 1, 1, 1, 1},
+									{1, 1, 1, 1, 1, 1, 1, 1},
+									{0, 0, 0, 0, 0, 1, 1, 1},
+									{0, 0, 0, 0, 0, 1, 1, 1},
+									{0, 0, 0, 0, 0, 1, 1, 1},
+									{1, 1, 1, 1, 1, 1, 1, 1},
+									{1, 1, 1, 1, 1, 1, 1, 1}};
 
         GameObject[,] Dark= new GameObject[maxX,maxY];
 
@@ -89,6 +99,7 @@ for (int x = maxX-1; x >= 0; x--)
                 //Debug.Log(x + " " + y);
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 //Places NormalRooms
+				//Debug.Log(x + " , " + y + " = " + level[x,y]);
                 if (level[x, y] == 1)
                 {
 					int rand = Random.Range(1, 15);
@@ -217,7 +228,7 @@ for (int x = maxX-1; x >= 0; x--)
                     Instantiate(NormalShell, offset, Quaternion.identity);
                     offsetY += 24;
 				}
-                else if(level[x,y]== 6 || level[x,y] == 5 || level[x,y] == 7){
+                else if(level[x,y]== 6 || level[x,y] == 5 || level[x,y] == 7 || level[x,y] == 34){
                     Instantiate(RightShell, offset, Quaternion.identity);
                     offsetY += 24;
                 }
@@ -235,7 +246,7 @@ for (int x = maxX-1; x >= 0; x--)
     level[0,7] = 50;
  }
  else if(randTR == 1 || randTR == 2){
-    level[0,2] = 50;
+    level[1,7] = 50;
  }
  
 
@@ -253,8 +264,9 @@ offsetX=-4.94f;
                 Vector3 offset = new Vector2(offsetY,offsetX);
                 Vector3 GuardOffset = new Vector2(offsetY,offsetX-2.5f);
 
-                if((GuardCounter % 4 == 0) && GuardCounter != 0 && level[x,y] != 0){
-                    Instantiate(Guard, GuardOffset, Quaternion.identity);
+                if((GuardCounter % 3 == 0) && GuardCounter != 0 && level[x,y] != 0){
+					//Debug.Log("Guard at " + x + " , " + y);
+                    //Instantiate(Guard, GuardOffset, Quaternion.identity);
                 }
 
 
@@ -318,16 +330,16 @@ offsetX=-4.94f;
                     Instantiate(StartEndRoom, offset, Quaternion.identity);
                     offsetY += 24;
                 }
-                else if (level[x, y] == 2)
+                else if (level[x, y] == 2 || level[x,y] == 5 || level[x,y] == 34)
                 {
                     Instantiate(LeftRoom, offset, Quaternion.identity);
                     offsetY += 24;
-                }
+                }/*
                 else if (level[x, y] == 5)
                 {
                     Instantiate(RightRoom, offset, Quaternion.identity);
                     offsetY += 24;
-                }
+                }*/
                 
                 else if(level[x,y]== 50){
                     Instantiate(TREASUREROOM, offset, Quaternion.identity);
