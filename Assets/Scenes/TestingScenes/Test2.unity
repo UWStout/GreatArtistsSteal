@@ -516,6 +516,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4304323762638026, guid: 270708bd166d6334ca43baf504dd6337,
     type: 2}
   m_PrefabInternal: {fileID: 641665298}
+--- !u!1 &516778092 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1851119043331334, guid: 4f02713b7b535ef42a7271dce08337be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1270992685}
 --- !u!1001 &519983708
 Prefab:
   m_ObjectHideFlags: 0
@@ -660,7 +665,7 @@ SpriteRenderer:
   m_Size: {x: 57.6, y: 32.399998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!114 &603863309
 MonoBehaviour:
@@ -1553,9 +1558,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 30c890ad2f5cf7f47bdf17b4bcbe9baf,
+    m_HighlightedSprite: {fileID: 21300000, guid: 69dd70efeccef9640ad543ccab1cfae1,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 30c890ad2f5cf7f47bdf17b4bcbe9baf, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 69dd70efeccef9640ad543ccab1cfae1, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1588,7 +1593,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 838d2be35567a994b85e0668d4ad4676, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47e480c5c29fae146af9b8235ca829fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1797,6 +1802,7 @@ MonoBehaviour:
     m_Bits: 512
   gravityForce: -40
   pauseMenu: {fileID: 315770017}
+  GUI: {fileID: 516778092}
 --- !u!50 &1986646122
 Rigidbody2D:
   serializedVersion: 4
