@@ -7,6 +7,7 @@ using UnityEngine;
 public class Exit : MonoBehaviour {
 
 	private static bool hasKey;
+	Scene currentScene;
 	private bool canInteract;
 	void Start () {
 		hasKey = Key.hasKey;
@@ -15,13 +16,15 @@ public class Exit : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		hasKey = Key.hasKey;
-		//Scene currentScene = SceneManager.GetActiveScene();
+		Scene currentScene = SceneManager.GetActiveScene();
 		if(canInteract == true && hasKey == true){
 			if(Input.GetKeyDown(KeyCode.E)){
 				Debug.Log("YAY");
-				//if(currentScene.name == "Level One"){
-				//	SceneManager.LoadScene("levelBriefing");
-				//}
+				if(currentScene.name == "Level One"){
+					Debug.Log("Beat Level Uno");
+					hasKey = false;
+					SceneManager.LoadScene("levelBriefing");
+				}
 			}
 		}
 	}
