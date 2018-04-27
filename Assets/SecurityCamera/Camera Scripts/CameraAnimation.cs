@@ -24,6 +24,8 @@ public class CameraAnimation : MonoBehaviour {
 
     private bool patrolling = true;
 
+    public static bool playerSpotted = false;
+
     private void Start()
     {
         otherObject = GameObject.Find("Player");
@@ -46,9 +48,10 @@ public class CameraAnimation : MonoBehaviour {
         {
             timeLeft -= Time.deltaTime;
 
-            if (timeLeft <= 3)
+            if (timeLeft <= 4.5f)
             {
                 anim.SetBool("Follow", true);
+                playerSpotted = true;
             }
 
             if (timeLeft <= 0)

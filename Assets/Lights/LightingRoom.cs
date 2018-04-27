@@ -39,26 +39,15 @@ public class LightingRoom : MonoBehaviour {
         if (collision.transform.tag == ("Player"))
         {
             player = collision.gameObject;
-            /*if (Key.hasKey == true)
-            {
-                playerGUI.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-                playerGUI.gameObject.transform.GetChild(2).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(3).gameObject.SetActive(false);
-            }
-            else if (Key.hasKey == false)
-            {
-                playerGUI.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                playerGUI.gameObject.transform.GetChild(1).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(2).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(3).gameObject.SetActive(false);
-            }*/
+            
         }
 
         if (collision.transform.tag == ("Guard"))
         {
             guard = collision.gameObject;
         }
+
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -69,20 +58,7 @@ public class LightingRoom : MonoBehaviour {
         if (collision.transform.tag == ("Player"))
         {
             player = null;
-            /*if (Key.hasKey == true)
-            {
-                playerGUI.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(1).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(2).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(3).gameObject.SetActive(true);
-            }
-            else if (Key.hasKey == false)
-            {
-                playerGUI.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(1).gameObject.SetActive(false);
-                playerGUI.gameObject.transform.GetChild(2).gameObject.SetActive(true);
-                playerGUI.gameObject.transform.GetChild(3).gameObject.SetActive(false);
-            }*/
+            
         }
 
         if (collision.transform.tag == ("Guard"))
@@ -91,17 +67,16 @@ public class LightingRoom : MonoBehaviour {
         }
     }
 
-    /*private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        GameObject playerGUI = GameObject.FindGameObjectWithTag("GUI");
-
-        if (collision.transform.tag == ("Player") && Key.hasKey == true)
+        if (collision.transform.tag == "SecCamera")
         {
-            playerGUI.gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            Debug.Log("security camera in room");
+            if (CameraAnimation.playerSpotted == true)
+            {
+                Debug.Log("security camera in room spotted player");
+                Destroy(gameObject);
+            }
         }
-        else if (collision.transform.tag == ("Player") && Key.hasKey == false)
-        {
-            playerGUI.gameObject.transform.GetChild(2).gameObject.SetActive(true);
-        }
-    }*/
+    }
 }
