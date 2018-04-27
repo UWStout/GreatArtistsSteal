@@ -25,6 +25,36 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene ("mainMenu");
 	}
 
+	public void debreifingLoad(int time, int money, int level){
+
+	}
+
+	public void debreifingContinue(int time, int money, int level){
+
+	}
+
+
+	public void loadMan1(){
+		SceneManager.LoadScene("Level One");
+	}
+
+	public void loadMan2(){
+		SceneManager.LoadScene("Level Two");
+	}
+
+	public void loadMan3(){
+		SceneManager.LoadScene("Level Three");
+	}
+
+	public void loadMan4(){
+		SceneManager.LoadScene("Level Four");
+	}
+
+	public void loadMan5(){
+		SceneManager.LoadScene("Level Five");
+	}
+
+
 	public void MenuQuit(){
 		Application.Quit();
 	}

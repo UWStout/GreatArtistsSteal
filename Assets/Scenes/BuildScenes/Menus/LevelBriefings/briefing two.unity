@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 379482381}
   - component: {fileID: 379482380}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,9 +175,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 052f3b7a5f500e74aacc9d2560b83ccc,
+    m_HighlightedSprite: {fileID: 21300000, guid: b28647c62a4b2d54ba448320023efb14,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 052f3b7a5f500e74aacc9d2560b83ccc, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: b28647c62a4b2d54ba448320023efb14, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c2050651e5df91a45a66b0634a5c109d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20e774a2f97ad8d49963d6431797d071, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -380,7 +380,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3f9342ff6763c4f43a44fdef6b40c009, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fd5e99438281f54480999df3f9bf53c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -552,7 +552,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 785958877}
-        m_MethodName: loadMan1
+        m_MethodName: loadMan3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
