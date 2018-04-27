@@ -23,27 +23,30 @@ public class Exit : MonoBehaviour {
 				if(currentScene.name == "Level One"){
 					Debug.Log("Beat Level Uno");
 					hasKey = false;
-					SceneManager.LoadScene("levelBriefing");
+					SceneManager.LoadScene("briefing two");
 				}
 				else if(currentScene.name == "Level Two"){
 					Debug.Log("Beat Level Dos");
 					hasKey = false;
-					SceneManager.LoadScene("levelBriefing");
+					SceneManager.LoadScene("briefing three");
 				}
 				else if(currentScene.name == "Level Three"){
 					Debug.Log("Beat Level Tres");
 					hasKey = false;
-					SceneManager.LoadScene("levelBriefing");
+					SceneManager.LoadScene("briefing four");
 				}
 				else if(currentScene.name == "Level Four"){
 					Debug.Log("Beat Level Quattro");
 					hasKey = false;
-					SceneManager.LoadScene("levelBriefing");
+					SceneManager.LoadScene("briefing five");
 				}
 				else if(currentScene.name == "Level Five"){
 					Debug.Log("Beat Level Five");
 					hasKey = false;
-					SceneManager.LoadScene("levelBriefing");
+
+
+					// Add name to highscore list
+					SceneManager.LoadScene("");
 				}
 			}
 		}

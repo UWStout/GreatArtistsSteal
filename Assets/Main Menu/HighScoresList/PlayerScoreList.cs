@@ -26,9 +26,5 @@ public class PlayerScoreList : MonoBehaviour {
 			go.transform.Find ("PlayerName").GetComponent<Text>().text = name;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
