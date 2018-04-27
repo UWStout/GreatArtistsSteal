@@ -197,6 +197,9 @@ for (int x = maxX-1; x >= 0; x--)
                     if((level[x,y] == level[x-1,y]&&level[x-1,y] >=0)||(level[x,y] == level[x,y-1]&&level[x,y-1]>=0)){
                         while(level[x,y] == level[x-1,y]||level[x,y] == level[x,y-1]){
                             level[x,y] -= 1;
+							if(level[x,y] == 9){
+                                level[x,y] += 2;
+                            }
                         }
                     }
                 }
