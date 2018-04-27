@@ -21,7 +21,9 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene ("highscores");
 	}
 
-	//public void 
+	public void mainReturn(){
+		SceneManager.LoadScene ("mainMenu");
+	}
 
 	public void MenuQuit(){
 		Application.Quit();

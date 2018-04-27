@@ -32,7 +32,7 @@ public class Steal : MonoBehaviour {
                 FindObjectOfType<AudioManager>().Play("Steal");
                 Debug.Log("10$");
                 Destroy(gameObject);
-                newScore1.AddScore();
+				newScore1.AddScore(Random.Range(1,4));
             }
        }else if (canSteal == false)
         {
