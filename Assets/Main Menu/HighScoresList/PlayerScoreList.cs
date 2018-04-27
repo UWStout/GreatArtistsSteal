@@ -18,7 +18,7 @@ public class PlayerScoreList : MonoBehaviour {
 			return;
 		}
 
-		string[] names = ScoreBoard.getPlayerNames();
+	//	string[] names = ScoreBoard.getPlayerNames();
 
 		for (int i = 0; i < 5; i++) {
 			GameObject go = (GameObject)Instantiate (playerScoreEntryPrefab);
