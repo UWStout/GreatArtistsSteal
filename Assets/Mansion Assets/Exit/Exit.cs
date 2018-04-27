@@ -8,6 +8,7 @@ public class Exit : MonoBehaviour {
 
 	private static bool hasKey;
 	Scene currentScene;
+	Scene previousScene;
 	private bool canInteract;
 	void Start () {
 		hasKey = Key.hasKey;
@@ -22,6 +23,27 @@ public class Exit : MonoBehaviour {
 				Debug.Log("YAY");
 				if(currentScene.name == "Level One"){
 					Debug.Log("Beat Level Uno");
+					hasKey = false;
+					//previousScene = "Level One";
+					SceneManager.LoadScene("levelBriefing");
+				}
+				else if(currentScene.name == "Level Two"){
+					Debug.Log("Beat Level Dos");
+					hasKey = false;
+					SceneManager.LoadScene("levelBriefing");
+				}
+				else if(currentScene.name == "Level Three"){
+					Debug.Log("Beat Level Tres");
+					hasKey = false;
+					SceneManager.LoadScene("levelBriefing");
+				}
+				else if(currentScene.name == "Level Four"){
+					Debug.Log("Beat Level Quattro");
+					hasKey = false;
+					SceneManager.LoadScene("levelBriefing");
+				}
+				else if(currentScene.name == "Level Five"){
+					Debug.Log("Beat Level Five");
 					hasKey = false;
 					SceneManager.LoadScene("levelBriefing");
 				}
