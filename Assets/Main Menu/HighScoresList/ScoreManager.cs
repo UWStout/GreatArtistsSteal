@@ -3,25 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class ScoreBoard : MonoBehaviour {
+public class ScoreManager : MonoBehaviour {
 
 	//List of "Users"
 	Dictionary<string, Dictionary<string, int>> playerScores;
 
 	void Start(){
-		setScore ("quill18", "Time / Level", 9001);
-		setScore ("quill18", "Money", 9001);
 
-		setScore ("penis ", "Time / Level", 2201);
-		setScore ("penis", "Money", 901);
+		//testing
+		setScore ("quill18", "Time", 1);
+		setScore ("quill18", "Money", 3);
 
-		setScore ("assHAT", "Time / Level", 3001);
-		setScore ("assHAT", "Money", 69);
+		setScore ("penis", "Time", 22);
+		setScore ("penis", "Money", 9);
+
+		setScore ("assHAT", "Time", 3);
+		setScore ("assHAT", "Money", 6);
 
 
 
 
-		Debug.Log( getScore("quill18", "kills") );
+		Debug.Log( getScore("quill18", "Money") );
 	}
 
 	void Init(){
@@ -51,16 +53,11 @@ public class ScoreBoard : MonoBehaviour {
 		Init ();
 
 		if (playerScores.ContainsKey (username) == false) {
-			
 			playerScores[username] = new Dictionary<string, int>();
 		}
 
-		if (playerScores [username].ContainsKey (scoreType) == false) {
-			//return 0;
-		}
-
-		//return playerScores [username] [scoreType];
-
+		playerScores [username] [scoreType] = value;
+			
 	}
 
 	public void changeScore(string username, string scoreType, int amount){
@@ -73,5 +70,12 @@ public class ScoreBoard : MonoBehaviour {
 		Init ();
 		return playerScores.Keys.ToArray();
 	}
+
+	public string[] getPlayerNames(string sortingScoreType){
+		Init ();
+		return playerScores.Keys.OrderByDescending( n => getScore(n, sortingScoreType)).ToArray();
+	}
+
+
 
 }

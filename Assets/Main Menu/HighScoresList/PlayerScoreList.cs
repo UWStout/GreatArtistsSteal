@@ -6,24 +6,34 @@ using UnityEngine.UI;
 public class PlayerScoreList : MonoBehaviour {
 
 	public GameObject playerScoreEntryPrefab;
-
-	ScoreBoard scoreBoard;
+	ScoreManager scoreManager;
 
 	// Use this for initialization
-	void Start () {
-		scoreBoard = GameObject.FindObjectOfType<ScoreBoard> ();
 
-		if (scoreBoard == null) {
+	void Start(){
+		scoreManager = GameObject.FindObjectOfType<ScoreManager> ();
+	}
+
+	//this will become a single call (tut is 
+	void Update () {
+		if (scoreManager == null) {
 			Debug.LogError ("you for got to add the score board component");
 			return;
 		}
+		while (this.transform.childCount > 0) {
+			Transform c = this.transform.GetChild (0);
+			c.SetParent (null);
+			Destroy (c.gameObject);
+		}
 
-	//	string[] names = ScoreBoard.getPlayerNames();
-
-		for (int i = 0; i < 5; i++) {
+		string[] names = scoreManager.getPlayerNames("Money");
+		foreach (string name in names){
 			GameObject go = (GameObject)Instantiate (playerScoreEntryPrefab);
 			go.transform.SetParent (this.transform);
 			go.transform.Find ("PlayerName").GetComponent<Text>().text = name;
+			go.transform.Find ("PlayerTime").GetComponent<Text> ().text = scoreManager.getScore (name, "Time").ToString();
+			go.transform.Find ("PlayerMoney").GetComponent<Text> ().text = scoreManager.getScore (name, "Money").ToString();
+
 		}
 	}
 
