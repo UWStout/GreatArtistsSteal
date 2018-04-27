@@ -15,7 +15,7 @@ public class enterNamePlayer : MonoBehaviour {
 	
 	public void EnterName(){
 		if (enterName.text != string.Empty) {
-			PlayerPrefs name = enterName;
+			PlayerPrefs.SetString("name") = enterName;
 			ScoreManager.setScore (name, "Time", 0);
 			ScoreManager.setScore (name, "Money", 0);
 			ScoreManager.setScore (name, "Level", 0);

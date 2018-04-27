@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour {
     public Text timerText;
     private float startTime;
 
+	public float globalTime;
+
 	// Use this for initialization
 	void Start () {
         timerText = gameObject.GetComponent<Text>();
@@ -17,6 +19,7 @@ public class Timer : MonoBehaviour {
     private void Update()
     {
         float t = Time.time - startTime;
+		globalTime = t;
 
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f2");

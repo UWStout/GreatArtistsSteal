@@ -9,6 +9,8 @@ public class Score : MonoBehaviour
     public Text scoreText;
     private static int score = 0;
 
+	public int globalScore;
+
     private void Start()
     {
         scoreText = gameObject.GetComponent<Text>();
@@ -22,6 +24,7 @@ public class Score : MonoBehaviour
 	public void AddScore(int multiplier)
     {
 		score = score + 10*multiplier;
+		globalScore = score;
 
 		//Add to Money score for highscore Dictionary
 
