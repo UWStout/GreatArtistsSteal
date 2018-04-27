@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4301363405547648}
-  - component: {fileID: 114320821467335448}
+  - component: {fileID: 114845696327370178}
   m_Layer: 0
   m_Name: Lvl4Spawner
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114320821467335448
+--- !u!114 &114845696327370178
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1320499958921006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1568dd82e4943a8458a01603b7603fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 248e8b313023483419447d3756765cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LeftShell: {fileID: 1845198780279042, guid: 8afd8785c1f07674690085ffa734027a, type: 2}
@@ -85,8 +85,8 @@ MonoBehaviour:
     type: 2}
   NormalRoom15: {fileID: 1104928557769134, guid: 5211fe9b78fe93c428d01743bcea4077,
     type: 2}
-  LeftRoom: {fileID: 1246143189594872, guid: 48bd222b1a9a7754ea521a2a6e764ac3, type: 2}
-  RightRoom: {fileID: 1300738506279924, guid: ca11a9f43fa38ff459f7025055330ce8, type: 2}
+  LeftRoom: {fileID: 1247869322269136, guid: b3301e7e80a2d0c4eb57216a72f84558, type: 2}
+  RightRoom: {fileID: 1246143189594872, guid: 48bd222b1a9a7754ea521a2a6e764ac3, type: 2}
   StairsUp: {fileID: 1300208532001542, guid: 154db1c2946c7a24297294f08a0ed95a, type: 2}
   StairsDown: {fileID: 1377089946235208, guid: 1f415caa1c4cdcf4a90a7a552c8f364c, type: 2}
   Darkness: {fileID: 1969760634471528, guid: 434f15a69fe052840863795f07c22816, type: 2}
