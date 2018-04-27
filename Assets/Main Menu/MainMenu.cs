@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void Highscore(){
-		SceneManager.LoadScene ("highScores");
+		SceneManager.LoadScene ("highscores");
 	}
 
 	//public void 

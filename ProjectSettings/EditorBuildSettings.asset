@@ -11,9 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuildScenes/Level One.unity
     guid: 526486f0cb3986c48bf8940d54f00622
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/BuildScenes/Menus/levelBriefing.unity
     guid: 0b450e99bde636b4598dd0ddc4120432
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menus/main Controls.unity
+    guid: 8e4bc2e0aae1604439fe6731ee4df409
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menus/main Credits.unity
+    guid: 2e83af6d6e595f84e80915761dec4c1c
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menus/highscores.unity
+    guid: 6137b24a93bf33a46b2565eec63ff17b
