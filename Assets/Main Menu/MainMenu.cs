@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class MainMenu : MonoBehaviour {
+
+	public GameObject playerInputName;
 
 	public void Play(){
 		SceneManager.LoadScene("levelBriefing");
@@ -25,7 +29,7 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene ("mainMenu");
 	}
 
-	public void debreifingLoad(int time, int money, int level){
+	public void debreifingLoad(float time, int money, int level){
 
 	}
 
@@ -57,5 +61,11 @@ public class MainMenu : MonoBehaviour {
 
 	public void MenuQuit(){
 		Application.Quit();
+	}
+
+
+	public void enterName(){
+		//this.GetComponent<Button> ().interactable = false;
+		Instantiate (playerInputName);
 	}
 }

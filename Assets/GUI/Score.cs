@@ -21,6 +21,9 @@ public class Score : MonoBehaviour
 
 	public void AddScore(int multiplier)
     {
-        score = score + 10;
+		score = score + 10*multiplier;
+
+		//Add to Money score for highscore Dictionary
+
     }
 }

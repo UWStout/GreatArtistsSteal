@@ -11,54 +11,64 @@ public class ScoreManager : MonoBehaviour {
 	void Start(){
 
 		//testing
-		setScore ("quill18", "Time", 1);
-		setScore ("quill18", "Money", 3);
+		setScore ("Noah", "Time", 1);
+		setScore ("Noah", "Money", 3);
 
 		setScore ("penis", "Time", 22);
 		setScore ("penis", "Money", 9);
 
-		setScore ("assHAT", "Time", 3);
-		setScore ("assHAT", "Money", 6);
+		setScore ("assHAT", "Time", 99);
+		setScore ("assHAT", "Money", 99);
 
+		setScore ("DickHAT", "Time", 31);
+		setScore ("DickHAT", "Money", 644);
 
+		setScore ("ShitHAT", "Time", 43);
+		setScore ("ShitHAT", "Money", 100);
 
+		setScore ("A", "Time", 443);
+		setScore ("A", "Money", 1400);
 
-		Debug.Log( getScore("quill18", "Money") );
+		setScore ("B", "Time", 443);
+		setScore ("B", "Money", 1400);
+
+		setScore ("d", "Time", 443);
+		setScore ("d", "Money", 1400);
+
+		setScore ("c", "Time", 443);
+		setScore ("c", "Money", 1400);
+
+		//Debug.Log( getScore("quill18", "Money") );*/
 	}
 
 	void Init(){
 		if (playerScores != null) {
 			return;
 		}
-
 		playerScores = new Dictionary<string, Dictionary<string, int>>();
-
 	}
+
 
 	public int getScore(string username, string scoreType){
 		Init ();
-
 		if (playerScores.ContainsKey (username) == false) {
 			return 0;
 		}
-
 		if (playerScores [username].ContainsKey (scoreType) == false) {
 			return 0;
 		}
-
 		return playerScores [username] [scoreType];
 	}
 
+
 	public void setScore(string username, string scoreType, int value){
 		Init ();
-
 		if (playerScores.ContainsKey (username) == false) {
 			playerScores[username] = new Dictionary<string, int>();
 		}
-
 		playerScores [username] [scoreType] = value;
-			
 	}
+
 
 	public void changeScore(string username, string scoreType, int amount){
 		Init ();
@@ -66,10 +76,9 @@ public class ScoreManager : MonoBehaviour {
 		setScore (username, scoreType, curScore + amount);
 	}
 
-	public string[] getPlayerNames(){
-		Init ();
-		return playerScores.Keys.ToArray();
-	}
+
+
+
 
 	public string[] getPlayerNames(string sortingScoreType){
 		Init ();
