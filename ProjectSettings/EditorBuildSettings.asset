@@ -9,17 +9,44 @@ EditorBuildSettings:
     path: Assets/Scenes/BuildScenes/Menus/mainMenu.unity
     guid: 2d83cd65235444d4880ebdd5a12f3b96
   - enabled: 1
-    path: Assets/Scenes/BuildScenes/Level One.unity
-    guid: 526486f0cb3986c48bf8940d54f00622
-  - enabled: 1
-    path: Assets/Scenes/BuildScenes/Menus/levelBriefing.unity
+    path: Assets/Scenes/BuildScenes/Menus/LevelBriefings/levelBriefing.unity
     guid: 0b450e99bde636b4598dd0ddc4120432
   - enabled: 1
-    path: Assets/Scenes/BuildScenes/Menus/main Controls.unity
-    guid: 8e4bc2e0aae1604439fe6731ee4df409
+    path: Assets/Scenes/BuildScenes/Menus/highscores.unity
+    guid: 6137b24a93bf33a46b2565eec63ff17b
   - enabled: 1
     path: Assets/Scenes/BuildScenes/Menus/main Credits.unity
     guid: 2e83af6d6e595f84e80915761dec4c1c
   - enabled: 1
-    path: Assets/Scenes/BuildScenes/Menus/highscores.unity
-    guid: 6137b24a93bf33a46b2565eec63ff17b
+    path: Assets/Scenes/BuildScenes/Menus/main Controls.unity
+    guid: 8e4bc2e0aae1604439fe6731ee4df409
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menus/main Options.unity
+    guid: f4c0c479475b72443bcf21c8a3920675
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Level One.unity
+    guid: 526486f0cb3986c48bf8940d54f00622
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menus/LevelBriefings/briefing two.unity
+    guid: 45a45cb68b33dc84cad6e40de60aea62
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menus/LevelBriefings/briefing three.unity
+    guid: 6c9fd025504d442469e9d7de20bdb97b
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menus/LevelBriefings/briefing four.unity
+    guid: 42679f13a7ad4b541ab3171b512de10e
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menus/LevelBriefings/briefing five.unity
+    guid: 88802dac330a1c442b8d2bf145dac401
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Level Two.unity
+    guid: 63f42176d06cafe4fb36edf2668986a2
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Level Three.unity
+    guid: 1d59049a0f83f664db57d9b340b37847
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Level Four.unity
+    guid: 7d7f5b55f96ee294dbcdff9f477278c7
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Level Five.unity
+    guid: 132da71057a8e4c49b78992e1c0940e7
