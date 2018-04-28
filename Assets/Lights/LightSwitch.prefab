@@ -112,5 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b0dadf1901e7f42b68dcf2ac5b030e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 10
-  startTime: 10
+  interval: 45
+  startTime: 60
