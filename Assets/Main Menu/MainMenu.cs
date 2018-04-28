@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Audio;
 
 
 public class MainMenu : MonoBehaviour {
@@ -69,4 +69,10 @@ public class MainMenu : MonoBehaviour {
 		//this.GetComponent<Button> ().interactable = false;
 		nameDialog.SetActive (!nameDialog.activeSelf);
 	}
+
+    public AudioMixer audioMixer;
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
+    }
 }
