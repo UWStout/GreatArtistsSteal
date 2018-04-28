@@ -278,7 +278,7 @@ public class GuardMovement : MonoBehaviour {
         otherAnimator.GetComponent<Animator>().SetBool("PlayerCaught", true);
         anim.SetBool("playerCaught", true);
 
-        Debug.Log(transform.childCount);
+        //Debug.Log(transform.childCount);
         int i = 0;
         GameObject[] allChildren = new GameObject[transform.childCount];
         foreach (Transform child in transform)

@@ -461,8 +461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd666aafc6e339458ebfdbd98491bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enterName: {fileID: 433698522}
-  nameDialog: {fileID: 0}
+  enterName: {fileID: 1566014051}
+  nameDialog: {fileID: 399690633}
 --- !u!1 &433698520
 GameObject:
   m_ObjectHideFlags: 0

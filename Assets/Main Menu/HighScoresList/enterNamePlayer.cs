@@ -12,15 +12,17 @@ public class enterNamePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log (PlayerPrefs.GetString("name") + " right here");
+		//Debug.Log (PlayerPrefs.GetString("name") + " right here");
 	}
 	
 	public void EnterName(){
 		if (enterName.text != string.Empty) {
-			PlayerPrefs.SetString("name", enterName.ToString());
-			ScoreManager.setScore (enterName.ToString(), "Time", 0);
-			ScoreManager.setScore (enterName.ToString(), "Money", 0);
-			ScoreManager.setScore (enterName.ToString(), "Level", 0);
+			PlayerPrefs.SetString("name", enterName.text);
+			string nom = enterName.text;
+			Debug.Log (nom);
+			ScoreManager.setScore (nom, "Time", 0);
+			ScoreManager.setScore (nom, "Money", 0);
+			ScoreManager.setScore (nom, "Level", 0);
 
 			//Debug.Log ("yeah idk");
 			//Debug.Log (enterName.ToString());
@@ -33,4 +35,6 @@ public class enterNamePlayer : MonoBehaviour {
 
 		//Debug.Log ("DIDNT WORK NOAH ______________________");
 	}
+
+
 }

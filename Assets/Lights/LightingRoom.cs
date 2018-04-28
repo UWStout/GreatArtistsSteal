@@ -20,11 +20,11 @@ public class LightingRoom : MonoBehaviour {
         // Update guard state
         if (guard != null && player != null)
         {
-            Debug.Log("Both in same room.");
+            //Debug.Log("Both in same room.");
             GuardMovement chasingScript = guard.GetComponent<GuardMovement>();
             if ((chasingScript != null) && chasingScript.chasing)
             {
-                Debug.Log("GOTCHA!");
+                //Debug.Log("GOTCHA!");
                 FindObjectOfType<AudioManager>().Play("LightOn");
                 Destroy(gameObject);
             }
@@ -53,7 +53,7 @@ public class LightingRoom : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision)
     {
         GameObject playerGUI = GameObject.FindGameObjectWithTag("GUI");
-        Debug.Log("Exit: " + collision.gameObject.tag);
+       // Debug.Log("Exit: " + collision.gameObject.tag);
 
         if (collision.transform.tag == ("Player"))
         {
@@ -74,7 +74,7 @@ public class LightingRoom : MonoBehaviour {
           //This was being called over 10,000 times -_-  //Debug.Log("security camera in room");
             if (CameraAnimation.playerSpotted == true)
             {
-                Debug.Log("security camera in room spotted player");
+               // Debug.Log("security camera in room spotted player");
                 Destroy(gameObject);
             }
         }
