@@ -19,8 +19,8 @@ public class StairUp : MonoBehaviour {
         //player.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
         anim = GetComponent<Animator>();
         
-        anim.SetBool("UpGoingUp",false);
-        anim.SetBool("UpGoingDown", false);
+        //anim.SetBool("UpGoingUp",false);
+        //anim.SetBool("UpGoingDown", false);
      }
     private void Update()
     {

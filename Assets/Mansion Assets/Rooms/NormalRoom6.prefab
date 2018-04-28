@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 61798766462113938}
   - component: {fileID: 50303698845145880}
   - component: {fileID: 251081376290469526}
-  - component: {fileID: 114875309819159996}
   m_Layer: 9
   m_Name: PianoKeys
   m_TagString: Untagged
@@ -707,17 +706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57b2e92f2488e24fb2814125ccf3c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114875309819159996
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407473798147806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e3d1482202fdd042aebbd94d1976504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212031737166536150
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1057,8 +1045,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -135724065
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6371fa0fdc04e3a44950d4134a44af94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -78,7 +78,6 @@ GameObject:
   - component: {fileID: 61178049859978596}
   - component: {fileID: 50188968356388604}
   - component: {fileID: 251008289544217732}
-  - component: {fileID: 114727025347333534}
   m_Layer: 9
   m_Name: PianoKeys
   m_TagString: Untagged
@@ -969,17 +968,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c57b2e92f2488e24fb2814125ccf3c56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114727025347333534
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1240142097987486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e3d1482202fdd042aebbd94d1976504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212008327811158034

@@ -6,8 +6,9 @@ using UnityEngine;
 public class LightsOn : MonoBehaviour {
 	private GameObject LightSwitch;
 	public float interval = 1f;
+	private float nextAction = 5f;
 
-	private float nextAction = 1f;
+	public static bool litTime;
 
 	// Use this for initialization
 	void Start () {
@@ -21,12 +22,10 @@ public class LightsOn : MonoBehaviour {
             nextAction = Time.time + interval;
             //Debug.Log("Lights moved");
 			LightSwitch.transform.position =  new Vector3(3.66f+Random.Range(0, 20)*24, -4.94f +Random.Range(0,20)*9, 0);
+			//Debug.Log("LitTime at:" + transform.position);
+			litTime = true;
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D collision){
-		if(collision.transform.tag == ("LightSwitch")){
-        	LightSwitch = collision.gameObject;
-		}
-	}
+	
 }

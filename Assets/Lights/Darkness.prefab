@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212725412906598892}
   - component: {fileID: 114698448858989154}
   - component: {fileID: 61540208886510324}
+  - component: {fileID: 114807759542925196}
+  - component: {fileID: 50120128082554548}
   m_Layer: 14
   m_Name: Darkness
   m_TagString: Darkness
@@ -42,6 +44,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50120128082554548
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969760634471528}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61540208886510324
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -76,6 +98,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 125ac0bc131b6d4488cb1f0426fdfd63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114807759542925196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969760634471528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0817648f1eff2449157f95c0bf9802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212725412906598892

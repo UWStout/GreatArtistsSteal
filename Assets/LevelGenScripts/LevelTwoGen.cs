@@ -97,7 +97,7 @@ for (int x = maxX-1; x >= 0; x--)
             for (int y = 0; y < maxY; y++)
             {
                 //Debug.Log(x + " " + y);
-                Vector3 offset = new Vector2(offsetY,offsetX);
+              //  Vector3 offset = new Vector2(offsetY,offsetX);
                 //Places NormalRooms
 				//Debug.Log(x + " , " + y + " = " + level[x,y]);
                 if (level[x, y] == 1)
