@@ -1604,16 +1604,6 @@ Prefab:
       propertyPath: m_Name
       value: Player_GUI
       objectReference: {fileID: 0}
-    - target: {fileID: 1851119043331334, guid: 4f02713b7b535ef42a7271dce08337be, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114049508894604554, guid: 4f02713b7b535ef42a7271dce08337be,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 572ff57df1f5f904e936297451fc2bf8,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f02713b7b535ef42a7271dce08337be, type: 2}
   m_IsPrefabParent: 0
