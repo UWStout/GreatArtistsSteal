@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void mainReturn(){
 		SceneManager.LoadScene ("mainMenu");
+		PlayerPrefs.SetString ("name", null);
 	}
 
 	public void debreifingLoad(float time, int money, int level){

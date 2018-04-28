@@ -21,6 +21,8 @@ public class Timer : MonoBehaviour {
         float t = Time.time - startTime;
 		globalTime = t;
 
+		//Debug.Log (globalTime);
+
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
 

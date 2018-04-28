@@ -75,6 +75,7 @@ public class Exit : MonoBehaviour {
 	public void updateScore(){
 		ScoreManager.changeScore (Name, "Level", 1); //Noah Added
 		ScoreManager.changeScore (Name, "Time",  (int)Timer.globalTime);
+	//	Debug.Log ((int)Timer.globalTime);
 		ScoreManager.changeScore (Name, "Money", Score.globalScore);
 
 	}
