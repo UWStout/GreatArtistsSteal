@@ -25,6 +25,7 @@ public class Exit : MonoBehaviour {
 		Scene currentScene = SceneManager.GetActiveScene();
 		if(canInteract == true && hasKey == true){
 			if(Input.GetKeyDown(KeyCode.E)){
+				Key.hasKey = false;
 				Debug.Log("YAY");
 				if(currentScene.name == "Level One"){
 					Debug.Log("Beat Level Uno");
