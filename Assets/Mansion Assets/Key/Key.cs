@@ -19,24 +19,29 @@ public class Key : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetKeyDown(KeyCode.K)){
+			hasKey = true;
+			Debug.Log("Key Collected... for testing");
+		}
 		if(canGrab == true && Chest.activeSelf == false){
 			if(Input.GetKeyDown(KeyCode.E)){
 				key.SetActive(false);
 				hasKey = true;
 				if(hasKey == true){
-            		Debug.Log("Collected Key");}
+            		//Debug.Log("Collected Key");}
+				}
 			}
 		}
 		if(canGrab == true && Chest.activeSelf == true){
 			if (Input.GetKeyDown(KeyCode.E))
             	{
-					Debug.Log("Opened Chest");
+					//Debug.Log("Opened Chest");
 					Chest.SetActive(false);
 					key.SetActive(true);
 				}
 		}
 	}
-	private void OnTriggerEnter2D(Collider2D collision)
+	void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.tag == ("Player"))
         {
