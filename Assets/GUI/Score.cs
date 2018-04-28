@@ -9,7 +9,7 @@ public class Score : MonoBehaviour
     public Text scoreText;
     private static int score = 0;
 
-	public int globalScore;
+	public static int globalScore;
 
     private void Start()
     {

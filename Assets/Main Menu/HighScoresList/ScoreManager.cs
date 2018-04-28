@@ -6,11 +6,10 @@ using System.Linq;
 public class ScoreManager : MonoBehaviour {
 
 	//List of "Users"
-	Dictionary<string, Dictionary<string, int>> playerScores;
+	static Dictionary<string, Dictionary<string, int>> playerScores;
 
 	void Start(){
-
-		//testing
+		/*/testing
 		setScore ("Noah", "Time", 1);
 		setScore ("Noah", "Money", 3);
 
@@ -41,7 +40,7 @@ public class ScoreManager : MonoBehaviour {
 		//Debug.Log( getScore("quill18", "Money") );*/
 	}
 
-	void Init(){
+	static void Init(){
 		if (playerScores != null) {
 			return;
 		}
@@ -57,11 +56,22 @@ public class ScoreManager : MonoBehaviour {
 		if (playerScores [username].ContainsKey (scoreType) == false) {
 			return 0;
 		}
-		return playerScores [username] [scoreType];
+		return playerScores [username][scoreType];
+	}
+
+	public static int getScoreS(string username, string scoreType){
+		Init ();
+		if (playerScores.ContainsKey (username) == false) {
+			return 0;
+		}
+		if (playerScores [username].ContainsKey (scoreType) == false) {
+			return 0;
+		}
+		return playerScores [username][scoreType];
 	}
 
 
-	public void setScore(string username, string scoreType, int value){
+	public static void setScore(string username, string scoreType, int value){
 		Init ();
 		if (playerScores.ContainsKey (username) == false) {
 			playerScores[username] = new Dictionary<string, int>();
@@ -70,9 +80,9 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 
-	public void changeScore(string username, string scoreType, int amount){
+	public static void changeScore(string username, string scoreType, int amount){
 		Init ();
-		int curScore = getScore (username, scoreType);
+		int curScore = getScoreS(username, scoreType);
 		setScore (username, scoreType, curScore + amount);
 	}
 
