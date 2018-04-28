@@ -24,6 +24,8 @@ public class Exit : MonoBehaviour {
 		//hasKey = true;
 		Scene currentScene = SceneManager.GetActiveScene();
 		if(canInteract == true && hasKey == true){
+			
+				Debug.Log("YYYYY");
 			if(Input.GetKeyDown(KeyCode.E)){
 				Key.hasKey = false;
 				Debug.Log("YAY");
@@ -71,6 +73,14 @@ public class Exit : MonoBehaviour {
             canInteract = true;
         }
     }
+	private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.tag == ("Player"))
+        {
+            canInteract = false;
+        }
+    }
+
 
 																		//Noah Added
 	public void updateScore(){
