@@ -31,7 +31,7 @@ public class PlayerScoreList : MonoBehaviour {
 			GameObject go = (GameObject)Instantiate (playerScoreEntryPrefab);
 			go.transform.SetParent (this.transform);
 			go.transform.Find ("PlayerName").GetComponent<Text>().text = name;
-			go.transform.Find ("PlayerTime").GetComponent<Text> ().text = scoreManager.getScore (name, "Time").ToString();
+			//go.transform.Find ("PlayerTime").GetComponent<Text> ().text = scoreManager.getScore (name, "Time").ToString();
 			go.transform.Find ("PlayerLevel").GetComponent<Text> ().text = scoreManager.getScore (name, "Level").ToString();
 			go.transform.Find ("PlayerMoney").GetComponent<Text> ().text = scoreManager.getScore (name, "Money").ToString();
 

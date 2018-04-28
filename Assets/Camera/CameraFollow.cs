@@ -38,7 +38,7 @@ public class CameraFollow : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        Debug.Log("LerpDown Value: " + lerpDown);
+        // this was being called 4000 times -_- //Debug.Log("LerpDown Value: " + lerpDown);
 
         if (lerpUp)
         {

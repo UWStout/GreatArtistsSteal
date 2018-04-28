@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
-	public GameObject playerInputName;
+	public GameObject nameDialog;
 
 	public void Play(){
 		SceneManager.LoadScene("levelBriefing");
@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour {
 	}
 
 
-	public void loadMan1(){
+	public static void loadMan1(){
 		SceneManager.LoadScene("Level One");
 	}
 
@@ -66,6 +66,6 @@ public class MainMenu : MonoBehaviour {
 
 	public void enterName(){
 		//this.GetComponent<Button> ().interactable = false;
-		Instantiate (playerInputName);
+		nameDialog.SetActive (!nameDialog.activeSelf);
 	}
 }

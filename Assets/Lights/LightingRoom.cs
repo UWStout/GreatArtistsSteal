@@ -71,7 +71,7 @@ public class LightingRoom : MonoBehaviour {
     {
         if (collision.transform.tag == "SecCamera")
         {
-            Debug.Log("security camera in room");
+          //This was being called over 10,000 times -_-  //Debug.Log("security camera in room");
             if (CameraAnimation.playerSpotted == true)
             {
                 Debug.Log("security camera in room spotted player");

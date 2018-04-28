@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour {
     public Text timerText;
     private float startTime;
 
-	public float globalTime;
+	public static float globalTime;
 
 	// Use this for initialization
 	void Start () {
