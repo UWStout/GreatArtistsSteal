@@ -70,7 +70,7 @@ public class LevelFiveGen : MonoBehaviour {
 				{3,1,1,7,0,0,4,1,1,6},
 				{0,4,1,8,1,1,8,1,7,0},
 				{0,3,1,1,1,1,1,9,6,0},
-				{0,0,25,1,1,1,1,6,0,0}
+				{0,0,25,1,34,1,1,6,0,0}
 
 		 };
 
@@ -228,7 +228,7 @@ for (int x = maxX-1; x >= 0; x--)
 					Instantiate(LeftShell, offset, Quaternion.identity);
 					offsetY += 24;
 				}
-				else if(level[x,y] == 1 ||level[x,y] == 8 || level[x,y]== 9 || level[x,y] >= 10 && level[x,y] <= 24)
+				else if(level[x,y] == 1 ||level[x,y] == 8 || level[x,y]== 9 || level[x,y] >= 10 && level[x,y] <= 24 || level[x,y] == 34)
 				{
                     Instantiate(NormalShell, offset, Quaternion.identity);
                     offsetY += 24;
@@ -339,7 +339,7 @@ offsetX=-4.94f;
                     Instantiate(LeftRoom, offset, Quaternion.identity);
                     offsetY += 24;
                 }
-                else if (level[x, y] == 5)
+                else if (level[x, y] == 5||level[x,y] == 34)
                 {
                     Instantiate(RightRoom, offset, Quaternion.identity);
                     offsetY += 24;
