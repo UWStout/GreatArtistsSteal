@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class LightsOn : MonoBehaviour {
 	private GameObject LightSwitch;
-	public float interval = 1f;
-	private float nextAction = 5f;
+	public float interval = 20f;
+	public float startTime = 10f;
 
 	public static bool litTime;
 
@@ -18,8 +18,8 @@ public class LightsOn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Time.time > nextAction){
-            nextAction = Time.time + interval;
+		if(Time.time > startTime){
+            startTime = Time.time + interval;
             //Debug.Log("Lights moved");
 			LightSwitch.transform.position =  new Vector3(3.66f+Random.Range(0, 20)*24, -4.94f +Random.Range(0,20)*9, 0);
 			//Debug.Log("LitTime at:" + transform.position);

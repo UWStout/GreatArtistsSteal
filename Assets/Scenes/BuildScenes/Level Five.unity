@@ -393,6 +393,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbb702104416e1b43a41266fb677e9d4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1030429772
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4845577629092390, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845577629092390, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845577629092390, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845577629092390, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845577629092390, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845577629092390, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845577629092390, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845577629092390, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6d2e174cbb35bfd4eb398b3c3a70a1d0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1441120951 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1172435257471772, guid: 270708bd166d6334ca43baf504dd6337,
