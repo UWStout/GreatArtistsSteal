@@ -71,6 +71,7 @@ public class CameraAnimation : MonoBehaviour {
 
         if (patrolling == true && resetPos == false)
         {
+            //FindObjectOfType<AudioManager>().Play("SecCamPatrolling");
             counter += Time.deltaTime * speed;
             trigger.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(4.44f, 8.68f);  
             trigger.transform.position = Vector3.Lerp(startPos, endPos, Mathf.PingPong(counter, 1f));
@@ -91,6 +92,8 @@ public class CameraAnimation : MonoBehaviour {
 
     public void Caught()
     {
+        FindObjectOfType<AudioManager>().Play("SecCamCaught");
+
         PlayerMovement playerControl = otherObject.GetComponent<PlayerMovement>();
         otherAnimator.GetComponent<Animator>().SetBool("PlayerCaught", true);
 
@@ -116,6 +119,7 @@ public class CameraAnimation : MonoBehaviour {
 
     public void UnSpotted()
     {
+        FindObjectOfType<AudioManager>().Play("LostVision");
         patrolling = false;
         anim.SetBool("Spotted", false);
         resetPos = true;

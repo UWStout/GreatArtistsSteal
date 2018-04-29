@@ -240,7 +240,8 @@ public class GuardMovement : MonoBehaviour {
 
     public void GuardAlert()
     {
-        
+        FindObjectOfType<AudioManager>().Play("LostVision");
+
         Patrolling = false;
         anim.SetBool("Alert", true);
 

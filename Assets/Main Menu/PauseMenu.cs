@@ -7,12 +7,15 @@ public class PauseMenu : MonoBehaviour {
 
 	public void PlayGame()
     {
+        FindObjectOfType<AudioManager>().Play("MenuClick");
         Time.timeScale = 1;
+        
         gameObject.SetActive(false);
     }
 
     public void QuitGame()
     {
+        FindObjectOfType<AudioManager>().Play("MenuClick");
         Application.Quit();
     }
 

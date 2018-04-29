@@ -53,9 +53,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: LightOn
-    clip: {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}
+    clip: {fileID: 8300000, guid: e63d8367105055b43b213858712c45c6, type: 3}
     volume: 1
-    pitch: 2
+    pitch: 1.5
     loop: 0
     source: {fileID: 0}
   - name: Steal
@@ -81,4 +81,28 @@ MonoBehaviour:
     volume: 0.7
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: LostVision
+    clip: {fileID: 8300000, guid: e55b271160c1d1d42b2d23b69f349b96, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SecCamPatrolling
+    clip: {fileID: 8300000, guid: 72328e9f69656734b8b617608c199369, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MenuClick
+    clip: {fileID: 8300000, guid: 24cd978fb5aeb68499e6b8b24aae21ba, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SecCamCaught
+    clip: {fileID: 8300000, guid: ce4aaa1ba0876e946897e85fb05d530f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

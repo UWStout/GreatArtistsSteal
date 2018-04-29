@@ -74,7 +74,8 @@ public class LightingRoom : MonoBehaviour {
           //This was being called over 10,000 times -_-  //Debug.Log("security camera in room");
             if (CameraAnimation.playerSpotted == true)
             {
-               // Debug.Log("security camera in room spotted player");
+                FindObjectOfType<AudioManager>().Play("LightOn");
+                // Debug.Log("security camera in room spotted player");
                 Destroy(gameObject);
             }
         }

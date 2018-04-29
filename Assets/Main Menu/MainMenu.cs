@@ -10,23 +10,28 @@ public class MainMenu : MonoBehaviour {
 	public GameObject nameDialog;
 
 	public void Play(){
-		SceneManager.LoadScene("levelBriefing");
+        FindObjectOfType<AudioManager>().Play("MenuClick");
+        SceneManager.LoadScene("levelBriefing");
 	}
 
 	public void Credits(){
-		SceneManager.LoadScene("main Credits");
+        FindObjectOfType<AudioManager>().Play("MenuClick");
+        SceneManager.LoadScene("main Credits");
 	}
 
 	public void ControlsMenu(){
-		SceneManager.LoadScene ("main Controls");
+        FindObjectOfType<AudioManager>().Play("MenuClick");
+        SceneManager.LoadScene ("main Controls");
 	}
 
 	public void Highscore(){
-		SceneManager.LoadScene ("highscores");
+        FindObjectOfType<AudioManager>().Play("MenuClick");
+        SceneManager.LoadScene ("highscores");
 	}
 
 	public void mainReturn(){
-		SceneManager.LoadScene ("mainMenu");
+        FindObjectOfType<AudioManager>().Play("MenuClick");
+        SceneManager.LoadScene ("mainMenu");
 		PlayerPrefs.SetString ("name", null);
 	}
 
@@ -61,7 +66,8 @@ public class MainMenu : MonoBehaviour {
 
 
 	public void MenuQuit(){
-		Application.Quit();
+        FindObjectOfType<AudioManager>().Play("MenuClick");
+        Application.Quit();
 	}
 
 

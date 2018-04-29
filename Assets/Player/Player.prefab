@@ -318,7 +318,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   gravityForce: -40
-  pauseMenu: {fileID: 0}
 --- !u!114 &114718901643745168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,7 +407,7 @@ SpriteRenderer:
   m_SortingLayerID: 1984667677
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 031cf2d88907608409e95a53b9c2dc1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 178ff2cbf286d934d94544944f37ecdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

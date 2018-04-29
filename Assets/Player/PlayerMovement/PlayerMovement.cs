@@ -72,21 +72,27 @@ public class PlayerMovement : MonoBehaviour {
         
     }
 
-	public GameObject pauseMenu;
+	GameObject pauseMenu;
     private void Update()
     {
         if (canControl == true)
         {
+            pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (Time.timeScale == 1)
                 {
                     Time.timeScale = 0;
+                    //GameObject.FindGameObjectWithTag("PauseMenu").SetActive(true);
+                    //GameObject.Find("PauseMenu").SetActive(false);
                     pauseMenu.SetActive(true);
                 }
                 else
                 {
                     Time.timeScale = 1;
+                    //GameObject.Find("PauseMenu").SetActive(false);
+                    //GameObject.FindGameObjectWithTag("PauseMenu").SetActive(false);
                     pauseMenu.SetActive(false);
                 }          
 
