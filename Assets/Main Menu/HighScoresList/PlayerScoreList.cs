@@ -31,8 +31,39 @@ public class PlayerScoreList : MonoBehaviour {
 		foreach (string name in names){
 			GameObject go = (GameObject)Instantiate (playerScoreEntryPrefab);
 			go.transform.SetParent (this.transform);
+
 			go.transform.Find ("PlayerName").GetComponent<Text>().text = name;
-			go.transform.Find ("PlayerTime").GetComponent<Text> ().text = scoreManager.getScore (name, "Time").ToString();
+            float temp = scoreManager.getScore(name, "Time");
+
+            string minutes = ((int)temp / 60).ToString();
+            string seconds = (temp % 60).ToString("f2");
+
+            string readout;
+
+            if (seconds.Length < 5)
+            {
+                if (minutes.Length < 2)
+                {
+                    readout = "0" + minutes + ":0" + seconds;
+                }
+                else
+                {
+                    readout = minutes + ":0" + seconds;
+                }
+            }
+            else
+            {
+                if (minutes.Length < 2)
+                {
+                    readout = "0" + minutes + ":" + seconds;
+                }
+                else
+                {
+                    readout = minutes + ":" + seconds;
+                }
+            }
+
+            go.transform.Find("PlayerTime").GetComponent<Text>().text = readout;
 			go.transform.Find ("PlayerLevel").GetComponent<Text> ().text = scoreManager.getScore (name, "Level").ToString();
 			go.transform.Find ("PlayerMoney").GetComponent<Text> ().text = scoreManager.getScore (name, "Money").ToString();
 
