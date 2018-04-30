@@ -120,7 +120,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SecCamBeeping
     clip: {fileID: 8300000, guid: 61155d15b4b3a3945b98dca60fffb5d4, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KeyPickup
+    clip: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
     volume: 1
     pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: ChestOpening
+    clip: {fileID: 8300000, guid: 9266fab1fc9668149bb3b28ff474195c, type: 3}
+    volume: 0.8
+    pitch: 1
     loop: 0
     source: {fileID: 0}
