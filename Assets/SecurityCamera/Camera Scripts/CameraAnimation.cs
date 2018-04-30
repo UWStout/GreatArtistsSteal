@@ -46,10 +46,12 @@ public class CameraAnimation : MonoBehaviour {
     {
         if (countDown == true)
         {
+            
             timeLeft -= Time.deltaTime;
 
             if (timeLeft <= 4.5f)
             {
+                
                 anim.SetBool("Follow", true);
                 playerSpotted = true;
             }
