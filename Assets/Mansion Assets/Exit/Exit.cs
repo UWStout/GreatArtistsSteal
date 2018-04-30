@@ -27,7 +27,8 @@ public class Exit : MonoBehaviour {
 			
 				Debug.Log("YYYYY");
 			if(Input.GetKeyDown(KeyCode.E)){
-				Key.hasKey = false;
+                UnityEngine.Cursor.visible = true;
+                Key.hasKey = false;
 				Debug.Log("YAY");
 				if(currentScene.name == "Level One"){
 					Debug.Log("Beat Level Uno");

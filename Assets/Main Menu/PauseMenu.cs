@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour {
 
 	public void PlayGame()
     {
+        UnityEngine.Cursor.visible = false;
+
         FindObjectOfType<AudioManager>().Play("MenuClick");
         Time.timeScale = 1;
         

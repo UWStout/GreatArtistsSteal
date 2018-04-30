@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour {
             StartCoroutine(delayPause());
             gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             gameObject.transform.GetChild(1).gameObject.SetActive(true);
-            
+            //Debug.Log("Stopped");
         }
         
     }
@@ -204,6 +204,7 @@ public class PlayerMovement : MonoBehaviour {
         UnityEngine.Cursor.visible = true;
         //Time.timeScale = 0;
         SceneManager.LoadScene("highscores");
+        //canControl = true;
     }
 
 }
