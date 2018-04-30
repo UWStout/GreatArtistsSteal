@@ -77,6 +77,7 @@ public class PlayerMovement : MonoBehaviour {
 	GameObject pauseMenu;
     private void Update()
     {
+        
         if (canControl == true)
         {
             pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
@@ -86,7 +87,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 if (Time.timeScale == 1)
                 {
-                    
+                    UnityEngine.Cursor.visible = true;
                     //Cursor.visible = true;
                     Time.timeScale = 0;
                     //GameObject.FindGameObjectWithTag("PauseMenu").SetActive(true);
@@ -96,6 +97,7 @@ public class PlayerMovement : MonoBehaviour {
                 }
                 else
                 {
+                    UnityEngine.Cursor.visible = false;
                     //Cursor.visible = false;
                     Time.timeScale = 1;
                     //GameObject.Find("PauseMenu").SetActive(false);
@@ -199,7 +201,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         yield return new WaitForSeconds(4f);
 
-        //Cursor.visible = true;
+        UnityEngine.Cursor.visible = true;
         //Time.timeScale = 0;
         SceneManager.LoadScene("highscores");
     }

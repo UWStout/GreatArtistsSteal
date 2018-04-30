@@ -49,8 +49,9 @@ public class LevelThreeGen : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        UnityEngine.Cursor.visible = false;
         //Cursor.visible = false;
-        
+
         Guard = GameObject.Find("Guard");
         
         //SecCamera = GameObject.FindGameObjectWithTag("SecCamera");

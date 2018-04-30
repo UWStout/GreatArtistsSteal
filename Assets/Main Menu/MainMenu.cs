@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour {
 	public GameObject nameDialog;
 
 	public void Play(){
+        
         FindObjectOfType<AudioManager>().Play("MenuClick");
         SceneManager.LoadScene("levelBriefing");
 	}

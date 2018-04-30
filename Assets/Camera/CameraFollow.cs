@@ -91,13 +91,13 @@ public class CameraFollow : MonoBehaviour {
 		float xPos3 = Mathf.Lerp (transform.position.x, player.transform.position.x - 1.5f, 50 * smoothSpeed * Time.deltaTime);
 
 
-		if ((player.position.x <= 3)) {
-			position.x = 3;
+		if ((player.position.x <= 0)) {
+			position.x = 0;
 			position.y = cameraHeight;
-		} else if ((player.position.x >= 221)) {
-			position.x = 221;
+		} else if ((player.position.x >= 223)) {
+			position.x = 223;
 			position.y = cameraHeight;
-		} else if (((player.position.x > 3) || (player.position.x < 220))) {
+		} else if (((player.position.x > 0) || (player.position.x < 223))) {
 			/*position.x = player.transform.position.x;
             position.y = cameraHeight;
             transform.position = position;*/
