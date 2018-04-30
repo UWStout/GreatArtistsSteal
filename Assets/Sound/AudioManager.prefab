@@ -119,7 +119,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: SecCamBeeping
-    clip: {fileID: 8300000, guid: 4fdd3e04769b6fa4b9f046ba21e8b850, type: 3}
+    clip: {fileID: 8300000, guid: bb0e4cd8e66a7664b9520b7be91d6883, type: 3}
     volume: 1
     pitch: 1
     loop: 0

@@ -879,7 +879,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "Unity Asset Store\r\n----------------------------------------------------------\r\nCasual
+    Game SFX Pack\r\nDustyroom\r\n\r\n\r\nFreeSound.org\r\n----------------------------------------------------------\r\nFootstep
+    01.wav\r\nVKProduktion\r\n\r\nCowboy / Spy Loop\r\nRodeoclash\r\n\r\nBlip (Retro
+    video game SFX) \xBB Blip_C_04 \r\ncabled_mess\r\n\r\nbeeps and blops \xBB bleeps_double-4.wav
+    \r\nGreencouch\r\n\r\nVintage Elecro pop loop\r\nfrankum\r\n\r\nMinimal Drum Loops
+    \xBB minimal_swing_100bpm \r\nDirtyJewbs\r\n\r\nchiptune melody.wav\r\nemceeciscokid\r\n\r\nnnus_forklift_error_code2.wav\r\nnnus\r\n\r\nChest
+    Opening.wav\r\nspookymodem"
 --- !u!222 &2057877236
 CanvasRenderer:
   m_ObjectHideFlags: 0
