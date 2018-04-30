@@ -118,3 +118,9 @@ MonoBehaviour:
     pitch: 2
     loop: 0
     source: {fileID: 0}
+  - name: SecCamBeeping
+    clip: {fileID: 8300000, guid: 61155d15b4b3a3945b98dca60fffb5d4, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}

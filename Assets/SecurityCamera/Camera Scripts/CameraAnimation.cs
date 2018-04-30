@@ -85,6 +85,7 @@ public class CameraAnimation : MonoBehaviour {
 
     public void Spotted()
     {
+        FindObjectOfType<AudioManager>().Play("SecCamBeeping");
         anim.SetBool("Spotted", true);
         patrolling = false;
         countDown = true;
