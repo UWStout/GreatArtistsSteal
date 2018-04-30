@@ -63,7 +63,7 @@ public class CameraAnimation : MonoBehaviour {
         if (resetPos == true)
         {
             trigger.transform.position = startPos;
-            Debug.Log("Reset starting point of trigger");    
+//            Debug.Log("Reset starting point of trigger");    
             resetPos = false;
             patrolling = true;
             counter = 0;

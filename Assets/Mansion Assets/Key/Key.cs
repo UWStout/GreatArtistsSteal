@@ -19,9 +19,9 @@ public class Key : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.K)){
+		if(Input.GetKeyDown(KeyCode.K)&&Input.GetKeyDown(KeyCode.I)&&Input.GetKeyDown(KeyCode.J)){
 			hasKey = true;
-			Debug.Log("Key Collected... for testing");
+			//Debug.Log("Key Collected... for testing");
 		}
 		if(canGrab == true && Chest.activeSelf == false){
 			if(Input.GetKeyDown(KeyCode.E)){

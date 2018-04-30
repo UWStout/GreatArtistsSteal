@@ -197,13 +197,13 @@ public class GuardMovement : MonoBehaviour {
         {
             transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
         }
-        Debug.Log("GuardChasing");
+//        Debug.Log("GuardChasing");
         chasing = true;
     }
 
     public void StopGuardChasing()
     {
-        Debug.Log("GuardStopChasing");
+//        Debug.Log("GuardStopChasing");
 
         chasing = false;
         //StartCoroutine(delay());
@@ -212,11 +212,11 @@ public class GuardMovement : MonoBehaviour {
 
         if (transform.position.x < player.transform.position.x && movingRight == false)
         {
-            Debug.Log("Guard moving right with player on right");
+//            Debug.Log("Guard moving right with player on right");
         }
         else if (transform.position.x > player.transform.position.x && movingRight == false)
         {
-            Debug.Log("Guard moving right with player on left");
+//            Debug.Log("Guard moving right with player on left");
             transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
             movingRight = true;
             stopChasingSwapLeft = true;
@@ -224,7 +224,7 @@ public class GuardMovement : MonoBehaviour {
         }
         else if (transform.position.x < player.transform.position.x && movingRight == true)
         {
-            Debug.Log("Guard moving left with player on right");
+//            Debug.Log("Guard moving left with player on right");
             transform.localScale = new Vector3(guardScale, guardScale, guardScale);
             movingRight = false;
             stopChasingSwapRight = true;
@@ -232,7 +232,7 @@ public class GuardMovement : MonoBehaviour {
         }
         else if (transform.position.x > player.transform.position.x && movingRight == true)
         {
-            Debug.Log("Guard moving left with player on left");
+//            Debug.Log("Guard moving left with player on left");
         }
 
         Patrolling = true;
@@ -245,7 +245,7 @@ public class GuardMovement : MonoBehaviour {
         Patrolling = false;
         anim.SetBool("Alert", true);
 
-        Debug.Log("GUARDALERT");
+//        Debug.Log("GUARDALERT");
         StartCoroutine(AlertFlip());
 
     }
@@ -274,7 +274,7 @@ public class GuardMovement : MonoBehaviour {
             transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
         }
 
-        Debug.Log("GuardCaught");
+//        Debug.Log("GuardCaught");
         playerCaught = true;
         otherAnimator.GetComponent<Animator>().SetBool("PlayerCaught", true);
         anim.SetBool("playerCaught", true);
@@ -291,7 +291,7 @@ public class GuardMovement : MonoBehaviour {
         {
             Destroy(child.gameObject);
         }
-        Debug.Log(transform.childCount);
+//        Debug.Log(transform.childCount);
 
         playerControl.canControl = false;
 
@@ -301,7 +301,7 @@ public class GuardMovement : MonoBehaviour {
     public Sprite incapacitatedSprite;
     public void GuardIncapacitated()
     {
-        Debug.Log("Guard incapacitated");
+//        Debug.Log("Guard incapacitated");
         Incapacitated = true;
         Patrolling = false;
         chasing = false;
@@ -313,7 +313,7 @@ public class GuardMovement : MonoBehaviour {
         anim.SetTrigger("Incap");
 
         //array to hold all child objects
-        Debug.Log(transform.childCount);
+//        Debug.Log(transform.childCount);
         int i = 0;
         GameObject[] allChildren = new GameObject[transform.childCount];
         foreach (Transform child in transform)
@@ -325,7 +325,7 @@ public class GuardMovement : MonoBehaviour {
         {
             child.gameObject.SetActive(false);
         }
-        Debug.Log(transform.childCount);
+//        Debug.Log(transform.childCount);
 
 
         //gameObject.GetComponent<Animator>().enabled = false;

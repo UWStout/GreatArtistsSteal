@@ -11,19 +11,19 @@ public class StairUp : MonoBehaviour {
     public GameObject Player;
     public GameObject DownStairs;
 
-    private Animator anim;
-    public Animator anim2;
+    //private Animator anim;
+    //public Animator anim2;
     private bool enter;
     float changeHeight = 9f;
-    private bool play = true;
+//    private bool play = true;
 
 
  void Start() {
         DownStairs = GameObject.Find("DownStairs");
         Player = GameObject.FindGameObjectWithTag("Player");
         //player.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
-        anim = GetComponent<Animator>();
-        anim2 = DownStairs.GetComponent<Animator> ();
+       // anim = GetComponent<Animator>();
+        //anim2 = DownStairs.GetComponent<Animator> ();
 /* 
         anim.SetBool("UpGoingUp", false);
         anim.SetBool("UpComingDown", false);
@@ -36,9 +36,7 @@ public class StairUp : MonoBehaviour {
         {
             CameraFollow moveCam = GameObject.FindGameObjectWithTag("Camera").gameObject.GetComponent<CameraFollow>();
             moveCam.LerpUp();
-            if(anim.GetBool("Default") == true){
-                anim.enabled = true;
-            }
+    
             Player.SetActive(false);
             StartCoroutine(Delay());
                       
@@ -50,7 +48,7 @@ public class StairUp : MonoBehaviour {
         if (collision.gameObject.tag == ("Player"))
         {
             triggerEntered = true;
-            Debug.Log("can interact"); 
+//            Debug.Log("can interact"); 
         } 
     }
 
@@ -59,12 +57,12 @@ public class StairUp : MonoBehaviour {
         if (collision.gameObject.tag == ("Player"))
         {
             triggerEntered = false;
-            Debug.Log("can't interact");
+//            Debug.Log("can't interact");
         }
     }
 
 IEnumerator Delay() {
-        play = true;
+       // play = true;
         //anim.Play("UpGoingUp");
         //anim.SetBool("UpGoingUp", true);
        //anim.Play("UpGoingUp");

@@ -25,36 +25,36 @@ public class Exit : MonoBehaviour {
 		Scene currentScene = SceneManager.GetActiveScene();
 		if(canInteract == true && hasKey == true){
 			
-				Debug.Log("YYYYY");
+		//		Debug.Log("YYYYY");
 			if(Input.GetKeyDown(KeyCode.E)){
 				Key.hasKey = false;
 				Debug.Log("YAY");
 				if(currentScene.name == "Level One"){
-					Debug.Log("Beat Level Uno");
+//					Debug.Log("Beat Level Uno");
 					hasKey = false;
 					updateScore ();
 					SceneManager.LoadScene("briefing two");
 				}
 				else if(currentScene.name == "Level Two"){
-					Debug.Log("Beat Level Dos");
+		//			Debug.Log("Beat Level Dos");
 					hasKey = false;
 					updateScore ();
 					SceneManager.LoadScene("briefing three");
 				}
 				else if(currentScene.name == "Level Three"){
-					Debug.Log("Beat Level Tres");
+		//			Debug.Log("Beat Level Tres");
 					hasKey = false;
 					updateScore ();
 					SceneManager.LoadScene("briefing four");
 				}
 				else if(currentScene.name == "Level Four"){
-					Debug.Log("Beat Level Quattro");
+		//			Debug.Log("Beat Level Quattro");
 					hasKey = false;
 					updateScore ();
 					SceneManager.LoadScene("briefing five");
 				}
 				else if(currentScene.name == "Level Five"){
-					Debug.Log("Beat Level Five");
+		//			Debug.Log("Beat Level Five");
 					hasKey = false;
 					updateScore ();
 

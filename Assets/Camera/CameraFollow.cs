@@ -52,7 +52,7 @@ public class CameraFollow : MonoBehaviour {
                 lerpValue = 0f;
                 cameraHeight = oldHeight + 9f;
                 lerpUp = false;
-                Debug.Log("Stop lerp up");
+//                Debug.Log("Stop lerp up");
             }
         }
         else if (lerpDown)

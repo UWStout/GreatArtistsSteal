@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LeftShell: {fileID: 1845198780279042, guid: 8afd8785c1f07674690085ffa734027a, type: 2}
-  RightShell: {fileID: 1193216918536300, guid: 5ce328c831b30ca48bd61594c97bc3f5, type: 2}
-  NormalShell: {fileID: 1783036735320936, guid: 35c3ae14e31f6a84b8c45f39e8c39739,
+  RightShell: {fileID: 1783036735320936, guid: 35c3ae14e31f6a84b8c45f39e8c39739, type: 2}
+  NormalShell: {fileID: 1193216918536300, guid: 5ce328c831b30ca48bd61594c97bc3f5,
     type: 2}
   NormalRoom1: {fileID: 1300738506279924, guid: ca11a9f43fa38ff459f7025055330ce8,
     type: 2}
