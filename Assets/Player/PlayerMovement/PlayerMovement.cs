@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public GameObject GUI;
 
+	public string Name;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -77,6 +79,8 @@ public class PlayerMovement : MonoBehaviour {
 	GameObject pauseMenu;
     private void Update()
     {
+
+		Name = PlayerPrefs.GetString("name");
         
         if (canControl == true)
         {
@@ -203,8 +207,18 @@ public class PlayerMovement : MonoBehaviour {
 
         UnityEngine.Cursor.visible = true;
         //Time.timeScale = 0;
+		updateScore();
         SceneManager.LoadScene("highscores");
         //canControl = true;
     }
+
+
+	public void updateScore(){
+		ScoreManager.changeScore (Name, "Level", 1); //Noah Added
+		ScoreManager.changeScore (Name, "Time",  (int)Timer.globalTime);
+		//	Debug.Log ((int)Timer.globalTime);
+		ScoreManager.changeScore (Name, "Money", Score.globalScore);
+
+	}
 
 }
