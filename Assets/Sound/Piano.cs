@@ -9,8 +9,8 @@ public class Piano : MonoBehaviour {
 	{
     	if (coll.gameObject.name == "Player")
     	{
-			
-    	}
+            FindObjectOfType<AudioManager>().Play("PianoHit");
+        }
 	}
 
 }

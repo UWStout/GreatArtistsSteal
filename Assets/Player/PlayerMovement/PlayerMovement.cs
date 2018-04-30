@@ -198,7 +198,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         yield return new WaitForSeconds(4f);
 
-        Cursor.visible = true;
+        //Cursor.visible = true;
         //Time.timeScale = 0;
         SceneManager.LoadScene("highscores");
     }
