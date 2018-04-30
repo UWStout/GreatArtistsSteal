@@ -878,7 +878,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.9
   m_Text: "Unity Asset Store\r\n----------------------------------------------------------\r\nCasual
     Game SFX Pack\r\nDustyroom\r\n\r\nFreeSound.org\r\n----------------------------------------------------------\r\nFootstep
     01.wav\r\nVKProduktion\r\n\r\nCowboy / Spy Loop\r\nRodeoclash\r\n\r\nBlip (Retro
@@ -886,7 +886,9 @@ MonoBehaviour:
     \r\nGreencouch\r\n\r\nVintage Elecro pop loop\r\nfrankum\r\n\r\nMinimal Drum Loops
     \xBB minimal_swing_100bpm \r\nDirtyJewbs\r\n\r\nchiptune melody.wav\r\nemceeciscokid\r\n\r\nnnus_forklift_error_code2.wav\r\nnnus\r\n\r\nChest
     Opening.wav\r\nspookymodem\n\nAngry Grunt\r\nRocotilos\n\r\nSoundImage.org\r\n----------------------------------------------------------\r\nAnalog
-    Nostalgia\r\nEric Matyas\r\n\r\nGame menu_v001\r\nEric Matyas"
+    Nostalgia\r\nEric Matyas\r\n\r\nGame menu_v001\r\nEric Matyas\n\n\nAddition Programs
+    used: - Spriter Pro\r - Visual Studio Code\r - Adobe Photoshop / Adobe Illustrator\r
+    / Adobe Premiere Pro - Unity\r - Procreate (iOS)\n"
 --- !u!222 &2057877236
 CanvasRenderer:
   m_ObjectHideFlags: 0
