@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public GameObject GUI;
 
+	public string Name;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -77,6 +79,8 @@ public class PlayerMovement : MonoBehaviour {
 	GameObject pauseMenu;
     private void Update()
     {
+
+		Name = PlayerPrefs.GetString("name");
         
         if (canControl == true)
         {
