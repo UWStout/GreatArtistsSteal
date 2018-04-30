@@ -86,6 +86,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 if (Time.timeScale == 1)
                 {
+                    
                     //Cursor.visible = true;
                     Time.timeScale = 0;
                     //GameObject.FindGameObjectWithTag("PauseMenu").SetActive(true);
