@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (canControl == false)
         {
+            
             GUI.SetActive(false);
             StartCoroutine(delayPause());
             gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
@@ -102,6 +104,31 @@ public class PlayerMovement : MonoBehaviour {
 
             }
 
+
+            /*bool walk = false;
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            {
+                walk = true;
+                //FindObjectOfType<AudioManager>().Play("PlayerWalking");
+            }
+            else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+            {
+                walk = false;
+            }
+
+            if (walk)
+            {
+                FindObjectOfType<AudioManager>().Play("PlayerWalking");
+            }
+            else
+            {
+                
+            }*/
+
+            /*if (grounded)
+            {
+                FindObjectOfType<AudioManager>().Play("PlayerLanding");
+            }*/
 
             if ((grounded && Input.GetKeyDown(KeyCode.Space)) || (grounded && Input.GetButtonDown("Jump")))//determines whether or not the player is near the ground and can jump or not
             {
@@ -170,9 +197,10 @@ public class PlayerMovement : MonoBehaviour {
     IEnumerator delayPause()
     {
         yield return new WaitForSeconds(4f);
-        
-        Time.timeScale = 0;
-        
+
+        Cursor.visible = true;
+        //Time.timeScale = 0;
+        SceneManager.LoadScene("highscores");
     }
 
 }

@@ -49,7 +49,7 @@ public class LevelThreeGen : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         
         Guard = GameObject.Find("Guard");
         

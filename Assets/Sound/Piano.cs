@@ -9,7 +9,7 @@ public class Piano : MonoBehaviour {
 	{
     	if (coll.gameObject.name == "Player")
     	{
-			Debug.Log("Piano Noises");
+			
     	}
 	}
 
