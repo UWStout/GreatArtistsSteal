@@ -20,7 +20,8 @@ public class Key : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.K)&&Input.GetKeyDown(KeyCode.I)&&Input.GetKeyDown(KeyCode.J)){
-			hasKey = true;
+           
+            hasKey = true;
 			//Debug.Log("Key Collected... for testing");
 		}
 		if(canGrab == true && Chest.activeSelf == false){
@@ -28,15 +29,17 @@ public class Key : MonoBehaviour {
 				key.SetActive(false);
 				hasKey = true;
 				if(hasKey == true){
-            		//Debug.Log("Collected Key");}
-				}
+                    FindObjectOfType<AudioManager>().Play("KeyPickup");
+                    //Debug.Log("Collected Key");}
+                }
 			}
 		}
 		if(canGrab == true && Chest.activeSelf == true){
 			if (Input.GetKeyDown(KeyCode.E))
             	{
-					//Debug.Log("Opened Chest");
-					Chest.SetActive(false);
+                FindObjectOfType<AudioManager>().Play("ChestOpening");
+                //Debug.Log("Opened Chest");
+                Chest.SetActive(false);
 					key.SetActive(true);
 				}
 		}
@@ -47,6 +50,14 @@ public class Key : MonoBehaviour {
         {
 
             canGrab = true;
+        }
+    }
+	void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.tag == ("Player"))
+        {
+
+            canGrab = false;
         }
     }
 }
