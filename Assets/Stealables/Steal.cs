@@ -30,7 +30,7 @@ public class Steal : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Interact"))
             {
                 FindObjectOfType<AudioManager>().Play("Steal");
-                Debug.Log("10$");
+//                Debug.Log("10$");
                 Destroy(gameObject);
 				newScore1.AddScore(Random.Range(1,4));
             }

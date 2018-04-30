@@ -19,7 +19,7 @@ public class DarkOff : MonoBehaviour {
 			if(LightsOn.litTime == true){
 				Destroy(gameObject);
 				LightsOn.litTime = false;
-				Debug.Log("Lit No More");
+				//Debug.Log("Lit No More");
 			}
 		}
 	}

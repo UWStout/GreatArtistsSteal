@@ -9,20 +9,20 @@ public class StairDown : MonoBehaviour {
     private float locationDown = -9f;
     public GameObject Player;
     public GameObject UpStairs;
-    private Animator anim;
+    //private Animator anim;
     
-    public Animator anim2;
+    //public Animator anim2;
     private bool triggerEntered = false;
     float changeHeight = -9f;
 
     void Start() {
         Player = GameObject.FindGameObjectWithTag("Player");
         //player.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
-        anim = GetComponent<Animator>();
-        anim2 = UpStairs.GetComponent<Animator> ();
+        //anim = GetComponent<Animator>();
+        //anim2 = UpStairs.GetComponent<Animator> ();
 
-        anim.SetBool("DownGoingDown", false);
-        anim.SetBool("DownComingUp", false);
+        //anim.SetBool("DownGoingDown", false);
+        //anim.SetBool("DownComingUp", false);
      }
     private void Update()
     {
@@ -47,7 +47,7 @@ public class StairDown : MonoBehaviour {
         if (collision.gameObject.tag == ("Player"))
         {
             triggerEntered = true;
-            Debug.Log("can interact");
+//            Debug.Log("can interact");
         }
     }
 
@@ -56,7 +56,7 @@ public class StairDown : MonoBehaviour {
         if (collision.gameObject.tag == ("Player"))
         {
             triggerEntered = false;
-            Debug.Log("cant interact");
+//            Debug.Log("cant interact");
         }
     }
 
@@ -68,7 +68,7 @@ public class StairDown : MonoBehaviour {
         Player.transform.position = new Vector2(Player.transform.position.x, Player.transform.position.y + locationDown);
         Vector2 after = Player.transform.position;
         //player.transform.position = player.transform.position +9;
-        Debug.Log(string.Format("PlayerMoveDown: {0} vs {1}", before, after));
+        //Debug.Log(string.Format("PlayerMoveDown: {0} vs {1}", before, after));
         //CameraFollow.cameraHeight = CameraFollow.cameraHeight + locationDown;
         yield return new WaitForSeconds(1f);
         Player.SetActive(true); 
