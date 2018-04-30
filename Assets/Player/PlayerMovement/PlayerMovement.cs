@@ -203,8 +203,18 @@ public class PlayerMovement : MonoBehaviour {
 
         UnityEngine.Cursor.visible = true;
         //Time.timeScale = 0;
+		updateScore();
         SceneManager.LoadScene("highscores");
         //canControl = true;
     }
+
+
+	public void updateScore(){
+		ScoreManager.changeScore (Name, "Level", 1); //Noah Added
+		ScoreManager.changeScore (Name, "Time",  (int)Timer.globalTime);
+		//	Debug.Log ((int)Timer.globalTime);
+		ScoreManager.changeScore (Name, "Money", Score.globalScore);
+
+	}
 
 }
