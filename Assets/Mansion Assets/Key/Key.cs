@@ -52,4 +52,12 @@ public class Key : MonoBehaviour {
             canGrab = true;
         }
     }
+	void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.tag == ("Player"))
+        {
+
+            canGrab = false;
+        }
+    }
 }
