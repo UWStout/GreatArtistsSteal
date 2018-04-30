@@ -136,3 +136,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: GuardChasing
+    clip: {fileID: 8300000, guid: 25fc2417e00663a448c159f9e628d30a, type: 3}
+    volume: 0.9
+    pitch: 1.3
+    loop: 0
+    source: {fileID: 0}

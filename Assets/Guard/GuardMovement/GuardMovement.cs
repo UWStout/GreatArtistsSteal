@@ -182,6 +182,8 @@ public class GuardMovement : MonoBehaviour {
 
     public void GuardChasing()
     {
+        FindObjectOfType<AudioManager>().Play("GuardChasing");
+
         if (transform.position.x < player.transform.position.x && movingRight == true)
         {
             transform.localScale = new Vector3(-guardScale, guardScale, guardScale);
